@@ -1,0 +1,5 @@
+{
+  "DangNhap": {
+    "Login": "Select * from DANGNHAP where TENDANGNHAP = @userName and MATKHAU = @passWord"
+  }
+}

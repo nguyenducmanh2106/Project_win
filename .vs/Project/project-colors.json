@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4e6eebe8-5909-4079-8115-163f5780dd70": {
+      "ProjectGuid": "4e6eebe8-5909-4079-8115-163f5780dd70",
+      "DisplayName": "MainProject",
+      "ColorIndex": 0
+    },
+    "df4d28f8-8ec5-436a-8aba-ab52875dfcb3": {
+      "ProjectGuid": "df4d28f8-8ec5-436a-8aba-ab52875dfcb3",
+      "DisplayName": "Dapper.Model",
+      "ColorIndex": 1
+    },
+    "33f17117-1bc9-416f-bfed-70393c8dae54": {
+      "ProjectGuid": "33f17117-1bc9-416f-bfed-70393c8dae54",
+      "DisplayName": "Dapper.IDAL",
+      "ColorIndex": 2
+    },
+    "3651cb78-6f6e-4176-be83-b98ccc28c72d": {
+      "ProjectGuid": "3651cb78-6f6e-4176-be83-b98ccc28c72d",
+      "DisplayName": "Dapper.SQLServerDAL",
+      "ColorIndex": 3
+    },
+    "1559abe1-bcd9-4b0f-89be-1c637ddf262c": {
+      "ProjectGuid": "1559abe1-bcd9-4b0f-89be-1c637ddf262c",
+      "DisplayName": "Core",
+      "ColorIndex": 4
+    },
+    "7e9067d2-1ecd-4c29-9b0e-97de6285188e": {
+      "ProjectGuid": "7e9067d2-1ecd-4c29-9b0e-97de6285188e",
+      "DisplayName": "Dapper.Factory",
+      "ColorIndex": 5
+    },
+    "a57f9509-9d72-4826-b69b-e71e51bc141e": {
+      "ProjectGuid": "a57f9509-9d72-4826-b69b-e71e51bc141e",
+      "DisplayName": "Dapper.IBLL",
+      "ColorIndex": 6
+    },
+    "ce980ee9-f104-448e-8698-8d6721b838dd": {
+      "ProjectGuid": "ce980ee9-f104-448e-8698-8d6721b838dd",
+      "DisplayName": "Dapper.BLL",
+      "ColorIndex": 7
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 8
+}

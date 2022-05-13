@@ -1,0 +1,49 @@
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csprojResolveAssemblyReference.cache
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csprojResolveAssemblyReference.cache
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.AssemblyReference.cache
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CoreCompileInputs.cache
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CopyComplete
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\bin\Debug\DapperExtensions.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.AssemblyReference.cache
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CoreCompileInputs.cache
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CopyComplete
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\DapperExtensions.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\bin\Debug\DapperExtensions.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.AssemblyReference.cache
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CoreCompileInputs.cache
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CopyComplete
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb

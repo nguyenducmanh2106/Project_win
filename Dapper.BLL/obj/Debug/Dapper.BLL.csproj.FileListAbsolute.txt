@@ -1,0 +1,142 @@
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.pdb
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csprojResolveAssemblyReference.cache
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.dll
+F:\Workspace\visual studio 2012\Projects\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.pdb
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csprojResolveAssemblyReference.cache
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.dll
+F:\CodingPeasants\C#.NET\SourceCode\Dapper.NET\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\MySql.Data.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll.config
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.AssemblyReference.cache
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CoreCompileInputs.cache
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CopyComplete
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\ZstdNet.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\BouncyCastle.Crypto.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Ubiety.Dns.Core.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Memory.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Buffers.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Numerics.Vectors.dll
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\MySql.Data.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.pdb
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Memory.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Buffers.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.xml
+D:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Numerics.Vectors.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.BLL.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\MySql.Data.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\ZstdNet.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\BouncyCastle.Crypto.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Ubiety.Dns.Core.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Memory.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Buffers.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Numerics.Vectors.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Factory.dll.config
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IBLL.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.IDAL.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Dapper.Model.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\MySql.Data.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\DapperExtensions.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.pdb
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\Google.Protobuf.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Memory.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Buffers.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\bin\Debug\System.Numerics.Vectors.xml
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.AssemblyReference.cache
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CoreCompileInputs.cache
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CopyComplete
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.dll
+E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.BLL\obj\Debug\Dapper.BLL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.BLL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.BLL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.Factory.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.IBLL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.IDAL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.Model.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\MySql.Data.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\DapperExtensions.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Google.Protobuf.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\ZstdNet.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Memory.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Buffers.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.Factory.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.Factory.dll.config
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.IBLL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.IDAL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Dapper.Model.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\MySql.Data.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\DapperExtensions.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Google.Protobuf.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\Google.Protobuf.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Memory.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Buffers.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.AssemblyReference.cache
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CoreCompileInputs.cache
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\obj\Debug\Dapper.BLL.csproj.CopyComplete
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\obj\Debug\Dapper.BLL.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.BLL\obj\Debug\Dapper.BLL.pdb
