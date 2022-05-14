@@ -193,6 +193,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SqlQuery\sql_query.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

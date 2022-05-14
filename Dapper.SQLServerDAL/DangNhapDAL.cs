@@ -12,6 +12,7 @@ using DapperExtensions.Mapper;
 using SV.HRM.Core.Utils;
 using System.Reflection;
 using System.Diagnostics;
+using System.IO;
 
 /*
  * create by ndmanh

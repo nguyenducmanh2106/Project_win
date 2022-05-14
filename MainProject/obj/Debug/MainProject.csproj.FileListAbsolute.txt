@@ -11,6 +11,7 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Text.Json.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\MySql.Data.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\DapperExtensions.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Memory.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.ValueTuple.dll
@@ -35,9 +36,11 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.IDAL.pdb
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.Model.pdb
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.SQLServerDAL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.SQLServerDAL.dll.config
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Text.Json.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\MySql.Data.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\DapperExtensions.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Memory.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\System.ValueTuple.xml
@@ -73,6 +76,3 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainPro
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainProject.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.exe
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.pdb
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.dll
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.SQLServerDAL.dll.config
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Dapper.xml

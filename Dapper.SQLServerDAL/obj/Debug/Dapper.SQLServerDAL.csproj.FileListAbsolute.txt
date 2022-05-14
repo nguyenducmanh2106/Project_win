@@ -106,6 +106,7 @@ E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.SQLServerDAL\obj\Debug\Dapper.
 E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.csproj.CopyComplete
 E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.dll
 E:\3-Tier-Architecture-using-dapper\Dapper\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\bin\Debug\Dapper.SQLServerDAL.dll.config
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\bin\Debug\Dapper.SQLServerDAL.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\bin\Debug\Dapper.SQLServerDAL.pdb
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\bin\Debug\Core.dll
@@ -159,4 +160,3 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\obj\Debug
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\obj\Debug\Dapper.SQLServerDAL.pdb
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.SQLServerDAL\bin\Debug\Dapper.SQLServerDAL.dll.config

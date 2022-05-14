@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SV.HRM.Core.Utils
 {
@@ -16,6 +18,7 @@ namespace SV.HRM.Core.Utils
         public static string GetQueryFromJSON(string fileName,string subsystem, string sqlQuery)
         {
             var fileJson = File.ReadAllText(fileName);
+           
             var json = JsonDocument.Parse(fileJson, new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip });
             return json.RootElement.GetProperty(subsystem).GetProperty(sqlQuery).GetString();
         }

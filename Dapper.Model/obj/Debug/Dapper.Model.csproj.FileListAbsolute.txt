@@ -31,6 +31,7 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\bin\Debug\Dapper
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\bin\Debug\Dapper.Model.pdb
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\bin\Debug\DapperExtensions.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\bin\Debug\DapperExtensions.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\obj\Debug\Dapper.Model.csproj.AssemblyReference.cache
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\obj\Debug\Dapper.Model.csproj.CoreCompileInputs.cache
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\obj\Debug\Dapper.Model.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.Model\obj\Debug\Dapper.Model.dll
