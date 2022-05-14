@@ -178,9 +178,6 @@
     <EmbeddedResource Include="GUI\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UserLoginInfor.aa-ER.resx">
-      <DependentUpon>UserLoginInfor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserLoginInfor.resx">
       <DependentUpon>UserLoginInfor.cs</DependentUpon>
     </EmbeddedResource>

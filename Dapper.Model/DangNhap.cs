@@ -23,6 +23,7 @@ namespace Dapper.Model
         public string MATK { get; set; }// mã tài khoản
         public int? CAPTK { get; set; }// cấp tài khoản
         public int? TKCT { get; set; }// tài khoản cấp trên
+        public string FullName { get; set; }// họ tên
 
         //public virtual List<BookReview> Reviews { get; set; }
 

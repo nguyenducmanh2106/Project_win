@@ -16,7 +16,9 @@ namespace QLBANXE
         public MainScreen()
         {
             InitializeComponent();
-            var a = VariablesGlobal.Instance.UserLoginCurrent;
+            var fullName = VariablesGlobal.Instance.UserLoginCurrent?.FullName;
+
+            this.UserNameMenu.Text = fullName;
         }
 
         private void btn_QLSANPHAM_Click(object sender, EventArgs e)
@@ -67,6 +69,16 @@ namespace QLBANXE
         }
 
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void UserNameMenu_Click(object sender, EventArgs e)
         {
 
         }

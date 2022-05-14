@@ -17,7 +17,6 @@ namespace QLBANXE
     {
         public DangNhapBLL _dangNhapBLL = new DangNhapBLL();
 
-        public BookBLL _bookBLL = new BookBLL();
         public txtUsername()
         {
             InitializeComponent();
