@@ -48,12 +48,12 @@ namespace Dapper.Factory
                 throw;
             }
         }
-        public static IDangNhapDAL CreateDangNhapDAL()
+        public static IUserDAL CreateUserDAL()
         {
             try
             {
-                string className = path + ".DangNhapDAL";
-                return (IDangNhapDAL)Assembly.Load(path).CreateInstance(className);
+                string className = path + ".UserDAL";
+                return (IUserDAL)Assembly.Load(path).CreateInstance(className);
             }
             catch (Exception ex)
             {

@@ -1,4 +1,4 @@
-﻿namespace QLBANXE.GUI
+﻿namespace QLBANXE
 {
     partial class UserLoginInfor
     {
@@ -29,61 +29,107 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.ChangePassWord = new System.Windows.Forms.Button();
+            this.UpdateUserLogin = new System.Windows.Forms.Button();
+            this.TENTK = new System.Windows.Forms.TextBox();
+            this.TENDANGNHAP = new System.Windows.Forms.TextBox();
+            this.TENTKTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.UserName);
+            this.panel1.Controls.Add(this.BackButton);
+            this.panel1.Controls.Add(this.ChangePassWord);
+            this.panel1.Controls.Add(this.UpdateUserLogin);
+            this.panel1.Controls.Add(this.TENTK);
+            this.panel1.Controls.Add(this.TENDANGNHAP);
+            this.panel1.Controls.Add(this.TENTKTitle);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(192, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 203);
+            this.panel1.Size = new System.Drawing.Size(650, 232);
             this.panel1.TabIndex = 0;
+            // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(396, 114);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(98, 36);
+            this.BackButton.TabIndex = 7;
+            this.BackButton.Text = "Thoát";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // ChangePassWord
+            // 
+            this.ChangePassWord.Location = new System.Drawing.Point(263, 114);
+            this.ChangePassWord.Name = "ChangePassWord";
+            this.ChangePassWord.Size = new System.Drawing.Size(98, 36);
+            this.ChangePassWord.TabIndex = 6;
+            this.ChangePassWord.Text = "Đổi mật khẩu";
+            this.ChangePassWord.UseVisualStyleBackColor = true;
+            this.ChangePassWord.Click += new System.EventHandler(this.ChangePassWord_Click);
+            // 
+            // UpdateUserLogin
+            // 
+            this.UpdateUserLogin.Location = new System.Drawing.Point(127, 114);
+            this.UpdateUserLogin.Name = "UpdateUserLogin";
+            this.UpdateUserLogin.Size = new System.Drawing.Size(98, 36);
+            this.UpdateUserLogin.TabIndex = 5;
+            this.UpdateUserLogin.Text = "Cập nhật";
+            this.UpdateUserLogin.UseVisualStyleBackColor = true;
+            this.UpdateUserLogin.Click += new System.EventHandler(this.UpdateUserLogin_Click);
+            // 
+            // TENTK
+            // 
+            this.TENTK.Location = new System.Drawing.Point(280, 54);
+            this.TENTK.Name = "TENTK";
+            this.TENTK.Size = new System.Drawing.Size(223, 20);
+            this.TENTK.TabIndex = 4;
+            // 
+            // TENDANGNHAP
+            // 
+            this.TENDANGNHAP.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.TENDANGNHAP.Enabled = false;
+            this.TENDANGNHAP.Location = new System.Drawing.Point(280, 15);
+            this.TENDANGNHAP.Name = "TENDANGNHAP";
+            this.TENDANGNHAP.ReadOnly = true;
+            this.TENDANGNHAP.Size = new System.Drawing.Size(223, 20);
+            this.TENDANGNHAP.TabIndex = 3;
+            // 
+            // TENTKTitle
+            // 
+            this.TENTKTitle.AutoSize = true;
+            this.TENTKTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TENTKTitle.Location = new System.Drawing.Point(123, 52);
+            this.TENTKTitle.Name = "TENTKTitle";
+            this.TENTKTitle.Size = new System.Drawing.Size(102, 22);
+            this.TENTKTitle.TabIndex = 2;
+            this.TENTKTitle.Text = "Họ và tên:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 13);
+            this.label1.Location = new System.Drawing.Point(123, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(188, 18);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(35, 13);
-            this.UserName.TabIndex = 1;
-            this.UserName.Text = "label2";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên đăng nhập:";
             // 
             // UserLoginInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(998, 522);
             this.Controls.Add(this.panel1);
             this.Name = "UserLoginInfor";
             this.Text = "Thông tin đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -94,7 +140,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label UserName;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TENTKTitle;
+        private System.Windows.Forms.TextBox TENDANGNHAP;
+        private System.Windows.Forms.TextBox TENTK;
+        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button ChangePassWord;
+        private System.Windows.Forms.Button UpdateUserLogin;
     }
 }

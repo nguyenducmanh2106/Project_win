@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DangNhapDAL.cs" />
+    <Compile Include="UserDAL.cs" />
     <Compile Include="BookDAL.cs" />
     <Compile Include="BookReviewDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

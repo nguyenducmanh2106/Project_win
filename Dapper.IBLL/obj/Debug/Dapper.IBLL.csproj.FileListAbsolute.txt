@@ -47,3 +47,14 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IBLL\obj\Debug\Dapper.
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IBLL\obj\Debug\Dapper.IBLL.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Dapper.IBLL\obj\Debug\Dapper.IBLL.pdb
+E:\Project_win\Dapper.IBLL\bin\Debug\Dapper.IBLL.dll
+E:\Project_win\Dapper.IBLL\bin\Debug\Dapper.IBLL.pdb
+E:\Project_win\Dapper.IBLL\bin\Debug\Dapper.Model.dll
+E:\Project_win\Dapper.IBLL\bin\Debug\DapperExtensions.dll
+E:\Project_win\Dapper.IBLL\bin\Debug\Dapper.Model.pdb
+E:\Project_win\Dapper.IBLL\bin\Debug\DapperExtensions.pdb
+E:\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.AssemblyReference.cache
+E:\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.CoreCompileInputs.cache
+E:\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.CopyComplete
+E:\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.dll
+E:\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.pdb

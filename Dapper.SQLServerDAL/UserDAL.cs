@@ -20,7 +20,7 @@ using System.IO;
 
 namespace Dapper.SQLServerDAL
 {
-    public class DangNhapDAL : IDangNhapDAL
+    public class UserDAL : IUserDAL
     {
         private IDbConnection _conn;
         public IDbConnection Conn
@@ -103,6 +103,34 @@ namespace Dapper.SQLServerDAL
                 //string sqlQuery = JSONObject.GetQueryFromJSON($"SqlCommand/sql_query.json", nameof(DangNhap), methodCurrent);
                 string sqlQuery = "Select * from DANGNHAP where TENDANGNHAP = @userName and MATKHAU = @passWord";
                 return Conn.Query<DangNhap>(sqlQuery, new { userName = userName, passWord= passWord })?.SingleOrDefault();
+            }
+        }
+
+        /// <summary>
+        /// Update 1 vài thông tin user đang đăng nhập
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int UpdateUserLogin(DangNhap model)
+        {
+            using (Conn)
+            {
+                string sqlQuery = "UPDATE DANGNHAP set TENTK = @TENTK WHERE ID = @ID";
+                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK ,ID = model.ID});
+            }
+        }
+
+        /// <summary>
+        /// Đổi mật khẩu
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int ChangePassWord(DangNhap model)
+        {
+            using (Conn)
+            {
+                string sqlQuery = "UPDATE DANGNHAP set MATKHAU = @MATKHAU WHERE ID = @ID and MATKHAU = @OldPass";
+                return Conn.Execute(sqlQuery, new { MATKHAU = model.MATKHAU, ID = model.ID, OldPass = model.OldPassWord });
             }
         }
 

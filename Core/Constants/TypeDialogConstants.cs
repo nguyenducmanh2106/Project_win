@@ -9,6 +9,8 @@ namespace Core.Constants
     public static class TypeDialogConstants
     {
         public const string NotificationTitle = "Thông báo";
-        public const string ErrorTitle = "Cảnh báo";
+        public const string ErrorTitle = "Lỗi";
+        public const string WarningTitle = "Cảnh báo";
+        public const string SuccessTitle = "Thành công";
     }
 }

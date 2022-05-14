@@ -15,7 +15,7 @@ namespace QLBANXE
 {
     public partial class txtUsername : Form
     {
-        public DangNhapBLL _dangNhapBLL = new DangNhapBLL();
+        public UserBLL _dangNhapBLL = new UserBLL();
 
         public txtUsername()
         {
@@ -38,7 +38,7 @@ namespace QLBANXE
             }
             else
             {
-                MessageBox.Show(MessageConstants.ErrorLoginMessage, TypeDialogConstants.ErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new ShowMessageBox().Warning("Tên tài khoản hoặc mật khẩu không chính xác!");
             }
 
         }

@@ -62,6 +62,12 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\DanhMucTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FeaturesProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <EmbeddedResource Include="GUI\BangGia.resx">
       <DependentUpon>BangGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoan.resx">
+      <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FeaturesProduct.resx">
       <DependentUpon>FeaturesProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +198,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="GUI\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
@@ -208,6 +218,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\icons\icon-plus-70.png" />
+    <Content Include="assets\icons\icon-save-color-70.png" />
+    <Content Include="assets\icons\icon-edit-soft-fill-70.png" />
+    <Content Include="assets\icons\icon-remove-color-70.png" />
+    <Content Include="assets\icons\icon-close-ios-filled-70.png" />
+    <Content Include="assets\icons\icon-user-kiranshastry-gradient-70.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />

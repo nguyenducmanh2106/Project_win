@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDangNhapBLL.cs" />
+    <Compile Include="IUserBLL.cs" />
     <Compile Include="IBookBLL.cs" />
     <Compile Include="IBookReviewBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

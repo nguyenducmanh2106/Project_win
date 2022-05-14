@@ -16,9 +16,9 @@ namespace QLBANXE
         public MainScreen()
         {
             InitializeComponent();
-            var fullName = VariablesGlobal.Instance.UserLoginCurrent?.FullName;
+            var fullName = VariablesGlobal.Instance.UserLoginCurrent?.TENTK;
 
-            this.UserNameMenu.Text = fullName;
+            this.UserName.Text = fullName;
         }
 
         private void btn_QLSANPHAM_Click(object sender, EventArgs e)
@@ -61,26 +61,26 @@ namespace QLBANXE
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void listUserMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhMucTaiKhoan danhMucTaiKhoan = new DanhMucTaiKhoan();
+            danhMucTaiKhoan.Show();
+            this.Dispose(true);
+        }
+
+        private void UserLoginInfor_Click(object sender, EventArgs e)
+        {
+            UserLoginInfor userInfor = new UserLoginInfor();
+            userInfor.Show();
+            this.Dispose(true);
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
         {
             txtUsername login = new txtUsername();
             login.Show();
-            this.Hide();
-        }
-
-        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void UserNameMenu_Click(object sender, EventArgs e)
-        {
-
+            this.Dispose();
         }
     }
 }

@@ -18,6 +18,10 @@ namespace Core.Global
         /// </summary>
         public static VariablesGlobal Instance => Lazy.Value;
         public char[] ChartArray { get; set; }
+
+        /// <summary>
+        /// Thông tin user đang đăng nhập
+        /// </summary>
         public DangNhap UserLoginCurrent { get; set; }
     }
 }
