@@ -73,12 +73,19 @@
   <ItemGroup>
     <Compile Include="Constants\MessageConstants.cs" />
     <Compile Include="Constants\TypeDialogConstants.cs" />
+    <Compile Include="Global\VariablesGlobal.cs" />
     <Compile Include="JSONObjectReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dapper.Model\Dapper.Model.csproj">
+      <Project>{DF4D28F8-8EC5-436A-8ABA-AB52875DFCB3}</Project>
+      <Name>Dapper.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.4\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.4\build\System.Text.Json.targets')" />

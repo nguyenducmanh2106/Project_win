@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Global;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QLBANXE
         public MainScreen()
         {
             InitializeComponent();
+            var a = VariablesGlobal.Instance.UserLoginCurrent;
         }
 
         private void btn_QLSANPHAM_Click(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace QLBANXE
             txtUsername login = new txtUsername();
             login.Show();
             this.Hide();
+        }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

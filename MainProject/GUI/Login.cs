@@ -1,4 +1,5 @@
 ﻿using Core.Constants;
+using Core.Global;
 using Dapper.BLL;
 using System;
 using System.Collections.Generic;
@@ -28,15 +29,17 @@ namespace QLBANXE
             string userName = txtUser.Text;
             string password = txtPassword.Text;
             var obj = _dangNhapBLL.Login(userName, password);
+           
             if (obj != null)
             {
+                VariablesGlobal.Instance.UserLoginCurrent = obj;
                 MainScreen mainScreen = new MainScreen();
                 mainScreen.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show(MessageConstants.ErrorLoginMessage, TypeDialogConstants.NotificationTitle);
+                MessageBox.Show(MessageConstants.ErrorLoginMessage, TypeDialogConstants.ErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

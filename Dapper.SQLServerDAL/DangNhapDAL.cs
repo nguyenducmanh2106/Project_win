@@ -100,7 +100,8 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
-                string sqlQuery = JSONObject.GetQueryFromJSON($"SqlQuery/sql_query.json", nameof(DangNhap), methodCurrent);
+                //string sqlQuery = JSONObject.GetQueryFromJSON($"SqlCommand/sql_query.json", nameof(DangNhap), methodCurrent);
+                string sqlQuery = "Select * from DANGNHAP where TENDANGNHAP = @userName and MATKHAU = @passWord";
                 return Conn.Query<DangNhap>(sqlQuery, new { userName = userName, passWord= passWord })?.SingleOrDefault();
             }
         }

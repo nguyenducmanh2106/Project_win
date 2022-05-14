@@ -19,8 +19,12 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\System.Text.En
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\System.Text.Json.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\System.ValueTuple.xml
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.csproj.AssemblyReference.cache
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.dll
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\Dapper.Model.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\DapperExtensions.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\Dapper.Model.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\Core\bin\Debug\DapperExtensions.pdb
