@@ -23,5 +23,10 @@ namespace Core.Global
         /// Thông tin user đang đăng nhập
         /// </summary>
         public DangNhap UserLoginCurrent { get; set; }
+
+        /// <summary>
+        /// Mã hóa mã tự gen
+        /// </summary>
+        public string Code { get; set; }
     }
 }

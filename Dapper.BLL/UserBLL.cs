@@ -37,9 +37,9 @@ namespace Dapper.BLL
             return dal.Delete(id) > 0 ? true : false;
         }
 
-        public IList<DangNhap> GetBookList()
+        public IList<DangNhapGridView> GetList(CoreModel obj)
         {
-            return dal.GetList();
+            return dal.GetList(obj);
         }
 
         public DangNhap GetEntity(int id)

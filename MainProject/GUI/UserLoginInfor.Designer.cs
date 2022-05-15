@@ -128,6 +128,7 @@
             this.ClientSize = new System.Drawing.Size(998, 522);
             this.Controls.Add(this.panel1);
             this.Name = "UserLoginInfor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.panel1.ResumeLayout(false);

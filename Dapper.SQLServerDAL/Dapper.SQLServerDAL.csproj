@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NhaCungCapDAL.cs" />
+    <Compile Include="BaseDAL.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="BookDAL.cs" />
     <Compile Include="BookReviewDAL.cs" />

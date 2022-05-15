@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,11 +65,41 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
-    <Compile Include="GUI\DanhMucTaiKhoan.cs">
+    <Compile Include="GUI\NhaCungCap\NhaCungCapGrid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DanhMucTaiKhoan.Designer.cs">
+    <Compile Include="GUI\NhaCungCap\NhaCungCapGrid.Designer.cs">
+      <DependentUpon>NhaCungCapGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\NhaCungCapCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\NhaCungCapCreate.Designer.cs">
+      <DependentUpon>NhaCungCapCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\NhaCungCapUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaCungCap\NhaCungCapUpdate.Designer.cs">
+      <DependentUpon>NhaCungCapUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoan.Designer.cs">
       <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBoxUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBoxUpdate.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoanBoxUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FeaturesProduct.cs">
       <SubType>Form</SubType>
@@ -151,8 +184,23 @@
     <EmbeddedResource Include="GUI\BangGia.resx">
       <DependentUpon>BangGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DanhMucTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\NhaCungCap\NhaCungCapGrid.resx">
+      <DependentUpon>NhaCungCapGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaCungCap\NhaCungCapCreate.resx">
+      <DependentUpon>NhaCungCapCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaCungCap\NhaCungCapUpdate.resx">
+      <DependentUpon>NhaCungCapUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoan.resx">
       <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBoxUpdate.resx">
+      <DependentUpon>DanhMucTaiKhoanBoxUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.resx">
+      <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FeaturesProduct.resx">
       <DependentUpon>FeaturesProduct.cs</DependentUpon>
@@ -203,6 +251,7 @@
     <EmbeddedResource Include="GUI\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -224,6 +273,10 @@
     <Content Include="assets\icons\icon-remove-color-70.png" />
     <Content Include="assets\icons\icon-close-ios-filled-70.png" />
     <Content Include="assets\icons\icon-user-kiranshastry-gradient-70.png" />
+    <Content Include="assets\icons\icon-search-ios-70.png" />
+    <Content Include="assets\icons\icon-search-ios-filled-70.png" />
+    <Content Include="assets\icons\icon-refresh-soft-fill-70.png" />
+    <Content Include="assets\icons\icon-previous-material-outlined-70.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />

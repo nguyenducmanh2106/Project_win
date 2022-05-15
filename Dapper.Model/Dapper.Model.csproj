@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreModel.cs" />
     <Compile Include="DangNhap.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookReview.cs" />
+    <Compile Include="NhaCungCap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

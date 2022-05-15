@@ -82,5 +82,11 @@ namespace QLBANXE
             login.Show();
             this.Dispose();
         }
+
+        private void NhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new NhaCungCapList().Show();
+            this.Dispose(true);
+        }
     }
 }

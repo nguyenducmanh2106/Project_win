@@ -22,10 +22,10 @@ namespace Dapper.IDAL
 
         int Delete(int id);
 
-        IList<DangNhap> GetList();
+        IList<DangNhapGridView> GetList(CoreModel obj);
 
         /// <summary>
-        /// Book
+        /// DANGNHAP
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

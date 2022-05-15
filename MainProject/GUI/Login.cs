@@ -31,10 +31,17 @@ namespace QLBANXE
            
             if (obj != null)
             {
-                VariablesGlobal.Instance.UserLoginCurrent = obj;
-                MainScreen mainScreen = new MainScreen();
-                mainScreen.Show();
-                this.Hide();
+                if(obj.TRANGTHAI == 1)
+                {
+                    VariablesGlobal.Instance.UserLoginCurrent = obj;
+                    MainScreen mainScreen = new MainScreen();
+                    mainScreen.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    new ShowMessageBox().Warning("Tài khoản của bạn đã bị khóa!");
+                }
             }
             else
             {

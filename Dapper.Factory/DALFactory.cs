@@ -60,5 +60,17 @@ namespace Dapper.Factory
                 throw ex;
             }
         }
+        public static INhaCungCapDAL CreateNhaCungCapDAL()
+        {
+            try
+            {
+                string className = path + ".NhaCungCapDAL";
+                return (INhaCungCapDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -20,11 +20,12 @@ namespace Dapper.Model
 
         public string TENDANGNHAP { get; set; }
         public string MATKHAU { get; set; }
-        public string MATK { get; set; }// mã tài khoản
         public int? CAPTK { get; set; }// cấp tài khoản
         public int? TKCT { get; set; }// tài khoản cấp trên
         public string TENTK { get; set; }// họ tên
+        public int TRANGTHAI { get; set; }
 
+        public string TRANGTHAI_TEXT { get; set; }
         public string OldPassWord { get; set; }
 
         //public virtual List<BookReview> Reviews { get; set; }
@@ -33,6 +34,16 @@ namespace Dapper.Model
         //{
         //    return string.Format("[{0}]------《{1}》", Id, Name);
         //}
+    }
+
+    public class DangNhapGridView
+    {
+        public int ID { get; set; }
+        public string TENDANGNHAP { get; set; }
+        public int? CAPTK { get; set; }// cấp tài khoản
+        public string TENTK { get; set; }// họ tên
+        public string TRANGTHAI_TEXT { get; set; }
+        public int TRANGTHAI { get; set; }
     }
 
     //public class BookMapper : ClassMapper<Book>

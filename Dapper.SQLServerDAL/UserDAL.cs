@@ -37,9 +37,8 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
-                string sqlQuery = JSONObject.GetQueryFromJSON($"SqlQuery/sql_query.json", nameof(DangNhap), methodCurrent);
-                return Conn.Execute(sqlQuery, model);
+                string sqlQuery = "INSERT INTO DANGNHAP(TENDANGNHAP,TENTK,MATKHAU,CAPTK,TRANGTHAI) VALUES (@TENDANGNHAP,@TENTK,@MATKHAU,@CAPTK,@TRANGTHAI)";
+                return Conn.Execute(sqlQuery, new { TENDANGNHAP = model.TENDANGNHAP, TENTK = model.TENTK, MATKHAU = model.MATKHAU, CAPTK = model.CAPTK, TRANGTHAI = model.TRANGTHAI });
             }
         }
 
@@ -47,9 +46,8 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
-                string sqlQuery = JSONObject.GetQueryFromJSON($"SqlQuery/sql_query.json", nameof(DangNhap), methodCurrent);
-                return Conn.Execute(sqlQuery, model);
+                string sqlQuery = "UPDATE DANGNHAP SET TENTK = @TENTK,CAPTK=@CAPTK,TRANGTHAI = @TRANGTHAI where TENDANGNHAP = @TENDANGNHAP";
+                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK,CAPTK = model.CAPTK,TRANGTHAI = model.TRANGTHAI, TENDANGNHAP = model.TENDANGNHAP });
             }
         }
 
@@ -67,19 +65,23 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
-                string sqlQuery = JSONObject.GetQueryFromJSON($"SqlQuery/sql_query.json", nameof(DangNhap), methodCurrent);
-                return Conn.Execute(sqlQuery, new { id = id });
+                string sqlQuery = "DELETE FROM DANGNHAP WHERE ID = @ID";
+                return Conn.Execute(sqlQuery, new { ID = id });
             }
         }
 
-        public IList<DangNhap> GetList()
+        public IList<DangNhapGridView> GetList(CoreModel obj)
         {
             using (Conn)
             {
-                string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
-                string sqlQuery = JSONObject.GetQueryFromJSON($"SqlQuery/sql_query.json", nameof(DangNhap), methodCurrent);
-                return Conn.Query<DangNhap>(sqlQuery).ToList();
+                var param = obj.CustomData;
+                DynamicParameters dynamicParameters = new DynamicParameters();
+                foreach(var item in param)
+                {
+                    dynamicParameters.Add(item.Key, item.Value);
+                }
+                string sqlQuery = "sp_DanhMucTaiKhoan_Grid";
+                return Conn.Query<DangNhapGridView>(sqlQuery, dynamicParameters,null,true,null,CommandType.StoredProcedure).ToList();
             }
         }
 
@@ -102,7 +104,7 @@ namespace Dapper.SQLServerDAL
                 string methodCurrent = new StackTrace().GetFrame(1).GetMethod().Name;
                 //string sqlQuery = JSONObject.GetQueryFromJSON($"SqlCommand/sql_query.json", nameof(DangNhap), methodCurrent);
                 string sqlQuery = "Select * from DANGNHAP where TENDANGNHAP = @userName and MATKHAU = @passWord";
-                return Conn.Query<DangNhap>(sqlQuery, new { userName = userName, passWord= passWord })?.SingleOrDefault();
+                return Conn.Query<DangNhap>(sqlQuery, new { userName = userName, passWord = passWord })?.SingleOrDefault();
             }
         }
 
@@ -116,7 +118,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "UPDATE DANGNHAP set TENTK = @TENTK WHERE ID = @ID";
-                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK ,ID = model.ID});
+                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK, ID = model.ID });
             }
         }
 

@@ -103,9 +103,49 @@ namespace QLBANXE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_previous_material_outlined_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-previous-material-outlined-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_refresh_soft_fill_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-refresh-soft-fill-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_remove_color_70 {
             get {
                 object obj = ResourceManager.GetObject("icon-remove-color-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_search_ios_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-search-ios-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_search_ios_filled_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-search-ios-filled-70", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
