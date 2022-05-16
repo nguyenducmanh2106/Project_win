@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.IDAL

@@ -9,13 +9,13 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.Factory
 {
     /// <summary>
-    /// Connection工厂用于实例化对应的IDbConnection对象，传递给Dapper。
+    /// Connection
     /// </summary>
     public class ConnectionFactory
     {

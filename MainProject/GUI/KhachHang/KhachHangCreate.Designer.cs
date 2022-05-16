@@ -36,14 +36,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TENKH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.SDT = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.EMAIL = new System.Windows.Forms.TextBox();
-            this.MST = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.NGAYDANGKY = new System.Windows.Forms.DateTimePicker();
+            this.SDT = new System.Windows.Forms.MaskedTextBox();
+            this.MST = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // CodeLabel
@@ -112,13 +112,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "SĐT";
             // 
-            // SDT
-            // 
-            this.SDT.Location = new System.Drawing.Point(224, 158);
-            this.SDT.Name = "SDT";
-            this.SDT.Size = new System.Drawing.Size(200, 20);
-            this.SDT.TabIndex = 11;
-            // 
             // BackButton
             // 
             this.BackButton.Location = new System.Drawing.Point(181, 319);
@@ -145,13 +138,6 @@
             this.EMAIL.Name = "EMAIL";
             this.EMAIL.Size = new System.Drawing.Size(200, 20);
             this.EMAIL.TabIndex = 15;
-            // 
-            // MST
-            // 
-            this.MST.Location = new System.Drawing.Point(224, 236);
-            this.MST.Name = "MST";
-            this.MST.Size = new System.Drawing.Size(200, 20);
-            this.MST.TabIndex = 17;
             // 
             // label3
             // 
@@ -180,19 +166,35 @@
             this.NGAYDANGKY.Size = new System.Drawing.Size(200, 20);
             this.NGAYDANGKY.TabIndex = 19;
             // 
+            // SDT
+            // 
+            this.SDT.Location = new System.Drawing.Point(224, 157);
+            this.SDT.Mask = "0000000000";
+            this.SDT.Name = "SDT";
+            this.SDT.Size = new System.Drawing.Size(200, 20);
+            this.SDT.TabIndex = 20;
+            // 
+            // MST
+            // 
+            this.MST.Location = new System.Drawing.Point(224, 236);
+            this.MST.Mask = "0000000000";
+            this.MST.Name = "MST";
+            this.MST.Size = new System.Drawing.Size(200, 20);
+            this.MST.TabIndex = 21;
+            // 
             // KhachHangCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
+            this.Controls.Add(this.MST);
+            this.Controls.Add(this.SDT);
             this.Controls.Add(this.NGAYDANGKY);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.MST);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.SDT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TENKH);
             this.Controls.Add(this.label4);
@@ -220,13 +222,13 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox TENKH;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox SDT;
         public System.Windows.Forms.Button BackButton;
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.TextBox EMAIL;
-        public System.Windows.Forms.TextBox MST;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker NGAYDANGKY;
+        public System.Windows.Forms.DateTimePicker NGAYDANGKY;
+        public System.Windows.Forms.MaskedTextBox SDT;
+        public System.Windows.Forms.MaskedTextBox MST;
     }
 }

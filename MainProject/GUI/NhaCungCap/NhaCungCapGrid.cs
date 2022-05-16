@@ -142,7 +142,7 @@ namespace QLBANXE
                 return;
             }
             string name = recordEdit.TENNCC;
-            if (Show("Xóa tài khoản", name) == DialogResult.OK)
+            if (Show("Xóa nhà cung cấp", name) == DialogResult.OK)
             {
                 var result = bll.Delete(recordEdit.ID);
                 if (result)

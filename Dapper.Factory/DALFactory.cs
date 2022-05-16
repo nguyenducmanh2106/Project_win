@@ -7,13 +7,13 @@ using System.Reflection;
 using System.Text;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.Factory
 {
     /// <summary>
-    /// DAL工厂，读取App.config的配置文件实例化相应的DAL对象
+    /// DAL factory，đọc key trong App.config
     /// </summary>
     public class DALFactory
     {
@@ -79,6 +79,19 @@ namespace Dapper.Factory
             {
                 string className = path + ".KhachHangDAL";
                 return (IKhachHangDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static IHangHoaDAL CreateHangHoaDAL()
+        {
+            try
+            {
+                string className = path + ".HangHoaDAL";
+                return (IHangHoaDAL)Assembly.Load(path).CreateInstance(className);
             }
             catch (Exception ex)
             {

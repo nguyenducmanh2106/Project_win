@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            this.btn_QLSANPHAM = new System.Windows.Forms.Button();
-            this.btn_HANG_TON = new System.Windows.Forms.Button();
-            this.btn_HOA_DON = new System.Windows.Forms.Button();
-            this.btn_THONG_KE = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saoLưuDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +38,7 @@
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuGiảmGiáDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HangHoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đốiTácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NhaCungCapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KhachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,52 +62,6 @@
             this.panel1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_QLSANPHAM
-            // 
-            this.btn_QLSANPHAM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QLSANPHAM.Location = new System.Drawing.Point(92, 52);
-            this.btn_QLSANPHAM.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_QLSANPHAM.Name = "btn_QLSANPHAM";
-            this.btn_QLSANPHAM.Size = new System.Drawing.Size(187, 84);
-            this.btn_QLSANPHAM.TabIndex = 0;
-            this.btn_QLSANPHAM.Text = "QUẢN LÝ SẢN PHẨM";
-            this.btn_QLSANPHAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_QLSANPHAM.UseVisualStyleBackColor = true;
-            this.btn_QLSANPHAM.Click += new System.EventHandler(this.btn_QLSANPHAM_Click);
-            // 
-            // btn_HANG_TON
-            // 
-            this.btn_HANG_TON.Location = new System.Drawing.Point(92, 290);
-            this.btn_HANG_TON.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_HANG_TON.Name = "btn_HANG_TON";
-            this.btn_HANG_TON.Size = new System.Drawing.Size(187, 84);
-            this.btn_HANG_TON.TabIndex = 2;
-            this.btn_HANG_TON.Text = "QUẢN LÝ HÀNG TỒN";
-            this.btn_HANG_TON.UseVisualStyleBackColor = true;
-            this.btn_HANG_TON.Click += new System.EventHandler(this.btn_HANG_TON_Click);
-            // 
-            // btn_HOA_DON
-            // 
-            this.btn_HOA_DON.Location = new System.Drawing.Point(406, 52);
-            this.btn_HOA_DON.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_HOA_DON.Name = "btn_HOA_DON";
-            this.btn_HOA_DON.Size = new System.Drawing.Size(192, 84);
-            this.btn_HOA_DON.TabIndex = 4;
-            this.btn_HOA_DON.Text = "QUẢN LÝ HÓA ĐƠN";
-            this.btn_HOA_DON.UseVisualStyleBackColor = true;
-            this.btn_HOA_DON.Click += new System.EventHandler(this.btn_HOA_DON_Click);
-            // 
-            // btn_THONG_KE
-            // 
-            this.btn_THONG_KE.Location = new System.Drawing.Point(406, 178);
-            this.btn_THONG_KE.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_THONG_KE.Name = "btn_THONG_KE";
-            this.btn_THONG_KE.Size = new System.Drawing.Size(192, 82);
-            this.btn_THONG_KE.TabIndex = 5;
-            this.btn_THONG_KE.Text = "THỐNG KÊ";
-            this.btn_THONG_KE.UseVisualStyleBackColor = true;
-            this.btn_THONG_KE.Click += new System.EventHandler(this.btn_THONG_KE_Click);
             // 
             // menuStrip1
             // 
@@ -183,16 +133,17 @@
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hàngHóaToolStripMenuItem});
+            this.HangHoaToolStripMenuItem});
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
             this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm";
             // 
-            // hàngHóaToolStripMenuItem
+            // HangHoaToolStripMenuItem
             // 
-            this.hàngHóaToolStripMenuItem.Name = "hàngHóaToolStripMenuItem";
-            this.hàngHóaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.hàngHóaToolStripMenuItem.Text = "Hàng hóa";
+            this.HangHoaToolStripMenuItem.Name = "HangHoaToolStripMenuItem";
+            this.HangHoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.HangHoaToolStripMenuItem.Text = "Hàng hóa";
+            this.HangHoaToolStripMenuItem.Click += new System.EventHandler(this.HangHoaToolStripMenuItem_Click);
             // 
             // đốiTácToolStripMenuItem
             // 
@@ -264,13 +215,13 @@
             // sổCáiTàiKhoảnToolStripMenuItem
             // 
             this.sổCáiTàiKhoảnToolStripMenuItem.Name = "sổCáiTàiKhoảnToolStripMenuItem";
-            this.sổCáiTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.sổCáiTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sổCáiTàiKhoảnToolStripMenuItem.Text = "Sổ cái tài khoản";
             // 
             // sổChiTiếtTàiKhoảnToolStripMenuItem
             // 
             this.sổChiTiếtTàiKhoảnToolStripMenuItem.Name = "sổChiTiếtTàiKhoảnToolStripMenuItem";
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sổChiTiếtTàiKhoảnToolStripMenuItem.Text = "Sổ chi tiết tài khoản";
             // 
             // trợGiúpToolStripMenuItem
@@ -329,7 +280,7 @@
             // 
             this.UserLoginInfor.Name = "UserLoginInfor";
             this.UserLoginInfor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserLoginInfor.Size = new System.Drawing.Size(128, 22);
+            this.UserLoginInfor.Size = new System.Drawing.Size(180, 22);
             this.UserLoginInfor.Text = "Tài khoản";
             this.UserLoginInfor.Click += new System.EventHandler(this.UserLoginInfor_Click);
             // 
@@ -337,7 +288,7 @@
             // 
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LogOutButton.Size = new System.Drawing.Size(128, 22);
+            this.LogOutButton.Size = new System.Drawing.Size(180, 22);
             this.LogOutButton.Text = "Đăng xuất";
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
@@ -346,12 +297,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 625);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_THONG_KE);
-            this.Controls.Add(this.btn_HOA_DON);
-            this.Controls.Add(this.btn_HANG_TON);
-            this.Controls.Add(this.btn_QLSANPHAM);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -375,11 +323,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_QLSANPHAM;
-        private System.Windows.Forms.Button btn_HANG_TON;
-        private System.Windows.Forms.Button btn_HOA_DON;
-        private System.Windows.Forms.Button btn_THONG_KE;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giaoDịchToolStripMenuItem;
@@ -398,7 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem LogOutButton;
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuGiảmGiáDịchVụToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hàngHóaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HangHoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem NhaCungCapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem KhachHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuTheoKháchHàngToolStripMenuItem;

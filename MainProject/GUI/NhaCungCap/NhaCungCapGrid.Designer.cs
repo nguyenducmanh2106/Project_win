@@ -107,9 +107,10 @@
             this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputSearch.Location = new System.Drawing.Point(600, 63);
+            this.inputSearch.Location = new System.Drawing.Point(539, 70);
+            this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
-            this.inputSearch.Size = new System.Drawing.Size(175, 20);
+            this.inputSearch.Size = new System.Drawing.Size(249, 21);
             this.inputSearch.TabIndex = 2;
             // 
             // gridView
@@ -125,9 +126,10 @@
             this.EMAIL,
             this.NGUNGHOPTAC,
             this.ID});
-            this.gridView.Location = new System.Drawing.Point(27, 108);
+            this.gridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridView.Location = new System.Drawing.Point(0, 106);
             this.gridView.Name = "gridView";
-            this.gridView.Size = new System.Drawing.Size(748, 174);
+            this.gridView.Size = new System.Drawing.Size(800, 344);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             // 
@@ -187,14 +189,14 @@
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(573, 61);
+            this.SearchButton.Location = new System.Drawing.Point(512, 68);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(28, 22);
+            this.SearchButton.Size = new System.Drawing.Size(28, 24);
             this.SearchButton.TabIndex = 3;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // Frame
+            // NhaCungCapList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,9 +206,9 @@
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
-            this.Name = "Frame";
+            this.Name = "NhaCungCapList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh mục tài khoản";
+            this.Text = "Nhà cung cấp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.Frame_Load);
             this.menuStrip1.ResumeLayout(false);

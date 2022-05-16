@@ -8,7 +8,7 @@ using Dapper.Factory;
 using Dapper.IDAL;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.BLL

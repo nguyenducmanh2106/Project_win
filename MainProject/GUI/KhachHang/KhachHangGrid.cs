@@ -144,7 +144,7 @@ namespace QLBANXE
                 return;
             }
             string name = recordEdit.TENKH;
-            if (Show("Xóa tài khoản", name) == DialogResult.OK)
+            if (Show("Xóa khách hàng", name) == DialogResult.OK)
             {
                 var result = bll.Delete(recordEdit.ID);
                 if (result)

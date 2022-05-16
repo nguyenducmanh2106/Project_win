@@ -78,13 +78,19 @@ namespace QLBANXE
 
         private void NhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new KhachHangList().Show();
+            new NhaCungCapList().Show();
             this.Dispose(true);
         }
 
         private void KhachHangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new KhachHangList().Show();
+            this.Dispose(true);
+        }
+
+        private void HangHoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new HangHoaList().Show();
             this.Dispose(true);
         }
     }

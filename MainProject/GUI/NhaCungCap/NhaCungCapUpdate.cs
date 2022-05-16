@@ -44,6 +44,11 @@ namespace QLBANXE
                         new ShowMessageBox().Error("Chưa đúng định dạng email");
                         return;
                     }
+                    if (!CustomValidate.IsPhoneNumber(this.SDT.Text))
+                    {
+                        new ShowMessageBox().Error("Chưa đúng định dạng số điện thoại");
+                        return;
+                    }
                     NhaCungCap model = new NhaCungCap()
                     {
                         ID = Convert.ToInt32(this.ID.Text),

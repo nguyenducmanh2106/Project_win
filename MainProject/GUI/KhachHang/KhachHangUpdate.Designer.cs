@@ -36,15 +36,15 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.DIACHI = new System.Windows.Forms.TextBox();
-            this.SDT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.EMAIL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.MST = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.NGAYDANGKY = new System.Windows.Forms.DateTimePicker();
+            this.SDT = new System.Windows.Forms.MaskedTextBox();
+            this.MST = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // MATKLabel
@@ -115,13 +115,6 @@
             this.DIACHI.Size = new System.Drawing.Size(200, 20);
             this.DIACHI.TabIndex = 15;
             // 
-            // SDT
-            // 
-            this.SDT.Location = new System.Drawing.Point(224, 153);
-            this.SDT.Name = "SDT";
-            this.SDT.Size = new System.Drawing.Size(200, 20);
-            this.SDT.TabIndex = 17;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -165,13 +158,6 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Mã số thuế";
             // 
-            // MST
-            // 
-            this.MST.Location = new System.Drawing.Point(224, 228);
-            this.MST.Name = "MST";
-            this.MST.Size = new System.Drawing.Size(200, 20);
-            this.MST.TabIndex = 22;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -190,19 +176,35 @@
             this.NGAYDANGKY.Size = new System.Drawing.Size(200, 20);
             this.NGAYDANGKY.TabIndex = 24;
             // 
+            // SDT
+            // 
+            this.SDT.Location = new System.Drawing.Point(224, 152);
+            this.SDT.Mask = "0000000000";
+            this.SDT.Name = "SDT";
+            this.SDT.Size = new System.Drawing.Size(200, 20);
+            this.SDT.TabIndex = 25;
+            // 
+            // MST
+            // 
+            this.MST.Location = new System.Drawing.Point(224, 224);
+            this.MST.Mask = "0000000000";
+            this.MST.Name = "MST";
+            this.MST.Size = new System.Drawing.Size(200, 20);
+            this.MST.TabIndex = 26;
+            // 
             // KhachHangUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
+            this.Controls.Add(this.MST);
+            this.Controls.Add(this.SDT);
             this.Controls.Add(this.NGAYDANGKY);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.MST);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.SDT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DIACHI);
             this.Controls.Add(this.SaveButton);
@@ -231,14 +233,14 @@
         public System.Windows.Forms.Button BackButton;
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.TextBox DIACHI;
-        public System.Windows.Forms.TextBox SDT;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox EMAIL;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label ID;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox MST;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.DateTimePicker NGAYDANGKY;
+        public System.Windows.Forms.MaskedTextBox SDT;
+        public System.Windows.Forms.MaskedTextBox MST;
     }
 }

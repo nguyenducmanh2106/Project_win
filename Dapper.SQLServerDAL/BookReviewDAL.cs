@@ -9,7 +9,7 @@ using System.Data;
 using Dapper.Model;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.SQLServerDAL

@@ -37,11 +37,11 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.NGUNGHOPTAC = new System.Windows.Forms.CheckBox();
             this.DIACHI = new System.Windows.Forms.TextBox();
-            this.SDT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.EMAIL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
+            this.SDT = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // MATKLabel
@@ -57,7 +57,7 @@
             // 
             this.MANCC.Location = new System.Drawing.Point(224, 41);
             this.MANCC.Name = "MANCC";
-            this.MANCC.Size = new System.Drawing.Size(121, 20);
+            this.MANCC.Size = new System.Drawing.Size(200, 20);
             this.MANCC.TabIndex = 1;
             // 
             // label1
@@ -82,7 +82,7 @@
             // 
             this.TENNCC.Location = new System.Drawing.Point(224, 84);
             this.TENNCC.Name = "TENNCC";
-            this.TENNCC.Size = new System.Drawing.Size(121, 20);
+            this.TENNCC.Size = new System.Drawing.Size(200, 20);
             this.TENNCC.TabIndex = 9;
             // 
             // BackButton
@@ -119,15 +119,8 @@
             // 
             this.DIACHI.Location = new System.Drawing.Point(224, 139);
             this.DIACHI.Name = "DIACHI";
-            this.DIACHI.Size = new System.Drawing.Size(121, 20);
+            this.DIACHI.Size = new System.Drawing.Size(200, 20);
             this.DIACHI.TabIndex = 15;
-            // 
-            // SDT
-            // 
-            this.SDT.Location = new System.Drawing.Point(224, 183);
-            this.SDT.Name = "SDT";
-            this.SDT.Size = new System.Drawing.Size(121, 20);
-            this.SDT.TabIndex = 17;
             // 
             // label2
             // 
@@ -142,7 +135,7 @@
             // 
             this.EMAIL.Location = new System.Drawing.Point(224, 224);
             this.EMAIL.Name = "EMAIL";
-            this.EMAIL.Size = new System.Drawing.Size(121, 20);
+            this.EMAIL.Size = new System.Drawing.Size(200, 20);
             this.EMAIL.TabIndex = 19;
             // 
             // label3
@@ -163,15 +156,23 @@
             this.ID.TabIndex = 20;
             this.ID.Visible = false;
             // 
+            // SDT
+            // 
+            this.SDT.Location = new System.Drawing.Point(224, 186);
+            this.SDT.Mask = "0000000000";
+            this.SDT.Name = "SDT";
+            this.SDT.Size = new System.Drawing.Size(200, 20);
+            this.SDT.TabIndex = 26;
+            // 
             // NhaCungCapUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
+            this.Controls.Add(this.SDT);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.SDT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DIACHI);
             this.Controls.Add(this.NGUNGHOPTAC);
@@ -202,10 +203,10 @@
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.CheckBox NGUNGHOPTAC;
         public System.Windows.Forms.TextBox DIACHI;
-        public System.Windows.Forms.TextBox SDT;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox EMAIL;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label ID;
+        public System.Windows.Forms.MaskedTextBox SDT;
     }
 }

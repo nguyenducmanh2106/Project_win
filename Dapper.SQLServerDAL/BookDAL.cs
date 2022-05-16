@@ -11,7 +11,7 @@ using DapperExtensions;
 using DapperExtensions.Mapper;
 
 /*
- * create by Mao Qingyu 
+ * create by
  */
 
 namespace Dapper.SQLServerDAL
