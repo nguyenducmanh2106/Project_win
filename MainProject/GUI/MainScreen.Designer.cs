@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.btn_QLSANPHAM = new System.Windows.Forms.Button();
-            this.btn_KHACH_HANG = new System.Windows.Forms.Button();
             this.btn_HANG_TON = new System.Windows.Forms.Button();
             this.btn_HOA_DON = new System.Windows.Forms.Button();
             this.btn_THONG_KE = new System.Windows.Forms.Button();
@@ -46,7 +45,7 @@
             this.hàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đốiTácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NhaCungCapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KhachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDoanhThuTheoKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDoanhThuTheoHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,17 +79,6 @@
             this.btn_QLSANPHAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_QLSANPHAM.UseVisualStyleBackColor = true;
             this.btn_QLSANPHAM.Click += new System.EventHandler(this.btn_QLSANPHAM_Click);
-            // 
-            // btn_KHACH_HANG
-            // 
-            this.btn_KHACH_HANG.Location = new System.Drawing.Point(92, 178);
-            this.btn_KHACH_HANG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_KHACH_HANG.Name = "btn_KHACH_HANG";
-            this.btn_KHACH_HANG.Size = new System.Drawing.Size(187, 82);
-            this.btn_KHACH_HANG.TabIndex = 1;
-            this.btn_KHACH_HANG.Text = "QUẢN LÝ KHÁCH HÀNG";
-            this.btn_KHACH_HANG.UseVisualStyleBackColor = true;
-            this.btn_KHACH_HANG.Click += new System.EventHandler(this.btn_KHACH_HANG_Click);
             // 
             // btn_HANG_TON
             // 
@@ -203,14 +191,14 @@
             // hàngHóaToolStripMenuItem
             // 
             this.hàngHóaToolStripMenuItem.Name = "hàngHóaToolStripMenuItem";
-            this.hàngHóaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hàngHóaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.hàngHóaToolStripMenuItem.Text = "Hàng hóa";
             // 
             // đốiTácToolStripMenuItem
             // 
             this.đốiTácToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NhaCungCapToolStripMenuItem,
-            this.kháchHàngToolStripMenuItem});
+            this.KhachHangToolStripMenuItem});
             this.đốiTácToolStripMenuItem.Name = "đốiTácToolStripMenuItem";
             this.đốiTácToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.đốiTácToolStripMenuItem.Text = "Đối tác";
@@ -222,11 +210,12 @@
             this.NhaCungCapToolStripMenuItem.Text = "Nhà cung cấp";
             this.NhaCungCapToolStripMenuItem.Click += new System.EventHandler(this.NhaCungCapToolStripMenuItem_Click);
             // 
-            // kháchHàngToolStripMenuItem
+            // KhachHangToolStripMenuItem
             // 
-            this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            this.KhachHangToolStripMenuItem.Name = "KhachHangToolStripMenuItem";
+            this.KhachHangToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.KhachHangToolStripMenuItem.Text = "Khách hàng";
+            this.KhachHangToolStripMenuItem.Click += new System.EventHandler(this.KhachHangToolStripMenuItem_Click);
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -362,7 +351,6 @@
             this.Controls.Add(this.btn_THONG_KE);
             this.Controls.Add(this.btn_HOA_DON);
             this.Controls.Add(this.btn_HANG_TON);
-            this.Controls.Add(this.btn_KHACH_HANG);
             this.Controls.Add(this.btn_QLSANPHAM);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,7 +377,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_QLSANPHAM;
-        private System.Windows.Forms.Button btn_KHACH_HANG;
         private System.Windows.Forms.Button btn_HANG_TON;
         private System.Windows.Forms.Button btn_HOA_DON;
         private System.Windows.Forms.Button btn_THONG_KE;
@@ -413,7 +400,7 @@
         private System.Windows.Forms.ToolStripMenuItem phiếuGiảmGiáDịchVụToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hàngHóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem NhaCungCapToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem KhachHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuTheoKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuTheoHàngHóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoGiảmTrừDoanhThuHàngHóaToolStripMenuItem;

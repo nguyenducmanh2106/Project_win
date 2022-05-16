@@ -72,5 +72,18 @@ namespace Dapper.Factory
                 throw ex;
             }
         }
+
+        public static IKhachHangDAL CreateKhachHangDAL()
+        {
+            try
+            {
+                string className = path + ".KhachHangDAL";
+                return (IKhachHangDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

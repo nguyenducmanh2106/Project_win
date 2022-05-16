@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.EMAIL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MATKLabel
@@ -153,11 +154,21 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Email";
             // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Location = new System.Drawing.Point(137, 129);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(0, 13);
+            this.ID.TabIndex = 20;
+            this.ID.Visible = false;
+            // 
             // NhaCungCapUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SDT);
@@ -195,5 +206,6 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox EMAIL;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label ID;
     }
 }

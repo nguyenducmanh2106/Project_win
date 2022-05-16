@@ -37,7 +37,7 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "INSERT INTO NHACUNGCAP(MANCC,TENNCC,DIACHI,SDT,EMAIL,NGUNGHOPTAC) VALUES (@MANCC,@TENNCC,@DIACHI,@SDT,@EMAIL,@NGUNGHOPTAC)";
+                string sqlQuery = "INSERT INTO NCC(MANCC,TENNCC,DIACHI,SDT,EMAIL,NGUNGHOPTAC) VALUES (@MANCC,@TENNCC,@DIACHI,@SDT,@EMAIL,@NGUNGHOPTAC)";
                 return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL,NGUNGHOPTAC = model.NGUNGHOPTAC });
             }
         }
@@ -46,8 +46,8 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "UPDATE DANGNHAP SET TENTK = @TENTK,CAPTK=@CAPTK,TRANGTHAI = @TRANGTHAI where TENDANGNHAP = @TENDANGNHAP";
-                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL, NGUNGHOPTAC = model.NGUNGHOPTAC });
+                string sqlQuery = "UPDATE NCC SET MANCC = @MANCC,TENNCC=@TENNCC,DIACHI = @DIACHI,SDT = @SDT,EMAIL=@EMAIL,NGUNGHOPTAC=@NGUNGHOPTAC where ID = @ID";
+                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL, NGUNGHOPTAC = model.NGUNGHOPTAC,ID = model.ID });
             }
         }
 
@@ -65,7 +65,7 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "DELETE FROM DANGNHAP WHERE ID = @ID";
+                string sqlQuery = "DELETE FROM NCC WHERE ID = @ID";
                 return Conn.Execute(sqlQuery, new { ID = id });
             }
         }

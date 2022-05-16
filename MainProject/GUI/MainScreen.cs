@@ -28,13 +28,6 @@ namespace QLBANXE
             this.Hide();
         }
 
-        private void btn_KHACH_HANG_Click(object sender, EventArgs e)
-        {
-            KhachHang khachHang = new KhachHang();
-            khachHang.Show();
-            this.Hide();
-        }
-
         private void btn_HANG_TON_Click(object sender, EventArgs e)
         {
             HangTon hangTon = new HangTon();
@@ -85,7 +78,13 @@ namespace QLBANXE
 
         private void NhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new NhaCungCapList().Show();
+            new KhachHangList().Show();
+            this.Dispose(true);
+        }
+
+        private void KhachHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new KhachHangList().Show();
             this.Dispose(true);
         }
     }

@@ -40,9 +40,9 @@ namespace QLBANXE
 
         private void btn_NHACC_Click(object sender, EventArgs e)
         {
-            NHACC nHACC = new NHACC();
-            nHACC.Show();
-            this.Hide();
+            //NHACC nHACC = new NHACC();
+            //nHACC.Show();
+            //this.Hide();
         }
 
         private void btn_BANG_GIA_Click(object sender, EventArgs e)

@@ -56,7 +56,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(396, 114);
+            this.BackButton.Location = new System.Drawing.Point(359, 158);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(98, 36);
             this.BackButton.TabIndex = 7;
@@ -66,7 +66,7 @@
             // 
             // ChangePassWord
             // 
-            this.ChangePassWord.Location = new System.Drawing.Point(263, 114);
+            this.ChangePassWord.Location = new System.Drawing.Point(242, 158);
             this.ChangePassWord.Name = "ChangePassWord";
             this.ChangePassWord.Size = new System.Drawing.Size(98, 36);
             this.ChangePassWord.TabIndex = 6;
@@ -76,7 +76,7 @@
             // 
             // UpdateUserLogin
             // 
-            this.UpdateUserLogin.Location = new System.Drawing.Point(127, 114);
+            this.UpdateUserLogin.Location = new System.Drawing.Point(127, 158);
             this.UpdateUserLogin.Name = "UpdateUserLogin";
             this.UpdateUserLogin.Size = new System.Drawing.Size(98, 36);
             this.UpdateUserLogin.TabIndex = 5;

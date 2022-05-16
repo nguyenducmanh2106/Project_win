@@ -1,5 +1,6 @@
 ﻿using Core.Constants;
 using Core.Global;
+using Core.Utils;
 using Dapper.BLL;
 using Dapper.Model;
 using System;
@@ -39,6 +40,11 @@ namespace QLBANXE
                 }
                 else
                 {
+                    if (!CustomValidate.IsValidEmail(this.EMAIL.Text))
+                    {
+                        new ShowMessageBox().Error("Chưa đúng định dạng email");
+                        return;
+                    }
                     NhaCungCap model = new NhaCungCap()
                     {
                         MANCC = this.MANCC.Text,

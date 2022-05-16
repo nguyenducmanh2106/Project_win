@@ -114,8 +114,8 @@ namespace QLBANXE
             userNameLabel.SetBounds(9, 20, 20, 13);
             userNameTextBox.SetBounds(145, 20, 200, 20);
 
-            buttonOk.SetBounds(228, 122, 75, 23);
-            buttonCancel.SetBounds(309, 122, 75, 23);
+            buttonOk.SetBounds(228, 150, 75, 23);
+            buttonCancel.SetBounds(309, 150, 75, 23);
 
             userNameLabel.AutoSize = true;
             userNameTextBox.Anchor = userNameTextBox.Anchor | AnchorStyles.Right;

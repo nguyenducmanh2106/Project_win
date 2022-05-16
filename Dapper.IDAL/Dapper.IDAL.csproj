@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IKhachHangDAL.cs" />
     <Compile Include="INhaCungCapDAL.cs" />
     <Compile Include="IBaseDAL.cs" />
     <Compile Include="IUserDAL.cs" />

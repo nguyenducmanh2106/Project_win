@@ -1,4 +1,5 @@
-﻿using Core.Global;
+﻿using Core.Constants;
+using Core.Global;
 using Dapper.BLL;
 using Dapper.Model;
 using Newtonsoft.Json;
@@ -35,17 +36,6 @@ namespace QLBANXE
             this.Dispose(true);
         }
 
-        private void DanhMucTaiKhoan_Load(object sender, EventArgs e)
-        {
-            CoreModel obj = new CoreModel();
-            obj.CustomData = new Dictionary<string, object>();
-            obj.CustomData.Add("TextSearch", this.inputSearch.Text);
-            var data = bll.GetList(obj);
-            gridView.DataSource = data;
-            //cbbMaSP.DataSource = bll.getMaSP();
-            //cbbMaSP.DisplayMember = "MaSP";
-            //cbbMaSP.ValueMember = "MaSP";
-        }
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
@@ -68,6 +58,7 @@ namespace QLBANXE
             frame.SDT.Text = recordEdit.SDT;
             frame.EMAIL.Text = recordEdit.EMAIL;
             frame.NGUNGHOPTAC.Checked = Convert.ToBoolean(recordEdit.NGUNGHOPTAC);
+            frame.ID.Text = recordEdit.ID.ToString();
             frame.Show();
         }
 
@@ -76,7 +67,7 @@ namespace QLBANXE
         {
             this.inputSearch.Text = null;
             recordEdit = null;
-            DanhMucTaiKhoan_Load(sender, e);
+            Frame_Load(sender, e);
         }
 
         private void CellClick(object sender, DataGridViewCellEventArgs e)
@@ -92,7 +83,7 @@ namespace QLBANXE
             recordEdit.ID = Convert.ToInt32(gridView.Rows[index].Cells["ID"].Value);
         }
 
-        private DialogResult Show(string title, string userName)
+        private DialogResult Show(string title, string name)
         {
             Form form = new Form();
             Label userNameLabel = new Label();
@@ -102,7 +93,7 @@ namespace QLBANXE
             Button buttonCancel = new Button();
 
             form.Text = title;
-            userNameLabel.Text = $"Bạn có muốn xóa: {userName} ?";
+            userNameLabel.Text = $"Bạn có muốn xóa: {name} ?";
 
             userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -115,8 +106,8 @@ namespace QLBANXE
             userNameLabel.SetBounds(9, 20, 20, 13);
             userNameTextBox.SetBounds(145, 20, 200, 20);
 
-            buttonOk.SetBounds(228, 222, 75, 23);
-            buttonCancel.SetBounds(309, 222, 75, 23);
+            buttonOk.SetBounds(228, 150, 75, 23);
+            buttonCancel.SetBounds(309, 150, 75, 23);
 
             userNameLabel.AutoSize = true;
             userNameTextBox.Anchor = userNameTextBox.Anchor | AnchorStyles.Right;
@@ -124,7 +115,7 @@ namespace QLBANXE
             buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 
-            form.ClientSize = new Size(396, 300);
+            form.ClientSize = new Size(396, 200);
             form.Controls.AddRange(
                 new Control[] { userNameLabel,
                     //userNameTextBox,
@@ -150,16 +141,37 @@ namespace QLBANXE
                 new ShowMessageBox().Warning("Chưa chọn bản ghi");
                 return;
             }
-            string userName = recordEdit.TENNCC;
-            if (Show("Xóa tài khoản", userName) == DialogResult.OK)
+            string name = recordEdit.TENNCC;
+            if (Show("Xóa tài khoản", name) == DialogResult.OK)
             {
-
+                var result = bll.Delete(recordEdit.ID);
+                if (result)
+                {
+                    new ShowMessageBox().Success(String.Format(MessageConstants.DeletetSuccessMessage, "nhà cung cấp"));
+                    Frame_Load(sender, e);
+                }
+                else
+                {
+                    new ShowMessageBox().Error(String.Format(MessageConstants.DeleteErrorMessage, "nhà cung cấp"));
+                }
             }
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            DanhMucTaiKhoan_Load(sender, e);
+            Frame_Load(sender, e);
+        }
+
+        private void Frame_Load(object sender, EventArgs e)
+        {
+            CoreModel obj = new CoreModel();
+            obj.CustomData = new Dictionary<string, object>();
+            obj.CustomData.Add("TextSearch", this.inputSearch.Text);
+            var data = bll.GetList(obj);
+            gridView.DataSource = data;
+            //cbbMaSP.DataSource = bll.getMaSP();
+            //cbbMaSP.DisplayMember = "MaSP";
+            //cbbMaSP.ValueMember = "MaSP";
         }
     }
 }

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,30 +30,44 @@ namespace QLBANXE
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            int? nullInt = null;
-            if (string.IsNullOrEmpty(this.TENDANGNHAP.Text) || string.IsNullOrEmpty(this.TENTK.Text))
+            try
             {
-                new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
-            }
-            else
-            {
-                DangNhap dangNhap = new DangNhap()
+                int? nullInt = null;
+                if (string.IsNullOrEmpty(this.TENDANGNHAP.Text) || string.IsNullOrEmpty(this.TENTK.Text))
                 {
-                    TENDANGNHAP = this.TENDANGNHAP.Text,
-                    TENTK = this.TENTK.Text,
-                    CAPTK = !string.IsNullOrEmpty(this.CAPTK.Text) ? Convert.ToInt32(this.CAPTK.Text) : nullInt,
-                    TRANGTHAI = Convert.ToInt32(this.TRANGTHAI.Checked)
-                };
-                bool result = userBLL.Update(dangNhap);
-                if (result)
-                {
-                    new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "tài khoản"));
-                    this.Dispose(true);
-                    
+                    new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
                 else
                 {
-                    new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "tài khoản"));
+                    DangNhap dangNhap = new DangNhap()
+                    {
+                        TENDANGNHAP = this.TENDANGNHAP.Text,
+                        TENTK = this.TENTK.Text,
+                        CAPTK = !string.IsNullOrEmpty(this.CAPTK.Text) ? Convert.ToInt32(this.CAPTK.Text) : nullInt,
+                        TRANGTHAI = Convert.ToInt32(this.TRANGTHAI.Checked)
+                    };
+                    bool result = userBLL.Update(dangNhap);
+                    if (result)
+                    {
+                        new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "tài khoản"));
+                        this.Dispose(true);
+
+                    }
+                    else
+                    {
+                        new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "tài khoản"));
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2601)
+                {
+                    new ShowMessageBox().Error("Tài khoản đã tồn tại");
+                }
+                else
+                {
+                    new ShowMessageBox().Error(ex.Message);
                 }
             }
         }

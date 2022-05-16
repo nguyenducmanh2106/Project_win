@@ -49,6 +49,7 @@
     <Compile Include="DangNhap.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookReview.cs" />
+    <Compile Include="KhachHang.cs" />
     <Compile Include="NhaCungCap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

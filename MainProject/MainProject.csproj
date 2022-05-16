@@ -65,6 +65,24 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\KhachHang\KhachHangCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang\KhachHangCreate.Designer.cs">
+      <DependentUpon>KhachHangCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHang\KhachHangGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang\KhachHangGrid.Designer.cs">
+      <DependentUpon>KhachHangGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhachHang\KhachHangUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhachHang\KhachHangUpdate.Designer.cs">
+      <DependentUpon>KhachHangUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\NhaCungCap\NhaCungCapGrid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +155,6 @@
     <Compile Include="GUI\HoaDonNhap.Designer.cs">
       <DependentUpon>HoaDonNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,12 +166,6 @@
     </Compile>
     <Compile Include="GUI\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\NHACC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\NHACC.Designer.cs">
-      <DependentUpon>NHACC.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Product.cs">
       <SubType>Form</SubType>
@@ -183,6 +189,15 @@
     </Compile>
     <EmbeddedResource Include="GUI\BangGia.resx">
       <DependentUpon>BangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHang\KhachHangCreate.resx">
+      <DependentUpon>KhachHangCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHang\KhachHangGrid.resx">
+      <DependentUpon>KhachHangGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhachHang\KhachHangUpdate.resx">
+      <DependentUpon>KhachHangUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaCungCap\NhaCungCapGrid.resx">
       <DependentUpon>NhaCungCapGrid.cs</DependentUpon>
@@ -220,17 +235,11 @@
     <EmbeddedResource Include="GUI\HoaDonNhap.resx">
       <DependentUpon>HoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NHACC.resx">
-      <DependentUpon>NHACC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>

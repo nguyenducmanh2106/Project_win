@@ -1,11 +1,13 @@
 ﻿using Core.Constants;
 using Core.Global;
+using Core.Utils;
 using Dapper.BLL;
 using Dapper.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,30 +31,50 @@ namespace QLBANXE
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(this.MANCC.Text) || string.IsNullOrEmpty(this.TENNCC.Text))
+            try
             {
-                new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
-            }
-            else
-            {
-                NhaCungCap model = new NhaCungCap()
+                if (string.IsNullOrEmpty(this.MANCC.Text) || string.IsNullOrEmpty(this.TENNCC.Text))
                 {
-                    MANCC = this.MANCC.Text,
-                    TENNCC = this.TENNCC.Text,
-                    DIACHI = this.DIACHI.Text,
-                    SDT = this.SDT.Text,
-                    EMAIL = this.EMAIL.Text,
-                    NGUNGHOPTAC = Convert.ToBoolean(this.NGUNGHOPTAC.Checked)
-                };
-                bool result = bll.Update(model);
-                if (result)
-                {
-                    new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "nhà cung cấp"));
-                    this.Dispose(true);
+                    new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
                 else
                 {
-                    new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "cung cấp"));
+                    if (!CustomValidate.IsValidEmail(this.EMAIL.Text))
+                    {
+                        new ShowMessageBox().Error("Chưa đúng định dạng email");
+                        return;
+                    }
+                    NhaCungCap model = new NhaCungCap()
+                    {
+                        ID = Convert.ToInt32(this.ID.Text),
+                        MANCC = this.MANCC.Text,
+                        TENNCC = this.TENNCC.Text,
+                        DIACHI = this.DIACHI.Text,
+                        SDT = this.SDT.Text,
+                        EMAIL = this.EMAIL.Text,
+                        NGUNGHOPTAC = Convert.ToBoolean(this.NGUNGHOPTAC.Checked)
+                    };
+                    bool result = bll.Update(model);
+                    if (result)
+                    {
+                        new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "nhà cung cấp"));
+                        this.Dispose(true);
+                    }
+                    else
+                    {
+                        new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "cung cấp"));
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2601)
+                {
+                    new ShowMessageBox().Error("Mã nhà cung cấp đã tồn tại");
+                }
+                else
+                {
+                    new ShowMessageBox().Error(ex.Message);
                 }
             }
         }

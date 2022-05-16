@@ -17,6 +17,9 @@ namespace QLBANXE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
             Application.Run(new txtUsername());
         }
     }

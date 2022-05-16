@@ -36,7 +36,6 @@
             this.RefreshButton = new System.Windows.Forms.ToolStripMenuItem();
             this.inputSearch = new System.Windows.Forms.TextBox();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.SearchButton = new System.Windows.Forms.Button();
             this.MANCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGUNGHOPTAC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -131,24 +131,6 @@
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             // 
-            // SearchButton
-            // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
-            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(573, 61);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(28, 22);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.UseVisualStyleBackColor = false;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
             // MANCC
             // 
             this.MANCC.DataPropertyName = "MANCC";
@@ -185,6 +167,7 @@
             this.NGUNGHOPTAC.DataPropertyName = "NGUNGHOPTAC";
             this.NGUNGHOPTAC.HeaderText = "Ngừng hợp tác";
             this.NGUNGHOPTAC.Name = "NGUNGHOPTAC";
+            this.NGUNGHOPTAC.ReadOnly = true;
             // 
             // ID
             // 
@@ -193,7 +176,25 @@
             this.ID.Name = "ID";
             this.ID.Visible = false;
             // 
-            // NhaCungCapList
+            // SearchButton
+            // 
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SearchButton.FlatAppearance.BorderSize = 0;
+            this.SearchButton.Location = new System.Drawing.Point(573, 61);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(28, 22);
+            this.SearchButton.TabIndex = 3;
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
+            // Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,11 +204,11 @@
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
-            this.Name = "NhaCungCapList";
+            this.Name = "Frame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh mục tài khoản";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
-            this.Load += new System.EventHandler(this.DanhMucTaiKhoan_Load);
+            this.Load += new System.EventHandler(this.Frame_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();

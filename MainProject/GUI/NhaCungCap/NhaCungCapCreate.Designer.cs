@@ -81,7 +81,6 @@
             // 
             this.DIACHI.Location = new System.Drawing.Point(224, 132);
             this.DIACHI.Name = "DIACHI";
-            this.DIACHI.PasswordChar = '•';
             this.DIACHI.Size = new System.Drawing.Size(121, 20);
             this.DIACHI.TabIndex = 5;
             // 
@@ -114,7 +113,6 @@
             // 
             this.SDT.Location = new System.Drawing.Point(224, 173);
             this.SDT.Name = "SDT";
-            this.SDT.PasswordChar = '•';
             this.SDT.Size = new System.Drawing.Size(121, 20);
             this.SDT.TabIndex = 11;
             // 
@@ -152,7 +150,6 @@
             // 
             this.EMAIL.Location = new System.Drawing.Point(224, 219);
             this.EMAIL.Name = "EMAIL";
-            this.EMAIL.PasswordChar = '•';
             this.EMAIL.Size = new System.Drawing.Size(121, 20);
             this.EMAIL.TabIndex = 15;
             // 
