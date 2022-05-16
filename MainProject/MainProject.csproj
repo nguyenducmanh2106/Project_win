@@ -65,6 +65,12 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\HangHoa\HangHoaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HangHoa\HangHoaUpdate.Designer.cs">
+      <DependentUpon>HangHoaUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HangHoa\HangHoaCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +82,6 @@
     </Compile>
     <Compile Include="GUI\HangHoa\HangHoaGrid.Designer.cs">
       <DependentUpon>HangHoaGrid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HangHoa\HangHoaUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HangHoa\HangHoaUpdate.Designer.cs">
-      <DependentUpon>HangHoaUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhachHang\KhachHangCreate.cs">
       <SubType>Form</SubType>
@@ -208,14 +208,14 @@
     <EmbeddedResource Include="GUI\BangGia.resx">
       <DependentUpon>BangGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HangHoa\HangHoaUpdate.resx">
+      <DependentUpon>HangHoaUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HangHoa\HangHoaCreate.resx">
       <DependentUpon>HangHoaCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HangHoa\HangHoaGrid.resx">
       <DependentUpon>HangHoaGrid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HangHoa\HangHoaUpdate.resx">
-      <DependentUpon>HangHoaUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHang\KhachHangCreate.resx">
       <DependentUpon>KhachHangCreate.cs</DependentUpon>
@@ -314,6 +314,7 @@
     <Content Include="assets\icons\icon-refresh-soft-fill-70.png" />
     <Content Include="assets\icons\icon-previous-material-outlined-70.png" />
     <Content Include="assets\icons\icon-no-image-color-70.png" />
+    <Content Include="assets\icons\icon-image-color-70.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />

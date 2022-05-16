@@ -42,5 +42,9 @@ namespace Dapper.BLL
             return dal.GetList(obj);
         }
 
+        public HangHoaModel GetEntity(string code)
+        {
+            return dal.GetEntity(code);
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "INSERT INTO NCC(MANCC,TENNCC,DIACHI,SDT,EMAIL,NGUNGHOPTAC) VALUES (@MANCC,@TENNCC,@DIACHI,@SDT,@EMAIL,@NGUNGHOPTAC)";
-                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL,NGUNGHOPTAC = model.NGUNGHOPTAC });
+                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL, NGUNGHOPTAC = model.NGUNGHOPTAC });
             }
         }
 
@@ -47,7 +47,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "UPDATE NCC SET MANCC = @MANCC,TENNCC=@TENNCC,DIACHI = @DIACHI,SDT = @SDT,EMAIL=@EMAIL,NGUNGHOPTAC=@NGUNGHOPTAC where ID = @ID";
-                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL, NGUNGHOPTAC = model.NGUNGHOPTAC,ID = model.ID });
+                return Conn.Execute(sqlQuery, new { MANCC = model.MANCC, TENNCC = model.TENNCC, DIACHI = model.DIACHI, SDT = model.SDT, EMAIL = model.EMAIL, NGUNGHOPTAC = model.NGUNGHOPTAC, ID = model.ID });
             }
         }
 
@@ -76,12 +76,21 @@ namespace Dapper.SQLServerDAL
             {
                 var param = obj.CustomData;
                 DynamicParameters dynamicParameters = new DynamicParameters();
-                foreach(var item in param)
+                foreach (var item in param)
                 {
                     dynamicParameters.Add(item.Key, item.Value);
                 }
                 string sqlQuery = "sp_NhaCungCap_Grid";
-                return Conn.Query<NhaCungCap>(sqlQuery, dynamicParameters,null,true,null,CommandType.StoredProcedure).ToList();
+                return Conn.Query<NhaCungCap>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public IList<NhaCungCap> GetListActive()
+        {
+            using (Conn)
+            {
+                string sqlQuery = "SELECT ID,MANCC,TENNCC FROM NCC WHERE NGUNGHOPTAC != 1";
+                return Conn.Query<NhaCungCap>(sqlQuery).ToList();
             }
         }
         #endregion

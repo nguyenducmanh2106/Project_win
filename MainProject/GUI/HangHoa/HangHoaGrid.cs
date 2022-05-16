@@ -52,7 +52,7 @@ namespace QLBANXE
                 return;
             }
 
-            //KhachHangUpdate frame = new KhachHangUpdate();
+            HangHoaUpdate frame = new HangHoaUpdate();
             //frame.MAKH.Text = recordEdit.MAKH;
             //frame.TENKH.Text = recordEdit.TENKH;
             //frame.DIACHI.Text = recordEdit.DIACHI;
@@ -60,8 +60,8 @@ namespace QLBANXE
             //frame.EMAIL.Text = recordEdit.EMAIL;
             //frame.MST.Text = recordEdit.MST;
             //frame.NGAYDANGKY.Value = recordEdit.NGAYDANGKY;
-            //frame.ID.Text = recordEdit.ID.ToString();
-            //frame.Show();
+            frame.MAHH.Text = recordEdit.MAHH.ToString();
+            frame.Show();
         }
 
 
@@ -76,8 +76,8 @@ namespace QLBANXE
         {
             int index = gridView.CurrentCell.RowIndex;
             recordEdit = new HangHoa();
-            //recordEdit.MAHH = gridView.Rows[index].Cells["MAHH"].Value.ToString();
-            //recordEdit.TENHH = gridView.Rows[index].Cells["TENHH"].Value.ToString();
+            recordEdit.MAHH = gridView.Rows[index].Cells["MAHH"].Value.ToString();
+            recordEdit.TENHH = gridView.Rows[index].Cells["TENHH"].Value.ToString();
             //recordEdit.DVT = gridView.Rows[index].Cells["DVT"].Value?.ToString();
             //recordEdit.NhaCungCapID = Convert.ToInt32(gridView.Rows[index].Cells["NhaCungCapID"].Value);
             //recordEdit.SOLUONG = Convert.ToInt32(gridView.Rows[index].Cells["SOLUONG"].Value);
@@ -145,17 +145,17 @@ namespace QLBANXE
                 return;
             }
             string name = recordEdit.TENHH;
-            if (Show("Xóa khách hàng", name) == DialogResult.OK)
+            if (Show("Xóa hàng hóa", name) == DialogResult.OK)
             {
                 var result = bll.Delete(recordEdit.ID);
                 if (result)
                 {
-                    new ShowMessageBox().Success(String.Format(MessageConstants.DeletetSuccessMessage, "nhà cung cấp"));
+                    new ShowMessageBox().Success(String.Format(MessageConstants.DeletetSuccessMessage, "hàng hóa"));
                     Frame_Load(sender, e);
                 }
                 else
                 {
-                    new ShowMessageBox().Error(String.Format(MessageConstants.DeleteErrorMessage, "nhà cung cấp"));
+                    new ShowMessageBox().Error(String.Format(MessageConstants.DeleteErrorMessage, "hàng hóa"));
                 }
             }
         }

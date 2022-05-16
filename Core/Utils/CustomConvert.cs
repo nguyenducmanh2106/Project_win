@@ -12,8 +12,14 @@ namespace Core.Utils
 {
     public static class CustomConvert
     {
-        public static byte[] imageToByteArray(System.Drawing.Image imageIn)
+        /// <summary>
+        /// Convert image into byte array
+        /// </summary>
+        /// <param name="imageIn"></param>
+        /// <returns></returns>
+        public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {
+            if(imageIn == null) return null;
             using (var ms = new MemoryStream())
             {
                 imageIn.Save(ms, imageIn.RawFormat);
@@ -21,8 +27,14 @@ namespace Core.Utils
             }
         }
 
-        public static Image byteArrayToImage(byte[] byteArrayIn)
+        /// <summary>
+        /// Convert byte array into image
+        /// </summary>
+        /// <param name="byteArrayIn"></param>
+        /// <returns></returns>
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
+            if (byteArrayIn == null || byteArrayIn.Length == 0) return null;
             MemoryStream ms = new MemoryStream(byteArrayIn, 0, byteArrayIn.Length);
             ms.Position = 0; // this is important
             return Image.FromStream(ms, true);

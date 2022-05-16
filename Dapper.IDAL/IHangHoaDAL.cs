@@ -24,6 +24,8 @@ namespace Dapper.IDAL
 
         IList<HangHoaModel> GetList(CoreModel obj);
 
+        HangHoaModel GetEntity(string code);
+
         #endregion
     }
 }

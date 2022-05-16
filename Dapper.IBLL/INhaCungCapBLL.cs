@@ -23,6 +23,7 @@ namespace Dapper.IBLL
         bool Delete(int id);
 
         IList<NhaCungCap> GetList(CoreModel obj);
+        IList<NhaCungCap> GetListActive();
 
         #endregion
     }

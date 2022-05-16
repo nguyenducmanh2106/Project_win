@@ -138,10 +138,8 @@ E:\Project_win\MainProject\obj\Debug\QLBANXE.Hangxe.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDon.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonBan.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonNhap.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHang.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.txtUsername.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.MainScreen.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.NHACC.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.Product.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.Properties.Resources.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.ThongKe.resources
@@ -173,3 +171,9 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaCreate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaList.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaUpdate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaCreate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaList.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaUpdate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangCreate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangList.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangUpdate.resources

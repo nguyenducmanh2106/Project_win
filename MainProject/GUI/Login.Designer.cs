@@ -98,7 +98,7 @@
             this.btn_LOGIN.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_LOGIN.Location = new System.Drawing.Point(43, 234);
             this.btn_LOGIN.Name = "btn_LOGIN";
-            this.btn_LOGIN.Size = new System.Drawing.Size(218, 32);
+            this.btn_LOGIN.Size = new System.Drawing.Size(218, 37);
             this.btn_LOGIN.TabIndex = 6;
             this.btn_LOGIN.Text = "Đăng nhập";
             this.btn_LOGIN.UseVisualStyleBackColor = false;

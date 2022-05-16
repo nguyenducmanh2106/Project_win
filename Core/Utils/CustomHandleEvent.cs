@@ -9,7 +9,7 @@ namespace Core.Utils
 {
     public static class CustomHandleEvent
     {
-        public static bool TextboxLimit(KeyPressEventArgs e)
+        public static bool TextboxContainNumber(KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsNumber(ch) && !char.IsDigit(ch))

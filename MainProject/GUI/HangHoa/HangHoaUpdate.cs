@@ -18,7 +18,9 @@ namespace QLBANXE
 {
     public partial class HangHoaUpdate : Form
     {
-        private readonly KhachHangBLL bll = new KhachHangBLL();
+        private readonly HangHoaBLL bll = new HangHoaBLL();
+        private readonly NhaCungCapBLL nhaCungCapBLL = new NhaCungCapBLL();
+        private HangHoaModel recordEdit = new HangHoaModel();
         public HangHoaUpdate()
         {
             InitializeComponent();
@@ -33,47 +35,35 @@ namespace QLBANXE
         {
             try
             {
-                if (string.IsNullOrEmpty(this.MAKH.Text) || string.IsNullOrEmpty(this.TENKH.Text))
+                if (string.IsNullOrEmpty(this.MAHH.Text) || string.IsNullOrEmpty(this.TENHH.Text))
                 {
                     new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
                 else
                 {
-                    if (!CustomValidate.IsValidEmail(this.EMAIL.Text))
+                    int? nullInt = null;
+                    decimal? nullDec = null;
+                    HangHoa model = new HangHoa()
                     {
-                        new ShowMessageBox().Error("Chưa đúng định dạng email");
-                        return;
-                    }
-                    if (!CustomValidate.IsPhoneNumber(this.SDT.Text))
-                    {
-                        new ShowMessageBox().Error("Chưa đúng định dạng số điện thoại");
-                        return;
-                    }
-                    if (!CustomValidate.IsValidTaxCode(this.MST.Text))
-                    {
-                        new ShowMessageBox().Error("Chưa đúng định dạng mã số thuê");
-                        return;
-                    }
-                    KhachHang model = new KhachHang()
-                    {
-                        ID = Convert.ToInt32(this.ID.Text),
-                        MAKH = this.MAKH.Text,
-                        TENKH = this.TENKH.Text,
-                        DIACHI = this.DIACHI.Text,
-                        SDT = this.SDT.Text,
-                        EMAIL = this.EMAIL.Text,
-                        MST = this.MST.Text,
-                        NGAYDANGKY = Convert.ToDateTime(this.NGAYDANGKY.Value)
+                        ID = recordEdit.ID,
+                        MAHH = this.MAHH.Text,
+                        TENHH = this.TENHH.Text,
+                        DVT = this.DVT.Text,
+                        NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
+                        SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
+                        GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
+                        GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
+                        HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
                     };
                     bool result = bll.Update(model);
                     if (result)
                     {
-                        new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "khách hàng"));
+                        new ShowMessageBox().Success(String.Format(MessageConstants.UpdateSuccessMessage, "hàng hóa"));
                         this.Dispose(true);
                     }
                     else
                     {
-                        new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "khách hàng"));
+                        new ShowMessageBox().Error(String.Format(MessageConstants.UpdateErrorMessage, "hàng hóa"));
                     }
                 }
             }
@@ -81,12 +71,107 @@ namespace QLBANXE
             {
                 if (ex.Number == 2601)
                 {
-                    new ShowMessageBox().Error("Mã khách hàng đã tồn tại");
+                    new ShowMessageBox().Error("Mã hàng hóa đã tồn tại");
                 }
                 else
                 {
                     new ShowMessageBox().Error(ex.Message);
                 }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Right)
+                || (e.KeyCode == Keys.Left)
+                || (e.KeyCode == Keys.Up)
+                || (e.KeyCode == Keys.Down))
+            {
+                // Do nothing
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(GIAXUAT.Text))
+                {
+                    string[] strArr = GIAXUAT.Text.Split(',');
+                    if (strArr != null && strArr.Length > 0)
+                    {
+                        GIAXUAT.Text = strArr[0];
+                    }
+                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                    var valueBefore = decimal.Parse(GIAXUAT.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                    GIAXUAT.Text = String.Format(culture, "{0:N0}", valueBefore);
+                    GIAXUAT.Select(GIAXUAT.Text.Length, 0);
+                }
+
+            }
+        }
+
+        private void KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!CustomHandleEvent.TextboxContainNumber(e))
+            {
+                e.Handled = true;
+                return;
+            }
+            e.Handled = false;
+        }
+
+        private void KeyUpGIANHAP(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Right)
+                || (e.KeyCode == Keys.Left)
+                || (e.KeyCode == Keys.Up)
+                || (e.KeyCode == Keys.Down))
+            {
+                // Do nothing
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(GIANHAP.Text))
+                {
+                    string[] strArr = GIANHAP.Text.Split(',');
+                    if (strArr != null && strArr.Length > 0)
+                    {
+                        GIANHAP.Text = strArr[0];
+                    }
+                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                    var valueBefore = decimal.Parse(GIANHAP.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                    GIANHAP.Text = String.Format(culture, "{0:N0}", valueBefore);
+                    GIANHAP.Select(GIANHAP.Text.Length, 0);
+                }
+
+            }
+        }
+
+        private void HangHoaCreate_Load(object sender, EventArgs e)
+        {
+            recordEdit = bll.GetEntity(this.MAHH.Text);
+            this.TENHH.Text = recordEdit.TENHH;
+            this.DVT.Text = recordEdit.DVT;
+            this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
+            this.MANCC.SelectedValue = recordEdit.NhaCungCapID;
+            this.GIANHAP.Text = recordEdit.GIANHAP?.ToString();
+            this.GIAXUAT.Text = recordEdit.GIAXUAT?.ToString();
+            this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
+            this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
+            MANCC.DataSource = nhaCungCapBLL.GetListActive();
+            MANCC.DisplayMember = "MANCC";
+            MANCC.ValueMember = "ID";
+        }
+
+        private void HINHANH_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                HINHANH.Image = new Bitmap(opnfd.FileName);
+                HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }

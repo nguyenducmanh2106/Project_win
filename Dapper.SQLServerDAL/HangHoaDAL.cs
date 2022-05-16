@@ -65,7 +65,7 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "DELETE FROM KHACHHANG WHERE ID = @ID";
+                string sqlQuery = "DELETE FROM HANGHOA WHERE ID = @ID";
                 return Conn.Execute(sqlQuery, new { ID = id });
             }
         }
@@ -76,12 +76,22 @@ namespace Dapper.SQLServerDAL
             {
                 var param = obj.CustomData;
                 DynamicParameters dynamicParameters = new DynamicParameters();
-                foreach(var item in param)
+                foreach (var item in param)
                 {
                     dynamicParameters.Add(item.Key, item.Value);
                 }
                 string sqlQuery = "sp_HangHoa_Grid";
-                return Conn.Query<HangHoaModel>(sqlQuery, dynamicParameters,null,true,null,CommandType.StoredProcedure).ToList();
+                return Conn.Query<HangHoaModel>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public HangHoaModel GetEntity(string code)
+        {
+            using (Conn)
+            {
+
+                string sqlQuery = "SELECT hh.*,ncc.TENNCC,ncc.MANCC from HANGHOA hh LEFT JOIN NCC ncc on hh.NhaCungCapID = ncc.ID WHERE hh.MAHH = @MAHH";
+                return Conn.QueryFirst<HangHoaModel>(sqlQuery, new { MAHH = code });
             }
         }
         #endregion

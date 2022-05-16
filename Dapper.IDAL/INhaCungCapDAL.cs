@@ -24,6 +24,8 @@ namespace Dapper.IDAL
 
         IList<NhaCungCap> GetList(CoreModel obj);
 
+        IList<NhaCungCap> GetListActive();
+
         #endregion
     }
 }
