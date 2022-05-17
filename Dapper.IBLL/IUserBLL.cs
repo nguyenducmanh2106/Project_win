@@ -23,6 +23,7 @@ namespace Dapper.IBLL
         bool Delete(int id);
 
         IList<DangNhapGridView> GetList(CoreModel obj);
+        IList<DangNhap> GetListActive();
 
         DangNhap GetEntity(int id);
 

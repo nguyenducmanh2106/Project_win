@@ -24,6 +24,8 @@ namespace Dapper.IBLL
 
         IList<KhachHang> GetList(CoreModel obj);
 
+        KhachHang GetEntity(int id);
+
         #endregion
     }
 }

@@ -26,6 +26,13 @@ namespace Dapper.IBLL
 
         HangHoaModel GetEntity(string code);
 
+        /// <summary>
+        /// Lấy hàng hóa có số lượng > 0 (vẫn có hàng trong kho)
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        IList<HangHoaModel> GetListCanUse();
+
         #endregion
     }
 }

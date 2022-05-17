@@ -35,7 +35,7 @@
             this.phụcHồiDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listUserMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giaoDịchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HoaDonGTGTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuGiảmGiáDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HangHoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,17 +112,18 @@
             // giaoDịchToolStripMenuItem
             // 
             this.giaoDịchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hóaĐơnToolStripMenuItem,
+            this.HoaDonGTGTToolStripMenuItem,
             this.phiếuGiảmGiáDịchVụToolStripMenuItem});
             this.giaoDịchToolStripMenuItem.Name = "giaoDịchToolStripMenuItem";
             this.giaoDịchToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.giaoDịchToolStripMenuItem.Text = "Giao dịch";
             // 
-            // hóaĐơnToolStripMenuItem
+            // HoaDonGTGTToolStripMenuItem
             // 
-            this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.hóaĐơnToolStripMenuItem.Text = "Hóa đơn GTGT";
+            this.HoaDonGTGTToolStripMenuItem.Name = "HoaDonGTGTToolStripMenuItem";
+            this.HoaDonGTGTToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.HoaDonGTGTToolStripMenuItem.Text = "Hóa đơn GTGT";
+            this.HoaDonGTGTToolStripMenuItem.Click += new System.EventHandler(this.HoaDonGTGTToolStripMenuItem_Click);
             // 
             // phiếuGiảmGiáDịchVụToolStripMenuItem
             // 
@@ -141,7 +142,7 @@
             // HangHoaToolStripMenuItem
             // 
             this.HangHoaToolStripMenuItem.Name = "HangHoaToolStripMenuItem";
-            this.HangHoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.HangHoaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.HangHoaToolStripMenuItem.Text = "Hàng hóa";
             this.HangHoaToolStripMenuItem.Click += new System.EventHandler(this.HangHoaToolStripMenuItem_Click);
             // 
@@ -157,14 +158,14 @@
             // NhaCungCapToolStripMenuItem
             // 
             this.NhaCungCapToolStripMenuItem.Name = "NhaCungCapToolStripMenuItem";
-            this.NhaCungCapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NhaCungCapToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.NhaCungCapToolStripMenuItem.Text = "Nhà cung cấp";
             this.NhaCungCapToolStripMenuItem.Click += new System.EventHandler(this.NhaCungCapToolStripMenuItem_Click);
             // 
             // KhachHangToolStripMenuItem
             // 
             this.KhachHangToolStripMenuItem.Name = "KhachHangToolStripMenuItem";
-            this.KhachHangToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.KhachHangToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.KhachHangToolStripMenuItem.Text = "Khách hàng";
             this.KhachHangToolStripMenuItem.Click += new System.EventHandler(this.KhachHangToolStripMenuItem_Click);
             // 
@@ -215,13 +216,13 @@
             // sổCáiTàiKhoảnToolStripMenuItem
             // 
             this.sổCáiTàiKhoảnToolStripMenuItem.Name = "sổCáiTàiKhoảnToolStripMenuItem";
-            this.sổCáiTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sổCáiTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.sổCáiTàiKhoảnToolStripMenuItem.Text = "Sổ cái tài khoản";
             // 
             // sổChiTiếtTàiKhoảnToolStripMenuItem
             // 
             this.sổChiTiếtTàiKhoảnToolStripMenuItem.Name = "sổChiTiếtTàiKhoảnToolStripMenuItem";
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.sổChiTiếtTàiKhoảnToolStripMenuItem.Text = "Sổ chi tiết tài khoản";
             // 
             // trợGiúpToolStripMenuItem
@@ -247,6 +248,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Location = new System.Drawing.Point(575, 0);
             this.panel1.Name = "panel1";
@@ -255,13 +257,15 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UserName});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(221, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip2.Size = new System.Drawing.Size(319, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(98, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -280,7 +284,7 @@
             // 
             this.UserLoginInfor.Name = "UserLoginInfor";
             this.UserLoginInfor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserLoginInfor.Size = new System.Drawing.Size(180, 22);
+            this.UserLoginInfor.Size = new System.Drawing.Size(128, 22);
             this.UserLoginInfor.Text = "Tài khoản";
             this.UserLoginInfor.Click += new System.EventHandler(this.UserLoginInfor_Click);
             // 
@@ -288,7 +292,7 @@
             // 
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LogOutButton.Size = new System.Drawing.Size(180, 22);
+            this.LogOutButton.Size = new System.Drawing.Size(128, 22);
             this.LogOutButton.Text = "Đăng xuất";
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
@@ -296,6 +300,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 625);
@@ -306,11 +312,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Kế toán bán hàng Công ty Cổ phần Công nghệ cao Thành Phát";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -339,7 +346,7 @@
         private System.Windows.Forms.ToolStripMenuItem UserName;
         private System.Windows.Forms.ToolStripMenuItem UserLoginInfor;
         private System.Windows.Forms.ToolStripMenuItem LogOutButton;
-        private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HoaDonGTGTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuGiảmGiáDịchVụToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HangHoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem NhaCungCapToolStripMenuItem;

@@ -104,9 +104,7 @@
             // 
             // inputSearch
             // 
-            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputSearch.Location = new System.Drawing.Point(539, 70);
             this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
@@ -116,6 +114,8 @@
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -126,7 +126,6 @@
             this.EMAIL,
             this.NGUNGHOPTAC,
             this.ID});
-            this.gridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridView.Location = new System.Drawing.Point(0, 106);
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(800, 344);
@@ -180,9 +179,7 @@
             // 
             // SearchButton
             // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
             this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -205,10 +202,10 @@
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
-            this.MaximizeBox = false;
             this.Name = "NhaCungCapList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhà cung cấp";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.Frame_Load);
             this.menuStrip1.ResumeLayout(false);

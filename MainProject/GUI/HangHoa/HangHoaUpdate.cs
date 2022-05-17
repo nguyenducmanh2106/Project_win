@@ -148,22 +148,6 @@ namespace QLBANXE
             }
         }
 
-        private void HangHoaCreate_Load(object sender, EventArgs e)
-        {
-            recordEdit = bll.GetEntity(this.MAHH.Text);
-            this.TENHH.Text = recordEdit.TENHH;
-            this.DVT.Text = recordEdit.DVT;
-            this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
-            this.MANCC.SelectedValue = recordEdit.NhaCungCapID;
-            this.GIANHAP.Text = recordEdit.GIANHAP?.ToString();
-            this.GIAXUAT.Text = recordEdit.GIAXUAT?.ToString();
-            this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
-            this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
-            MANCC.DataSource = nhaCungCapBLL.GetListActive();
-            MANCC.DisplayMember = "MANCC";
-            MANCC.ValueMember = "ID";
-        }
-
         private void HINHANH_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnfd = new OpenFileDialog();
@@ -173,6 +157,23 @@ namespace QLBANXE
                 HINHANH.Image = new Bitmap(opnfd.FileName);
                 HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void HangHoaUpdate_Load(object sender, EventArgs e)
+        {
+            MANCC.DataSource = nhaCungCapBLL.GetListActive();
+            MANCC.DisplayMember = "MANCC";
+            MANCC.ValueMember = "ID";
+
+            recordEdit = bll.GetEntity(this.MAHH.Text);
+            this.TENHH.Text = recordEdit.TENHH;
+            this.DVT.Text = recordEdit.DVT;
+            this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
+            this.MANCC.SelectedValue = recordEdit?.NhaCungCapID ?? -1;
+            this.GIANHAP.Text = String.Format("{0:n}", recordEdit.GIANHAP)?.ToString();
+            this.GIAXUAT.Text = String.Format("{0:n}", recordEdit.GIAXUAT)?.ToString();
+            this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
+            this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

@@ -103,18 +103,18 @@
             // 
             // inputSearch
             // 
-            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputSearch.Location = new System.Drawing.Point(562, 74);
+            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputSearch.Location = new System.Drawing.Point(543, 74);
             this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
-            this.inputSearch.Size = new System.Drawing.Size(215, 21);
+            this.inputSearch.Size = new System.Drawing.Size(238, 21);
             this.inputSearch.TabIndex = 2;
             // 
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -124,7 +124,6 @@
             this.TRANGTHAI_TEXT,
             this.TRANGTHAI,
             this.ID});
-            this.gridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridView.Location = new System.Drawing.Point(0, 109);
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(800, 341);
@@ -171,16 +170,14 @@
             // 
             // SearchButton
             // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
             this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(535, 72);
+            this.SearchButton.Location = new System.Drawing.Point(516, 72);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(28, 24);
             this.SearchButton.TabIndex = 3;
@@ -196,10 +193,10 @@
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
-            this.MaximizeBox = false;
             this.Name = "DanhMucTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh mục tài khoản";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.DanhMucTaiKhoan_Load);
             this.menuStrip1.ResumeLayout(false);

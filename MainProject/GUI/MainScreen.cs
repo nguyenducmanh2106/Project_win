@@ -20,28 +20,6 @@ namespace QLBANXE
 
             this.UserName.Text = fullName;
         }
-
-        private void btn_QLSANPHAM_Click(object sender, EventArgs e)
-        {
-            FeaturesProduct featuresProduct = new FeaturesProduct();
-            featuresProduct.Show();
-            this.Hide();
-        }
-
-        private void btn_HANG_TON_Click(object sender, EventArgs e)
-        {
-            HangTon hangTon = new HangTon();
-            hangTon.Show();
-            this.Hide();
-        }
-
-        private void btn_THONG_KE_Click(object sender, EventArgs e)
-        {
-            ThongKe thongKe = new ThongKe();
-            thongKe.Show();
-            this.Hide();
-        }
-
         private void btn_HOA_DON_Click(object sender, EventArgs e)
         {
             HoaDon hoaDon = new HoaDon();
@@ -91,6 +69,23 @@ namespace QLBANXE
         private void HangHoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new HangHoaList().Show();
+            this.Dispose(true);
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            //this.MinimumSize = new System.Drawing.Size(this.Width, this.Height);
+
+            //// no larger than screen size
+            //this.MaximumSize = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, (int)System.Windows.SystemParameters.PrimaryScreenHeight);
+
+            //this.AutoSize = true;
+            //this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        }
+
+        private void HoaDonGTGTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new HoaDonGTGTList().Show();
             this.Dispose(true);
         }
     }

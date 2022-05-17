@@ -153,6 +153,16 @@ namespace QLBANXE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_save_color_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-save-color-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_search_ios_70 {
             get {
                 object obj = ResourceManager.GetObject("icon-search-ios-70", resourceCulture);

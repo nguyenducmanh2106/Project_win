@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EditButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,9 +106,7 @@
             // 
             // inputSearch
             // 
-            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inputSearch.Location = new System.Drawing.Point(543, 69);
             this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
@@ -118,6 +116,8 @@
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,7 +129,6 @@
             this.MST,
             this.NGAYDANGKY,
             this.ID});
-            this.gridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridView.Location = new System.Drawing.Point(0, 104);
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(800, 346);
@@ -179,9 +178,9 @@
             // NGAYDANGKY
             // 
             this.NGAYDANGKY.DataPropertyName = "NGAYDANGKY";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.NGAYDANGKY.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle1.NullValue = null;
+            this.NGAYDANGKY.DefaultCellStyle = dataGridViewCellStyle1;
             this.NGAYDANGKY.HeaderText = "Ngày đăng ký";
             this.NGAYDANGKY.Name = "NGAYDANGKY";
             // 
@@ -194,9 +193,7 @@
             // 
             // SearchButton
             // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
             this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -219,10 +216,10 @@
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
-            this.MaximizeBox = false;
             this.Name = "KhachHangList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách hàng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.Frame_Load);
             this.menuStrip1.ResumeLayout(false);

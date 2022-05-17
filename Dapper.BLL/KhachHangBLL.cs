@@ -42,5 +42,9 @@ namespace Dapper.BLL
             return dal.GetList(obj);
         }
 
+        public KhachHang GetEntity(int id)
+        {
+            return dal.GetEntity(id);
+        }
     }
 }

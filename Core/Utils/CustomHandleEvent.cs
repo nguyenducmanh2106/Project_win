@@ -12,6 +12,7 @@ namespace Core.Utils
         public static bool TextboxContainNumber(KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
+            if (ch == '\b') return true;
             if (!char.IsNumber(ch) && !char.IsDigit(ch))
             {
                 e.Handled = true;

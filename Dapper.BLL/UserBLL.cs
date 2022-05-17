@@ -103,5 +103,18 @@ namespace Dapper.BLL
                 throw ex;
             }
         }
+
+        public IList<DangNhap> GetListActive()
+        {
+            try
+            {
+                return dal.GetListActive();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

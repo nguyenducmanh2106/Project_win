@@ -76,12 +76,21 @@ namespace Dapper.SQLServerDAL
             {
                 var param = obj.CustomData;
                 DynamicParameters dynamicParameters = new DynamicParameters();
-                foreach(var item in param)
+                foreach (var item in param)
                 {
                     dynamicParameters.Add(item.Key, item.Value);
                 }
                 string sqlQuery = "sp_KhachHang_Grid";
-                return Conn.Query<KhachHang>(sqlQuery, dynamicParameters,null,true,null,CommandType.StoredProcedure).ToList();
+                return Conn.Query<KhachHang>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure).ToList();
+            }
+        }
+
+        public KhachHang GetEntity(int id)
+        {
+            using (Conn)
+            {
+                string sqlQuery = "Select * from KHACHHANG WHERE ID = @ID";
+                return Conn.QuerySingle<KhachHang>(sqlQuery, new { ID = id });
             }
         }
         #endregion

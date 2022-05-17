@@ -41,6 +41,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Controls.Add(this.ChangePassWord);
@@ -56,6 +57,9 @@
             // 
             // BackButton
             // 
+            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BackButton.Location = new System.Drawing.Point(359, 158);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(98, 36);
@@ -66,6 +70,9 @@
             // 
             // ChangePassWord
             // 
+            this.ChangePassWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ChangePassWord.Location = new System.Drawing.Point(242, 158);
             this.ChangePassWord.Name = "ChangePassWord";
             this.ChangePassWord.Size = new System.Drawing.Size(98, 36);
@@ -76,6 +83,9 @@
             // 
             // UpdateUserLogin
             // 
+            this.UpdateUserLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UpdateUserLogin.Location = new System.Drawing.Point(127, 158);
             this.UpdateUserLogin.Name = "UpdateUserLogin";
             this.UpdateUserLogin.Size = new System.Drawing.Size(98, 36);
@@ -86,6 +96,9 @@
             // 
             // TENTK
             // 
+            this.TENTK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TENTK.Location = new System.Drawing.Point(280, 54);
             this.TENTK.Name = "TENTK";
             this.TENTK.Size = new System.Drawing.Size(223, 20);
@@ -93,6 +106,9 @@
             // 
             // TENDANGNHAP
             // 
+            this.TENDANGNHAP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TENDANGNHAP.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TENDANGNHAP.Enabled = false;
             this.TENDANGNHAP.Location = new System.Drawing.Point(280, 15);
@@ -103,6 +119,9 @@
             // 
             // TENTKTitle
             // 
+            this.TENTKTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TENTKTitle.AutoSize = true;
             this.TENTKTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TENTKTitle.Location = new System.Drawing.Point(123, 52);
@@ -113,6 +132,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 13);
@@ -130,6 +152,7 @@
             this.Name = "UserLoginInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đăng nhập";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

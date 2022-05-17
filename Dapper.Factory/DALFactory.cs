@@ -98,5 +98,18 @@ namespace Dapper.Factory
                 throw ex;
             }
         }
+
+        public static IHoaDonGTGTDAL CreateHoaDonGTGTDAL()
+        {
+            try
+            {
+                string className = path + ".HoaDonGTGTDAL";
+                return (IHoaDonGTGTDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

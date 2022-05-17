@@ -89,7 +89,7 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "SELECT ID,MANCC,TENNCC FROM NCC WHERE NGUNGHOPTAC != 1";
+                string sqlQuery = "SELECT ID,MANCC,TENNCC FROM NCC WHERE NGUNGHOPTAC = 1";
                 return Conn.Query<NhaCungCap>(sqlQuery).ToList();
             }
         }

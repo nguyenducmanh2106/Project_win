@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\BangGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\BangGia.Designer.cs">
-      <DependentUpon>BangGia.cs</DependentUpon>
-    </Compile>
     <Compile Include="BLL\BLL_BANGGIA.cs" />
     <Compile Include="BLL\BLL_HANGTON.cs" />
     <Compile Include="BLL\BLL_HANGXE.cs" />
@@ -65,6 +60,24 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTCreate.Designer.cs">
+      <DependentUpon>HoaDonGTGTCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTGrid.Designer.cs">
+      <DependentUpon>HoaDonGTGTGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.Designer.cs">
+      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HangHoa\HangHoaUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,24 +150,6 @@
     <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.Designer.cs">
       <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FeaturesProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FeaturesProduct.Designer.cs">
-      <DependentUpon>FeaturesProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HangTon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HangTon.Designer.cs">
-      <DependentUpon>HangTon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Hangxe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Hangxe.Designer.cs">
-      <DependentUpon>Hangxe.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,12 +180,6 @@
     <Compile Include="GUI\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\UserLoginInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,14 +188,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GUI\ThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThongKe.Designer.cs">
-      <DependentUpon>ThongKe.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="GUI\BangGia.resx">
-      <DependentUpon>BangGia.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTCreate.resx">
+      <DependentUpon>HoaDonGTGTCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTGrid.resx">
+      <DependentUpon>HoaDonGTGTGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.resx">
+      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HangHoa\HangHoaUpdate.resx">
       <DependentUpon>HangHoaUpdate.cs</DependentUpon>
@@ -244,15 +233,6 @@
     <EmbeddedResource Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.resx">
       <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FeaturesProduct.resx">
-      <DependentUpon>FeaturesProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HangTon.resx">
-      <DependentUpon>HangTon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Hangxe.resx">
-      <DependentUpon>Hangxe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,9 +248,6 @@
     <EmbeddedResource Include="GUI\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserLoginInfor.resx">
       <DependentUpon>UserLoginInfor.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,9 +261,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="GUI\ThongKe.resx">
-      <DependentUpon>ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

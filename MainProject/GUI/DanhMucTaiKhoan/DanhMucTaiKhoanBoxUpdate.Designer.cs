@@ -50,8 +50,10 @@
             // 
             // TENDANGNHAP
             // 
+            this.TENDANGNHAP.Enabled = false;
             this.TENDANGNHAP.Location = new System.Drawing.Point(224, 41);
             this.TENDANGNHAP.Name = "TENDANGNHAP";
+            this.TENDANGNHAP.ReadOnly = true;
             this.TENDANGNHAP.Size = new System.Drawing.Size(121, 20);
             this.TENDANGNHAP.TabIndex = 1;
             // 

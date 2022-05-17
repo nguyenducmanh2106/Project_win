@@ -152,6 +152,7 @@ namespace QLBANXE
             MANCC.DataSource = nhaCungCapBLL.GetListActive();
             MANCC.DisplayMember = "MANCC";
             MANCC.ValueMember = "ID";
+            MANCC.SelectedIndex = -1;
         }
 
         private void HINHANH_Click(object sender, EventArgs e)

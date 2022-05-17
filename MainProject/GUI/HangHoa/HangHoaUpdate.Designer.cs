@@ -224,7 +224,7 @@
             this.Name = "HangHoaUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật hàng hóa";
-            this.Load += new System.EventHandler(this.HangHoaCreate_Load);
+            this.Load += new System.EventHandler(this.HangHoaUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SOLUONG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HINHANH)).EndInit();
             this.ResumeLayout(false);

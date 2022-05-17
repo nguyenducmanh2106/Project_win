@@ -47,7 +47,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "UPDATE DANGNHAP SET TENTK = @TENTK,CAPTK=@CAPTK,TRANGTHAI = @TRANGTHAI where TENDANGNHAP = @TENDANGNHAP";
-                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK,CAPTK = model.CAPTK,TRANGTHAI = model.TRANGTHAI, TENDANGNHAP = model.TENDANGNHAP });
+                return Conn.Execute(sqlQuery, new { TENTK = model.TENTK, CAPTK = model.CAPTK, TRANGTHAI = model.TRANGTHAI, TENDANGNHAP = model.TENDANGNHAP });
             }
         }
 
@@ -76,12 +76,12 @@ namespace Dapper.SQLServerDAL
             {
                 var param = obj.CustomData;
                 DynamicParameters dynamicParameters = new DynamicParameters();
-                foreach(var item in param)
+                foreach (var item in param)
                 {
                     dynamicParameters.Add(item.Key, item.Value);
                 }
                 string sqlQuery = "sp_DanhMucTaiKhoan_Grid";
-                return Conn.Query<DangNhapGridView>(sqlQuery, dynamicParameters,null,true,null,CommandType.StoredProcedure).ToList();
+                return Conn.Query<DangNhapGridView>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure).ToList();
             }
         }
 
@@ -133,6 +133,15 @@ namespace Dapper.SQLServerDAL
             {
                 string sqlQuery = "UPDATE DANGNHAP set MATKHAU = @MATKHAU WHERE ID = @ID and MATKHAU = @OldPass";
                 return Conn.Execute(sqlQuery, new { MATKHAU = model.MATKHAU, ID = model.ID, OldPass = model.OldPassWord });
+            }
+        }
+
+        public IList<DangNhap> GetListActive()
+        {
+            using (Conn)
+            {
+                string sqlQuery = "Select ID,CONCAT(TENTK,' (',TENDANGNHAP,')') as TENTK from DANGNHAP where TRANGTHAI = 1";
+                return Conn.Query<DangNhap>(sqlQuery)?.ToList();
             }
         }
 

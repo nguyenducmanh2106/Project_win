@@ -24,6 +24,13 @@ namespace Dapper.IDAL
 
         IList<KhachHang> GetList(CoreModel obj);
 
+        /// <summary>
+        /// Lấy bản ghi theo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        KhachHang GetEntity(int id);
+
         #endregion
     }
 }

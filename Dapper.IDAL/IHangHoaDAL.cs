@@ -24,7 +24,15 @@ namespace Dapper.IDAL
 
         IList<HangHoaModel> GetList(CoreModel obj);
 
+        /// <summary>
+        /// Lấy hàng hóa có số lượng > 0 (vẫn có hàng trong kho)
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        IList<HangHoaModel> GetListCanUse();
+
         HangHoaModel GetEntity(string code);
+        HangHoaModel GetEntity(int id);
 
         #endregion
     }

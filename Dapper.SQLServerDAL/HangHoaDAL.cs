@@ -94,6 +94,30 @@ namespace Dapper.SQLServerDAL
                 return Conn.QueryFirst<HangHoaModel>(sqlQuery, new { MAHH = code });
             }
         }
+
+        public HangHoaModel GetEntity(int id)
+        {
+            using (Conn)
+            {
+
+                string sqlQuery = "SELECT hh.*,ncc.TENNCC,ncc.MANCC from HANGHOA hh LEFT JOIN NCC ncc on hh.NhaCungCapID = ncc.ID WHERE hh.ID = @ID";
+                return Conn.QueryFirst<HangHoaModel>(sqlQuery, new { ID = id });
+            }
+        }
+
+        /// <summary>
+        /// Lấy hàng hóa có số lượng > 0 (vẫn có hàng trong kho)
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public IList<HangHoaModel> GetListCanUse()
+        {
+            using (Conn)
+            {
+                string sqlQuery = "SELECT *,CONCAT(TENHH,' (',MAHH,')') as TENHH from HANGHOA";
+                return Conn.Query<HangHoaModel>(sqlQuery).ToList();
+            }
+        }
         #endregion
 
 

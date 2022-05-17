@@ -24,6 +24,8 @@ namespace Dapper.IDAL
 
         IList<DangNhapGridView> GetList(CoreModel obj);
 
+        IList<DangNhap> GetListActive();
+
         /// <summary>
         /// DANGNHAP
         /// </summary>
