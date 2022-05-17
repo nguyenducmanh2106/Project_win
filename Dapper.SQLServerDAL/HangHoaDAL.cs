@@ -108,14 +108,14 @@ namespace Dapper.SQLServerDAL
         /// <summary>
         /// Lấy hàng hóa có số lượng > 0 (vẫn có hàng trong kho)
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="id">lấy danh sách hàng hóa khác id truyền vào</param>
         /// <returns></returns>
-        public IList<HangHoaModel> GetListCanUse()
+        public IList<HangHoaModel> GetListCanUse(int id)
         {
             using (Conn)
             {
-                string sqlQuery = "SELECT *,CONCAT(TENHH,' (',MAHH,')') as TENHH from HANGHOA";
-                return Conn.Query<HangHoaModel>(sqlQuery).ToList();
+                string sqlQuery = "SELECT *,CONCAT(TENHH,' (',MAHH,')') as TENHH from HANGHOA WHERE ID != @ID";
+                return Conn.Query<HangHoaModel>(sqlQuery,new {ID = id}).ToList();
             }
         }
         #endregion

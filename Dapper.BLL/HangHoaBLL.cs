@@ -52,9 +52,9 @@ namespace Dapper.BLL
             return dal.GetEntity(id);
         }
 
-        public IList<HangHoaModel> GetListCanUse()
+        public IList<HangHoaModel> GetListCanUse(int id)
         {
-            return dal.GetListCanUse();
+            return dal.GetListCanUse(id);
         }
     }
 }

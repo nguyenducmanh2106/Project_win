@@ -150,7 +150,7 @@ namespace QLBANXE
             MAKH.DisplayMember = "MAKH";
             MAKH.ValueMember = "ID";
             MAKH.DataSource = khachHangBLL.GetList(obj);
-            this.MAKH.SelectedIndex = -1;
+            //this.MAKH.SelectedIndex = -1;
 
             //lấy thông tin các tài khoản
             IList<DangNhap> TKNOTHANHTOAN = userBLL.GetListActive();
@@ -177,7 +177,7 @@ namespace QLBANXE
             this.TKCK.ValueMember = "ID";
             this.TKCK.SelectedIndex = -1;
 
-            this.BindDataSourceForColumnCombobox();
+            this.BindDataSourceForColumnCombobox(-1);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -200,16 +200,10 @@ namespace QLBANXE
             }
         }
 
-        private void HandleEventRowAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            //int index = gridViewHangHoa.CurrentCell.RowIndex;
-
-        }
-
-        private void BindDataSourceForColumnCombobox()
+        private void BindDataSourceForColumnCombobox(int id)
         {
             var columns = (gridViewHangHoa.Columns["MAHH1"] as System.Windows.Forms.DataGridViewComboBoxColumn);
-            columns.DataSource = bll.GetListCanUse();
+            columns.DataSource = bll.GetListCanUse(id);
             columns.DisplayMember = "TENHH";
             columns.ValueMember = "ID";
 
@@ -217,12 +211,6 @@ namespace QLBANXE
         }
         private void AddRow()
         {
-            //gridViewHangHoa.Columns.Clear();
-            //DataGridViewComboBoxColumn dgvCmb = new DataGridViewComboBoxColumn();
-            //dgvCmb.DataSource = bll.GetListCanUse();
-            //dgvCmb.DisplayMember = "TENHH";
-            //dgvCmb.ValueMember = "ID";
-            //gridViewHangHoa.Columns.Add(dgvCmb);
             gridViewHangHoa.Rows.Add(1);
 
         }
@@ -232,11 +220,6 @@ namespace QLBANXE
             if (gridViewHangHoa.Columns[e.ColumnIndex].Name == "ACTION")
             {
                 gridViewHangHoa.Rows.RemoveAt(e.RowIndex);
-            }
-            if (gridViewHangHoa.Columns[e.ColumnIndex].Name == "MAHH1")
-            {
-                //var columns = (gridViewHangHoa.Rows[e.RowIndex].Cells["MAHH1"]. as System.Windows.Forms.ComboBox);
-                //this.columns.SelectedValueChanged += new System.EventHandler(this.ChangeCombobox);
             }
 
         }
@@ -248,7 +231,7 @@ namespace QLBANXE
 
 
         /// <summary>
-        /// Sự kiện thay đổi combobox mã hàng hóa
+        /// Bắt sự kiện thay đổi ô của datagridview
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -266,7 +249,27 @@ namespace QLBANXE
                 combo.SelectedIndexChanged +=
                     new EventHandler(ComboBox_SelectedIndexChanged);
             }
+
+            TextBox textBox = e.Control as TextBox;
+            if (textBox != null)
+            {
+                // Remove an existing event-handler, if present, to avoid 
+                // adding multiple handlers when the editing control is reused.
+                //textBox.TextChanged -=
+                //    new EventHandler(TextChanged);
+
+                // Add the event handler. 
+                textBox.TextChanged +=
+                    new EventHandler(TextChanged);
+            }
         }
+
+
+        /// <summary>
+        /// thay đổi giá trị các ô combobox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             int HangHoaID = 0;
@@ -276,7 +279,198 @@ namespace QLBANXE
             {
                 HangHoa hangHoa = bll.GetEntity(HangHoaID);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TENHH1"].Value = hangHoa?.TENHH;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DVT1"].Value = hangHoa?.DVT;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value = hangHoa?.SOLUONG;
             }
+        }
+
+
+        /// <summary>
+        /// xử lý sự kiện thay đổi giá trị các ô textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
+        /// xử lý sự kiện nhập dữ liệu cho các ô text box có dạng số
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex > 0)
+            {
+                if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("SOLUONG1")
+                    || gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("THUESUAT")
+                    || gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("TYLECK"))
+                {
+                    if (e.Value != null && e.Value?.ToString() != "")
+                    {
+                        double d = 0;
+                        double.TryParse(e.Value?.ToString(), out d);
+                        if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("SOLUONG1"))
+                        {
+                            double kho = 0;
+                            double.TryParse(gridViewHangHoa.Rows[e.RowIndex].Cells["KHO"].Value?.ToString(), out kho);
+                            if (d > kho)
+                            {
+                                d = kho;
+                            }
+                        }
+                        e.Value = d.ToString("n0");
+                        //e.Value = d.ToString("n");
+                    }
+                }
+                if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("DONGIA")
+                    || gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("TIENTHUE")
+                    || gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("TIENCK"))
+                {
+                    if (e.Value != null && e.Value?.ToString() != "")
+                    {
+                        double d = 0;
+                        double.TryParse(e.Value?.ToString(), out d);
+                        e.Value = d.ToString("n2");
+                    }
+                }
+            }
+        }
+
+        private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int EditingControlRowIndex = e.RowIndex;
+            int EditingControlColumnIndex = e.ColumnIndex;
+            if (EditingControlRowIndex < 0) return;
+            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString() == "NaN")
+            {
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
+            }
+            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString() == "NaN")
+            {
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
+            }
+            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString() == "NaN")
+            {
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value = 0;
+            }
+            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value?.ToString() == "NaN")
+            {
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value = 0;
+            }
+            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString() == "NaN")
+            {
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value = 0;
+            }
+            double soLuongKho = 0;
+            double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString(), out soLuongKho);
+
+            #region tự tính thuế suất và tiền thuế cho mỗi hàng hóa
+            if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("THUESUAT")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("DONGIA")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TYLECK")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENCK"))
+            {
+                double soLuong = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                double donGia = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DONGIA"].Value?.ToString(), out donGia);
+
+                double thueSuat = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
+
+                double tienCK = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
+
+                if (soLuong > soLuongKho)
+                {
+                    soLuong = soLuongKho;
+                }
+                double tienThue = (soLuong * donGia - tienCK) * (thueSuat * 0.01);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = tienThue;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+            }
+            if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENTHUE")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("DONGIA")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TYLECK")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENCK"))
+            {
+                double soLuong = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                double donGia = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DONGIA"].Value?.ToString(), out donGia);
+
+                double tienThue = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+
+                double tienCK = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
+                if (soLuong > soLuongKho)
+                {
+                    soLuong = soLuongKho;
+                }
+
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value = (tienThue * 100) / (soLuong * donGia - tienCK);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+            }
+            #endregion
+
+            #region tự tính Tỷ lệ chiết khấu và tiền chiết khấu cho mỗi hàng hóa
+            if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TYLECK")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("DONGIA"))
+            {
+                double soLuong = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                double donGia = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DONGIA"].Value?.ToString(), out donGia);
+
+                double tyLeCK = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value?.ToString(), out tyLeCK);
+
+                double tienThue = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+
+                if (soLuong > soLuongKho)
+                {
+                    soLuong = soLuongKho;
+                }
+                double tienCK = soLuong * donGia * (tyLeCK * 0.01);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value = tienCK;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+            }
+            if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENCK")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
+                || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("DONGIA"))
+            {
+                double soLuong = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                double donGia = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DONGIA"].Value?.ToString(), out donGia);
+
+                double tienCK = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
+
+                double tienThue = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+                if (soLuong > soLuongKho)
+                {
+                    soLuong = soLuongKho;
+                }
+
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value = (tienCK * 100) / (soLuong * donGia);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+            }
+            #endregion
         }
     }
 }

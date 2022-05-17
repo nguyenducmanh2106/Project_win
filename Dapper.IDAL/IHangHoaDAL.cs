@@ -29,7 +29,7 @@ namespace Dapper.IDAL
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        IList<HangHoaModel> GetListCanUse();
+        IList<HangHoaModel> GetListCanUse(int id);
 
         HangHoaModel GetEntity(string code);
         HangHoaModel GetEntity(int id);

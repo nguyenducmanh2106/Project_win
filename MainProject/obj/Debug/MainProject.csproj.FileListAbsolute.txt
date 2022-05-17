@@ -125,18 +125,12 @@ E:\Project_win\MainProject\bin\Debug\K4os.Compression.LZ4.xml
 E:\Project_win\MainProject\bin\Debug\K4os.Hash.xxHash.xml
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.AssemblyReference.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.SuggestedBindingRedirects.cache
-E:\Project_win\MainProject\obj\Debug\QLBANXE.BangGia.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.FeaturesProduct.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HangTon.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.Hangxe.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDon.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonBan.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonNhap.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.txtUsername.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.MainScreen.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.Product.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.Properties.Resources.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.ThongKe.resources
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.GenerateResource.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.CoreCompileInputs.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.CopyComplete
@@ -174,3 +168,6 @@ E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangUpdate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTCreate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTList.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTCreate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTList.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources

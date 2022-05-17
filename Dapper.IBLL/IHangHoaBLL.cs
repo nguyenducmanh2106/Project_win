@@ -31,7 +31,7 @@ namespace Dapper.IBLL
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        IList<HangHoaModel> GetListCanUse();
+        IList<HangHoaModel> GetListCanUse(int id);
 
         #endregion
     }
