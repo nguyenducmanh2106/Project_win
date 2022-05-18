@@ -119,7 +119,8 @@
             // 
             // gridView
             // 
-            this.gridView.AllowUserToOrderColumns = true;
+            this.gridView.AllowUserToAddRows = false;
+            this.gridView.AllowUserToDeleteRows = false;
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -137,6 +138,7 @@
             this.NhaCungCapID});
             this.gridView.Location = new System.Drawing.Point(0, 117);
             this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             this.gridView.Size = new System.Drawing.Size(800, 333);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
@@ -146,30 +148,35 @@
             this.MAHH.DataPropertyName = "MAHH";
             this.MAHH.HeaderText = "Mã hàng hóa";
             this.MAHH.Name = "MAHH";
+            this.MAHH.ReadOnly = true;
             // 
             // TENHH
             // 
             this.TENHH.DataPropertyName = "TENHH";
             this.TENHH.HeaderText = "Tên hàng hóa";
             this.TENHH.Name = "TENHH";
+            this.TENHH.ReadOnly = true;
             // 
             // DVT
             // 
             this.DVT.DataPropertyName = "DVT";
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.Name = "DVT";
+            this.DVT.ReadOnly = true;
             // 
             // MANCC
             // 
             this.MANCC.DataPropertyName = "MANCC";
             this.MANCC.HeaderText = "Mã nhà cung cấp";
             this.MANCC.Name = "MANCC";
+            this.MANCC.ReadOnly = true;
             // 
             // SOLUONG
             // 
             this.SOLUONG.DataPropertyName = "SOLUONG";
             this.SOLUONG.HeaderText = "Số lượng";
             this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.ReadOnly = true;
             // 
             // GIAXUAT
             // 
@@ -179,6 +186,7 @@
             this.GIAXUAT.DefaultCellStyle = dataGridViewCellStyle1;
             this.GIAXUAT.HeaderText = "Giá xuất";
             this.GIAXUAT.Name = "GIAXUAT";
+            this.GIAXUAT.ReadOnly = true;
             // 
             // GIANHAP
             // 
@@ -188,6 +196,7 @@
             this.GIANHAP.DefaultCellStyle = dataGridViewCellStyle2;
             this.GIANHAP.HeaderText = "Giá nhập";
             this.GIANHAP.Name = "GIANHAP";
+            this.GIANHAP.ReadOnly = true;
             // 
             // HINHANH
             // 
@@ -196,12 +205,14 @@
             this.HINHANH.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.HINHANH.MinimumWidth = 100;
             this.HINHANH.Name = "HINHANH";
+            this.HINHANH.ReadOnly = true;
             // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // NhaCungCapID
@@ -209,6 +220,7 @@
             this.NhaCungCapID.DataPropertyName = "NhaCungCapID";
             this.NhaCungCapID.HeaderText = "NhaCungCapID";
             this.NhaCungCapID.Name = "NhaCungCapID";
+            this.NhaCungCapID.ReadOnly = true;
             this.NhaCungCapID.Visible = false;
             // 
             // dataGridViewImageColumn1

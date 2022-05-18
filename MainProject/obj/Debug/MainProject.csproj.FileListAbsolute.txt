@@ -174,3 +174,6 @@ E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources

@@ -113,6 +113,7 @@
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.AllowUserToDeleteRows = false;
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -126,6 +127,7 @@
             this.ID});
             this.gridView.Location = new System.Drawing.Point(0, 109);
             this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             this.gridView.Size = new System.Drawing.Size(800, 341);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
@@ -135,30 +137,35 @@
             this.TENDANGNHAP.DataPropertyName = "TENDANGNHAP";
             this.TENDANGNHAP.HeaderText = "Tên TK";
             this.TENDANGNHAP.Name = "TENDANGNHAP";
+            this.TENDANGNHAP.ReadOnly = true;
             // 
             // TENTK
             // 
             this.TENTK.DataPropertyName = "TENTK";
             this.TENTK.HeaderText = "Họ tên";
             this.TENTK.Name = "TENTK";
+            this.TENTK.ReadOnly = true;
             // 
             // CAPTK
             // 
             this.CAPTK.DataPropertyName = "CAPTK";
             this.CAPTK.HeaderText = "Cấp TK";
             this.CAPTK.Name = "CAPTK";
+            this.CAPTK.ReadOnly = true;
             // 
             // TRANGTHAI_TEXT
             // 
             this.TRANGTHAI_TEXT.DataPropertyName = "TRANGTHAI_TEXT";
             this.TRANGTHAI_TEXT.HeaderText = "Trạng thái";
             this.TRANGTHAI_TEXT.Name = "TRANGTHAI_TEXT";
+            this.TRANGTHAI_TEXT.ReadOnly = true;
             // 
             // TRANGTHAI
             // 
             this.TRANGTHAI.DataPropertyName = "TRANGTHAI";
             this.TRANGTHAI.HeaderText = "TRANGTHAI";
             this.TRANGTHAI.Name = "TRANGTHAI";
+            this.TRANGTHAI.ReadOnly = true;
             this.TRANGTHAI.Visible = false;
             // 
             // ID
@@ -166,6 +173,7 @@
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // SearchButton

@@ -17,7 +17,7 @@ namespace QLBANXE
 {
     public partial class DanhMucTaiKhoanKeToanCreate : Form
     {
-        private readonly UserBLL userBLL = new UserBLL();
+        private readonly DanhMucTaiKhoanBLL bll = new DanhMucTaiKhoanBLL();
         public DanhMucTaiKhoanKeToanCreate()
         {
             InitializeComponent();
@@ -33,42 +33,34 @@ namespace QLBANXE
             try
             {
                 int? nullInt = null;
-                if (string.IsNullOrEmpty(this.TENDANGNHAP.Text) || string.IsNullOrEmpty(this.TENTK.Text) || string.IsNullOrEmpty(this.MATKHAU.Text) || string.IsNullOrEmpty(this.CONFIRM_MATKHAU.Text))
+                if (string.IsNullOrEmpty(this.MATK.Text) || string.IsNullOrEmpty(this.TENTK.Text) )
                 {
                     new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
                 else
                 {
-                    if (this.MATKHAU.Text != this.CONFIRM_MATKHAU.Text)
+                    DanhMucTaiKhoanKeToanModel dangNhap = new DanhMucTaiKhoanKeToanModel()
                     {
-                        new ShowMessageBox().Warning("Xác nhận mật khẩu chưa đúng");
+                        MATK = this.MATK.Text,
+                        TENTK = this.TENTK.Text,
+                        TKCT = !string.IsNullOrEmpty(this.TKCT.Text) ? Convert.ToInt32(this.TKCT.Text) : nullInt,
+                        CAPTK = !string.IsNullOrEmpty(this.CAPTK.Text) ? Convert.ToInt32(this.CAPTK.Text) : nullInt,
+                    };
+                    bool result = bll.Insert(dangNhap);
+                    if (result)
+                    {
+                        new ShowMessageBox().Success(String.Format(MessageConstants.InsertSuccessMessage, "tài khoản kế toán"));
+                        this.Dispose(true);
                     }
                     else
                     {
-                        DangNhap dangNhap = new DangNhap()
-                        {
-                            TENDANGNHAP = this.TENDANGNHAP.Text,
-                            TENTK = this.TENTK.Text,
-                            MATKHAU = this.MATKHAU.Text,
-                            CAPTK = !string.IsNullOrEmpty(this.CAPTK.Text) ? Convert.ToInt32(this.CAPTK.Text) : nullInt,
-                            TRANGTHAI = Convert.ToInt32(this.TRANGTHAI.Checked)
-                        };
-                        bool result = userBLL.Insert(dangNhap);
-                        if (result)
-                        {
-                            new ShowMessageBox().Success(String.Format(MessageConstants.InsertSuccessMessage, "tài khoản"));
-                            this.Dispose(true);
-                        }
-                        else
-                        {
-                            new ShowMessageBox().Error(String.Format(MessageConstants.InsertErrorMessage, "tài khoản"));
-                        }
+                        new ShowMessageBox().Error(String.Format(MessageConstants.InsertErrorMessage, "tài khoản kế toán"));
                     }
                 }
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
-                if(ex.Number == 2601)
+                if (ex.Number == 2601)
                 {
                     new ShowMessageBox().Error("Tài khoản đã tồn tại");
                 }

@@ -116,6 +116,7 @@
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.AllowUserToDeleteRows = false;
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -131,6 +132,7 @@
             this.ID});
             this.gridView.Location = new System.Drawing.Point(0, 104);
             this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             this.gridView.Size = new System.Drawing.Size(800, 346);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
@@ -140,30 +142,35 @@
             this.MAKH.DataPropertyName = "MAKH";
             this.MAKH.HeaderText = "Mã khách hàng";
             this.MAKH.Name = "MAKH";
+            this.MAKH.ReadOnly = true;
             // 
             // TENKH
             // 
             this.TENKH.DataPropertyName = "TENKH";
             this.TENKH.HeaderText = "Tên khách hàng";
             this.TENKH.Name = "TENKH";
+            this.TENKH.ReadOnly = true;
             // 
             // DIACHI
             // 
             this.DIACHI.DataPropertyName = "DIACHI";
             this.DIACHI.HeaderText = "Địa chỉ";
             this.DIACHI.Name = "DIACHI";
+            this.DIACHI.ReadOnly = true;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "SĐT";
             this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             // 
             // EMAIL
             // 
             this.EMAIL.DataPropertyName = "EMAIL";
             this.EMAIL.HeaderText = "Email";
             this.EMAIL.Name = "EMAIL";
+            this.EMAIL.ReadOnly = true;
             this.EMAIL.Visible = false;
             // 
             // MST
@@ -183,12 +190,14 @@
             this.NGAYDANGKY.DefaultCellStyle = dataGridViewCellStyle1;
             this.NGAYDANGKY.HeaderText = "Ngày đăng ký";
             this.NGAYDANGKY.Name = "NGAYDANGKY";
+            this.NGAYDANGKY.ReadOnly = true;
             // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // SearchButton

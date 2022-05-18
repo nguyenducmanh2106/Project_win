@@ -114,6 +114,7 @@
             // gridView
             // 
             this.gridView.AllowUserToAddRows = false;
+            this.gridView.AllowUserToDeleteRows = false;
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -128,6 +129,7 @@
             this.ID});
             this.gridView.Location = new System.Drawing.Point(0, 106);
             this.gridView.Name = "gridView";
+            this.gridView.ReadOnly = true;
             this.gridView.Size = new System.Drawing.Size(800, 344);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
@@ -137,30 +139,35 @@
             this.MANCC.DataPropertyName = "MANCC";
             this.MANCC.HeaderText = "Mã nhà cung cấp";
             this.MANCC.Name = "MANCC";
+            this.MANCC.ReadOnly = true;
             // 
             // TENNCC
             // 
             this.TENNCC.DataPropertyName = "TENNCC";
             this.TENNCC.HeaderText = "Tên nhà cung cấp";
             this.TENNCC.Name = "TENNCC";
+            this.TENNCC.ReadOnly = true;
             // 
             // DIACHI
             // 
             this.DIACHI.DataPropertyName = "DIACHI";
             this.DIACHI.HeaderText = "Địa chỉ";
             this.DIACHI.Name = "DIACHI";
+            this.DIACHI.ReadOnly = true;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "SĐT";
             this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             // 
             // EMAIL
             // 
             this.EMAIL.DataPropertyName = "EMAIL";
             this.EMAIL.HeaderText = "Email";
             this.EMAIL.Name = "EMAIL";
+            this.EMAIL.ReadOnly = true;
             this.EMAIL.Visible = false;
             // 
             // NGUNGHOPTAC
@@ -175,6 +182,7 @@
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // SearchButton
