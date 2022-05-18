@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CodeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +45,7 @@
             this.TKNOTHANHTOAN = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.NGAYLAP = new System.Windows.Forms.DateTimePicker();
             this.TKCK = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -81,14 +83,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.TONGTHANHTOAN = new System.Windows.Forms.Label();
+            this.TIENTHUE1 = new System.Windows.Forms.Label();
+            this.TIENCK1 = new System.Windows.Forms.Label();
+            this.TONGTIEN = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveButton = new System.Windows.Forms.ToolStripMenuItem();
             this.BackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.AddRowButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -174,7 +174,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.NGAYLAP);
             this.groupBox3.Controls.Add(this.TKNOTHANHTOAN);
             this.groupBox3.Controls.Add(this.TKCK);
             this.groupBox3.Controls.Add(this.label1);
@@ -192,17 +192,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin hóa đơn";
             // 
-            // dateTimePicker1
+            // NGAYLAP
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.NGAYLAP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 43);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(207, 20);
-            this.dateTimePicker1.TabIndex = 40;
+            this.NGAYLAP.CustomFormat = "dd/MM/yyyy";
+            this.NGAYLAP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NGAYLAP.Location = new System.Drawing.Point(14, 43);
+            this.NGAYLAP.Name = "NGAYLAP";
+            this.NGAYLAP.Size = new System.Drawing.Size(207, 20);
+            this.NGAYLAP.TabIndex = 40;
             // 
             // TKCK
             // 
@@ -226,9 +226,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(10, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 13);
+            this.label11.Size = new System.Drawing.Size(86, 13);
             this.label11.TabIndex = 32;
-            this.label11.Text = "Số hóa đơn";
+            this.label11.Text = "Số hóa đơn(*)";
             // 
             // TKCOTHUE
             // 
@@ -436,6 +436,7 @@
             this.ACTION});
             this.gridViewHangHoa.Location = new System.Drawing.Point(12, 342);
             this.gridViewHangHoa.Name = "gridViewHangHoa";
+            this.gridViewHangHoa.RowTemplate.Height = 32;
             this.gridViewHangHoa.Size = new System.Drawing.Size(983, 150);
             this.gridViewHangHoa.TabIndex = 41;
             this.gridViewHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
@@ -445,87 +446,104 @@
             // 
             // MAHH1
             // 
+            this.MAHH1.AutoComplete = false;
+            this.MAHH1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MAHH1.DataPropertyName = "MAHH1";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            this.MAHH1.DefaultCellStyle = dataGridViewCellStyle1;
             this.MAHH1.HeaderText = "Mã hàng";
             this.MAHH1.Name = "MAHH1";
             this.MAHH1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MAHH1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // TENHH1
             // 
             this.TENHH1.HeaderText = "Tên hàng";
             this.TENHH1.Name = "TENHH1";
+            this.TENHH1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // DVT1
             // 
             this.DVT1.DataPropertyName = "DVT1";
             this.DVT1.HeaderText = "ĐVT";
             this.DVT1.Name = "DVT1";
+            this.DVT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // SOLUONG1
             // 
             this.SOLUONG1.DataPropertyName = "SOLUONG1";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.SOLUONG1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SOLUONG1.DefaultCellStyle = dataGridViewCellStyle2;
             this.SOLUONG1.HeaderText = "Số lượng";
             this.SOLUONG1.Name = "SOLUONG1";
+            this.SOLUONG1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // KHO
             // 
             this.KHO.DataPropertyName = "KHO";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KHO.DefaultCellStyle = dataGridViewCellStyle3;
             this.KHO.HeaderText = "Kho";
             this.KHO.Name = "KHO";
             this.KHO.ReadOnly = true;
+            this.KHO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // DONGIA
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.DONGIA.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.DONGIA.DefaultCellStyle = dataGridViewCellStyle4;
             this.DONGIA.HeaderText = "Đơn giá";
             this.DONGIA.Name = "DONGIA";
+            this.DONGIA.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // THUESUAT
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.THUESUAT.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.THUESUAT.DefaultCellStyle = dataGridViewCellStyle5;
             this.THUESUAT.HeaderText = "% Thuế GTGT";
             this.THUESUAT.Name = "THUESUAT";
+            this.THUESUAT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TIENTHUE
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.TIENTHUE.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.TIENTHUE.DefaultCellStyle = dataGridViewCellStyle6;
             this.TIENTHUE.HeaderText = "Tiền thuế GTGT";
             this.TIENTHUE.Name = "TIENTHUE";
+            this.TIENTHUE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TYLECK
             // 
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.TYLECK.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.TYLECK.DefaultCellStyle = dataGridViewCellStyle7;
             this.TYLECK.HeaderText = "Tỷ lệ CK (%)";
             this.TYLECK.Name = "TYLECK";
+            this.TYLECK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // TIENCK
             // 
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.TIENCK.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.TIENCK.DefaultCellStyle = dataGridViewCellStyle8;
             this.TIENCK.HeaderText = "Tiền chiết khấu";
             this.TIENCK.Name = "TIENCK";
+            this.TIENCK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // THANHTIEN
             // 
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.THANHTIEN.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.THANHTIEN.DefaultCellStyle = dataGridViewCellStyle9;
             this.THANHTIEN.HeaderText = "Thành tiền";
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.ReadOnly = true;
+            this.THANHTIEN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ACTION
             // 
@@ -575,56 +593,54 @@
             this.label18.TabIndex = 45;
             this.label18.Text = "Tổng tiền thanh toán:";
             // 
-            // label19
+            // TONGTHANHTOAN
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(896, 574);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label19.Size = new System.Drawing.Size(109, 13);
-            this.label19.TabIndex = 49;
-            this.label19.Text = "Tổng tiền thanh toán:";
+            this.TONGTHANHTOAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TONGTHANHTOAN.AutoSize = true;
+            this.TONGTHANHTOAN.Location = new System.Drawing.Point(896, 574);
+            this.TONGTHANHTOAN.Name = "TONGTHANHTOAN";
+            this.TONGTHANHTOAN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TONGTHANHTOAN.Size = new System.Drawing.Size(13, 13);
+            this.TONGTHANHTOAN.TabIndex = 49;
+            this.TONGTHANHTOAN.Text = "0";
             // 
-            // label20
+            // TIENTHUE1
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(897, 551);
-            this.label20.Name = "label20";
-            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label20.Size = new System.Drawing.Size(68, 13);
-            this.label20.TabIndex = 48;
-            this.label20.Text = "Thuế GTGT:";
+            this.TIENTHUE1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TIENTHUE1.AutoSize = true;
+            this.TIENTHUE1.Location = new System.Drawing.Point(897, 551);
+            this.TIENTHUE1.Name = "TIENTHUE1";
+            this.TIENTHUE1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TIENTHUE1.Size = new System.Drawing.Size(13, 13);
+            this.TIENTHUE1.TabIndex = 48;
+            this.TIENTHUE1.Text = "0";
             // 
-            // label21
+            // TIENCK1
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(897, 529);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label21.Size = new System.Drawing.Size(61, 13);
-            this.label21.TabIndex = 47;
-            this.label21.Text = "Chiết khấu:";
+            this.TIENCK1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TIENCK1.AutoSize = true;
+            this.TIENCK1.Location = new System.Drawing.Point(897, 529);
+            this.TIENCK1.Name = "TIENCK1";
+            this.TIENCK1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TIENCK1.Size = new System.Drawing.Size(13, 13);
+            this.TIENCK1.TabIndex = 47;
+            this.TIENCK1.Text = "0";
             // 
-            // label22
+            // TONGTIEN
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(897, 506);
-            this.label22.Name = "label22";
-            this.label22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label22.Size = new System.Drawing.Size(82, 13);
-            this.label22.TabIndex = 46;
-            this.label22.Text = "Tổng tiền hàng:";
+            this.TONGTIEN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TONGTIEN.AutoSize = true;
+            this.TONGTIEN.Location = new System.Drawing.Point(897, 506);
+            this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TONGTIEN.Size = new System.Drawing.Size(13, 13);
+            this.TONGTIEN.TabIndex = 46;
+            this.TONGTIEN.Text = "0";
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CreateButton,
-            this.EditButton,
-            this.DeleteButton,
+            this.SaveButton,
             this.BackButton});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -632,26 +648,13 @@
             this.menuStrip1.TabIndex = 50;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // CreateButton
+            // SaveButton
             // 
-            this.CreateButton.Image = global::QLBANXE.Properties.Resources.icon_plus_70;
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(65, 20);
-            this.CreateButton.Text = "Thêm";
-            // 
-            // EditButton
-            // 
-            this.EditButton.Image = global::QLBANXE.Properties.Resources.icon_save_color_70;
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(55, 20);
-            this.EditButton.Text = "Lưu";
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Image = global::QLBANXE.Properties.Resources.icon_remove_color_70;
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(55, 20);
-            this.DeleteButton.Text = "Xóa";
+            this.SaveButton.Image = global::QLBANXE.Properties.Resources.icon_save_color_70;
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(55, 20);
+            this.SaveButton.Text = "Lưu";
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // BackButton
             // 
@@ -678,10 +681,10 @@
             this.ClientSize = new System.Drawing.Size(1009, 623);
             this.Controls.Add(this.AddRowButton);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.TONGTHANHTOAN);
+            this.Controls.Add(this.TIENTHUE1);
+            this.Controls.Add(this.TIENCK1);
+            this.Controls.Add(this.TONGTIEN);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -733,7 +736,7 @@
         private System.Windows.Forms.ComboBox TKCOTHUE;
         public System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox TKCK;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker NGAYLAP;
         public System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox LOAITIEN;
         private System.Windows.Forms.DataGridView gridViewHangHoa;
@@ -741,14 +744,12 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label TONGTHANHTOAN;
+        private System.Windows.Forms.Label TIENTHUE1;
+        private System.Windows.Forms.Label TIENCK1;
+        private System.Windows.Forms.Label TONGTIEN;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem CreateButton;
-        private System.Windows.Forms.ToolStripMenuItem EditButton;
-        private System.Windows.Forms.ToolStripMenuItem DeleteButton;
+        private System.Windows.Forms.ToolStripMenuItem SaveButton;
         private System.Windows.Forms.ToolStripMenuItem BackButton;
         private System.Windows.Forms.ComboBox MAKH;
         private System.Windows.Forms.Button AddRowButton;

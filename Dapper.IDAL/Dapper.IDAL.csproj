@@ -47,6 +47,7 @@
     <Compile Include="IHangHoaDAL.cs" />
     <Compile Include="INhaCungCapDAL.cs" />
     <Compile Include="IBaseDAL.cs" />
+    <Compile Include="IDanhMucTaiKhoanDAL.cs" />
     <Compile Include="IUserDAL.cs" />
     <Compile Include="IBookDAL.cs" />
     <Compile Include="IBookReviewDAL.cs" />

@@ -18,7 +18,8 @@ namespace QLBANXE
 {
     public partial class HoaDonGTGTCreate : Form
     {
-        private readonly HangHoaBLL bll = new HangHoaBLL();
+        private readonly HoaDonGTGTBLL bll = new HoaDonGTGTBLL();
+        private readonly HangHoaBLL hangHoaBll = new HangHoaBLL();
         private readonly KhachHangBLL khachHangBLL = new KhachHangBLL();
         private readonly UserBLL userBLL = new UserBLL();
         public HoaDonGTGTCreate()
@@ -31,7 +32,7 @@ namespace QLBANXE
         {
             try
             {
-                if (string.IsNullOrEmpty(this.SOHD.Text) || string.IsNullOrEmpty(this.MST.Text))
+                if (string.IsNullOrEmpty(this.SOHD.Text) || string.IsNullOrEmpty(this.MAKH.Text))
                 {
                     new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
@@ -39,25 +40,35 @@ namespace QLBANXE
                 {
                     int? nullInt = null;
                     decimal? nullDec = null;
-                    HangHoa model = new HangHoa()
+                    DateTime ngayLap = default;
+                    DateTime.TryParse(this.NGAYLAP.Text, out ngayLap);
+                    HoaDonGTGT model = new HoaDonGTGT()
                     {
-                        //MAHH = this.MAHH.Text,
-                        //TENHH = this.TENHH.Text,
-                        //DVT = this.DVT.Text,
-                        //NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
-                        //SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
-                        //GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
-                        //GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
+                        SOHD = this.SOHD.Text,
+                        NGAYLAP = ngayLap,
+                        KhachHangID = Convert.ToInt32(this.MAKH.SelectedValue),
+                        TKNOTHANHTOAN = Convert.ToInt32(this.TKNOTHANHTOAN.SelectedValue),
+                        TKCODOANHTHU = Convert.ToInt32(this.TKCODOANHTHU.SelectedValue),
+                        TKCOTHUE = Convert.ToInt32(this.TKCOTHUE.SelectedValue),
+                        TKCK = Convert.ToInt32(this.TKCK.SelectedValue),
+                        TIENTHANHTOAN = Convert.ToDecimal(this.TONGTHANHTOAN.Text),
+                        DIENGIAI = this.DIENGIAI.Text,
+                        LOAITIEN = this.LOAITIEN.Text,
+                        TONGTIENCK = Convert.ToDecimal(this.TIENCK1.Text),
+                        TONGTIENTHUE = Convert.ToDecimal(this.TIENTHUE1.Text),
                     };
-                    bool result = bll.Insert(model);
+
+                    List<CTHDGTGT> cTHDGTGT = new List<CTHDGTGT>();
+                    cTHDGTGT = CalculationChiTietHoaDonGTGT(gridViewHangHoa);
+                    bool result = bll.Insert(model, cTHDGTGT);
                     if (result)
                     {
-                        new ShowMessageBox().Success(String.Format(MessageConstants.InsertSuccessMessage, "hàng hóa"));
+                        new ShowMessageBox().Success(String.Format(MessageConstants.InsertSuccessMessage, "hóa đơn"));
                         this.Dispose(true);
                     }
                     else
                     {
-                        new ShowMessageBox().Error(String.Format(MessageConstants.InsertErrorMessage, "hàng hóa"));
+                        new ShowMessageBox().Error(String.Format(MessageConstants.InsertErrorMessage, "hóa đơn"));
                     }
                 }
             }
@@ -65,7 +76,7 @@ namespace QLBANXE
             {
                 if (ex.Number == 2601)
                 {
-                    new ShowMessageBox().Error("Mã hàng hóa đã tồn tại");
+                    new ShowMessageBox().Error("Mã hóa đơn đã tồn tại");
                 }
                 else
                 {
@@ -74,7 +85,7 @@ namespace QLBANXE
             }
             catch (Exception ex)
             {
-                throw ex;
+                new ShowMessageBox().Error(ex.Message);
             }
         }
 
@@ -203,7 +214,7 @@ namespace QLBANXE
         private void BindDataSourceForColumnCombobox(int id)
         {
             var columns = (gridViewHangHoa.Columns["MAHH1"] as System.Windows.Forms.DataGridViewComboBoxColumn);
-            columns.DataSource = bll.GetListCanUse(id);
+            columns.DataSource = hangHoaBll.GetListCanUse(id);
             columns.DisplayMember = "TENHH";
             columns.ValueMember = "ID";
 
@@ -277,7 +288,7 @@ namespace QLBANXE
             Int32.TryParse(((ComboBox)sender).SelectedValue?.ToString(), out HangHoaID);
             if (HangHoaID > 0)
             {
-                HangHoa hangHoa = bll.GetEntity(HangHoaID);
+                HangHoa hangHoa = hangHoaBll.GetEntity(HangHoaID);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TENHH1"].Value = hangHoa?.TENHH;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DVT1"].Value = hangHoa?.DVT;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value = hangHoa?.SOLUONG;
@@ -345,6 +356,7 @@ namespace QLBANXE
             int EditingControlRowIndex = e.RowIndex;
             int EditingControlColumnIndex = e.ColumnIndex;
             if (EditingControlRowIndex < 0) return;
+            Dictionary<string, object> dics = new Dictionary<string, object>();
             if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString() == "NaN")
             {
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
@@ -393,7 +405,14 @@ namespace QLBANXE
                 }
                 double tienThue = (soLuong * donGia - tienCK) * (thueSuat * 0.01);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = tienThue;
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = soLuong * donGia - tienCK + tienThue;
+
+                dics = CalculationSumary(gridViewHangHoa);
+                this.TONGTIEN.Text = dics["TONGTIEN"]?.ToString();
+                this.TIENCK1.Text = dics["TIENCK"]?.ToString();
+                this.TIENTHUE1.Text = dics["TIENTHUE"]?.ToString();
+                this.TONGTHANHTOAN.Text = dics["TONGTHANHTOAN"]?.ToString();
+
             }
             if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENTHUE")
                 || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
@@ -417,8 +436,14 @@ namespace QLBANXE
                     soLuong = soLuongKho;
                 }
 
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value = (tienThue * 100) / (soLuong * donGia - tienCK);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value = soLuong * donGia - tienCK > 0 ? (tienThue * 100) / (soLuong * donGia - tienCK) : 0;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+
+                dics = CalculationSumary(gridViewHangHoa);
+                this.TONGTIEN.Text = dics["TONGTIEN"]?.ToString();
+                this.TIENCK1.Text = dics["TIENCK"]?.ToString();
+                this.TIENTHUE1.Text = dics["TIENTHUE"]?.ToString();
+                this.TONGTHANHTOAN.Text = dics["TONGTHANHTOAN"]?.ToString();
             }
             #endregion
 
@@ -436,16 +461,24 @@ namespace QLBANXE
                 double tyLeCK = 0;
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value?.ToString(), out tyLeCK);
 
-                double tienThue = 0;
-                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+                double thueSuat = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
+
 
                 if (soLuong > soLuongKho)
                 {
                     soLuong = soLuongKho;
                 }
                 double tienCK = soLuong * donGia * (tyLeCK * 0.01);
+                double tienThue = (soLuong * donGia - tienCK) * (thueSuat * 0.01);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value = tienCK;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+
+                dics = CalculationSumary(gridViewHangHoa);
+                this.TONGTIEN.Text = dics["TONGTIEN"]?.ToString();
+                this.TIENCK1.Text = dics["TIENCK"]?.ToString();
+                this.TIENTHUE1.Text = dics["TIENTHUE"]?.ToString();
+                this.TONGTHANHTOAN.Text = dics["TONGTHANHTOAN"]?.ToString();
             }
             if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("TIENCK")
                 || gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("SOLUONG1")
@@ -460,17 +493,101 @@ namespace QLBANXE
                 double tienCK = 0;
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
 
-                double tienThue = 0;
-                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+                double thueSuat = 0;
+                double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
+
+                double tienThue = (soLuong * donGia - tienCK) * (thueSuat * 0.01);
                 if (soLuong > soLuongKho)
                 {
                     soLuong = soLuongKho;
                 }
 
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value = (tienCK * 100) / (soLuong * donGia);
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
+                double tyLeCk = (tienCK * 100) / (soLuong * donGia);
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value = tyLeCk;
+                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = soLuong * donGia - tienCK + tienThue;
+
+                dics = CalculationSumary(gridViewHangHoa);
+                this.TONGTIEN.Text = dics["TONGTIEN"]?.ToString();
+                this.TIENCK1.Text = dics["TIENCK"]?.ToString();
+                this.TIENTHUE1.Text = dics["TIENTHUE"]?.ToString();
+                this.TONGTHANHTOAN.Text = dics["TONGTHANHTOAN"]?.ToString();
             }
             #endregion
+        }
+        private Dictionary<string, object> CalculationSumary(DataGridView dgv)
+        {
+            Dictionary<string, object> dics = new Dictionary<string, object>();
+            decimal tongTien = 0;
+            decimal tienCK = 0;
+            decimal tienThue = 0;
+            decimal tongThanhToan = 0;
+            for (var index = 0; index < dgv.RowCount; index++)
+            {
+                decimal soLuong = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                Decimal donGia = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["DONGIA"].Value?.ToString(), out donGia);
+                tongTien += soLuong * donGia;
+
+                Decimal tienCK1 = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["TIENCK"].Value?.ToString(), out tienCK1);
+                tienCK += tienCK1;
+
+                Decimal tienThue1 = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["TIENTHUE"].Value?.ToString(), out tienThue1);
+                tienThue += tienThue1;
+
+
+
+            }
+            tongThanhToan += (tongTien - tienCK + tienThue);
+            dics["TONGTIEN"] = tongTien.ToString("n2");
+            dics["TIENCK"] = tienCK.ToString("n2");
+            dics["TIENTHUE"] = tienThue.ToString("n2");
+            dics["TONGTHANHTOAN"] = tongThanhToan.ToString("n2");
+
+            return dics;
+        }
+
+        private List<CTHDGTGT> CalculationChiTietHoaDonGTGT(DataGridView dgv)
+        {
+            List<CTHDGTGT> dics = new List<CTHDGTGT>();
+            for (var index = 0; index < dgv.RowCount; index++)
+            {
+                CTHDGTGT dic = new CTHDGTGT();
+                int soLuong = 0;
+                Int32.TryParse(gridViewHangHoa.Rows[index].Cells["SOLUONG1"].Value?.ToString(), out soLuong);
+
+                int MAHH = 0;
+                Int32.TryParse(gridViewHangHoa.Rows[index].Cells["MAHH1"].Value?.ToString(), out MAHH);
+
+                Decimal donGia = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["DONGIA"].Value?.ToString(), out donGia);
+
+                Decimal tienCK = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["TIENCK"].Value?.ToString(), out tienCK);
+
+                Decimal tyLeCK = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["TYLECK"].Value?.ToString(), out tyLeCK);
+
+                Decimal thueSuat = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
+
+                Decimal tienThue = 0;
+                Decimal.TryParse(gridViewHangHoa.Rows[index].Cells["TIENTHUE"].Value?.ToString(), out tienThue);
+
+                dic.HangHoaID = MAHH;
+                dic.SOLUONG = soLuong;
+                dic.DONGIA = donGia;
+                dic.TYLECK = tyLeCK;
+                dic.TIENCK = tienCK;
+                dic.THUESUAT = thueSuat;
+                dic.TIENTHUE = tienThue;
+                dics.Add(dic);
+            }
+
+            return dics;
         }
     }
 }

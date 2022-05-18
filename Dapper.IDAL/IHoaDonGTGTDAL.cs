@@ -15,10 +15,10 @@ namespace Dapper.IDAL
     {
         #region CRUD
         IDbConnection GetDbConnection();
-        int InsertTableHoaDonGTGT(HoaDonGTGT model);
-        int InsertTableChiTietHoaDonGTGT(CTHDGTGT model);
+        HoaDonGTGT InsertTableHoaDonGTGT(HoaDonGTGT model);
+        int InsertTableChiTietHoaDonGTGT(List<CTHDGTGT> model);
 
-        int Update(HoaDonGTGT model);
+        int UpdateTableHoaDonGTGT(HoaDonGTGT model);
 
         int Delete(HoaDonGTGT model);
 
@@ -26,7 +26,10 @@ namespace Dapper.IDAL
 
         IList<HoaDonGTGTModel> GetList(CoreModel obj);
 
-        HoaDonGTGTModel GetEntity(string code);
+        HoaDonGTGTDetail GetEntity(string code);
+        HoaDonGTGTDetail GetEntity(int id);
+
+        int DeleteTableChiTietHoaDonGTGT(int HoaDonGTGT_ID);
 
         #endregion
     }

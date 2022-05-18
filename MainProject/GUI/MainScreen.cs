@@ -35,7 +35,7 @@ namespace QLBANXE
 
         private void listUserMenuItem_Click(object sender, EventArgs e)
         {
-            DanhMucTaiKhoan danhMucTaiKhoan = new DanhMucTaiKhoan();
+            DanhMucTaiKhoanKeToan danhMucTaiKhoan = new DanhMucTaiKhoanKeToan();
             danhMucTaiKhoan.Show();
             this.Dispose(true);
         }
@@ -86,6 +86,13 @@ namespace QLBANXE
         private void HoaDonGTGTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new HoaDonGTGTList().Show();
+            this.Dispose(true);
+        }
+
+        private void ListUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhMucTaiKhoan danhMucTaiKhoan = new DanhMucTaiKhoan();
+            danhMucTaiKhoan.Show();
             this.Dispose(true);
         }
     }

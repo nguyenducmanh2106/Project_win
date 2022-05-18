@@ -60,6 +60,30 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToan.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoanKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanCreate.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoanKeToanCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanUpdate.Designer.cs">
+      <DependentUpon>DanhMucTaiKhoanKeToanUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.Designer.cs">
+      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +95,6 @@
     </Compile>
     <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTGrid.Designer.cs">
       <DependentUpon>HoaDonGTGTGrid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.Designer.cs">
-      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HangHoa\HangHoaUpdate.cs">
       <SubType>Form</SubType>
@@ -188,14 +206,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToan.resx">
+      <DependentUpon>DanhMucTaiKhoanKeToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanCreate.resx">
+      <DependentUpon>DanhMucTaiKhoanKeToanCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanUpdate.resx">
+      <DependentUpon>DanhMucTaiKhoanKeToanUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.resx">
+      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTCreate.resx">
       <DependentUpon>HoaDonGTGTCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTGrid.resx">
       <DependentUpon>HoaDonGTGTGrid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.resx">
-      <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HangHoa\HangHoaUpdate.resx">
       <DependentUpon>HangHoaUpdate.cs</DependentUpon>

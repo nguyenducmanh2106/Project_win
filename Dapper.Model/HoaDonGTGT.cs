@@ -57,6 +57,10 @@ namespace Dapper.Model
         /// Loại tiền tệ
         /// </summary>
         public string LOAITIEN { get; set; }
+
+        public decimal? TONGTIENCK { get; set; }
+
+        public decimal? TONGTIENTHUE { get; set; }
     }
 
     public class CTHDGTGT
@@ -78,6 +82,22 @@ namespace Dapper.Model
 
         public decimal? THUESUAT { get; set; }
         public decimal? TIENTHUE { get; set; }
+
+    }
+
+    public class CTHDGTGTModel : CTHDGTGT
+    {
+        public string DVT { get; set; }
+        public int? KHO { get; set; }
+        public decimal THANHTIEN { get; set; }
+        public string TENHH { get; set; }
+        public int MAHH { get; set; }
+    }
+    public class HoaDonGTGTDetail : HoaDonGTGT
+    {
+        public string ChiTiet { get; set; }
+        public List<CTHDGTGTModel> ChiTietHoaDonGTGT { get; set; }
+
     }
 
     public class HoaDonGTGTModel
@@ -98,7 +118,7 @@ namespace Dapper.Model
         /// <summary>
         /// tiền doanh thu
         /// </summary>
-        public decimal? TIENDOANHTHU { get; set; }
+        public decimal? TIENTHANHTOAN { get; set; }
 
         /// <summary>
         /// Mã khách hàng

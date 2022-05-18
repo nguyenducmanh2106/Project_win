@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreModel.cs" />
+    <Compile Include="DanhMucTaiKhoanKeToanModel.cs" />
     <Compile Include="DangNhap.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookReview.cs" />

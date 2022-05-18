@@ -58,6 +58,7 @@
             this.UserName = new System.Windows.Forms.ToolStripMenuItem();
             this.UserLoginInfor = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -262,10 +263,10 @@
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UserName});
-            this.menuStrip2.Location = new System.Drawing.Point(221, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(101, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip2.Size = new System.Drawing.Size(98, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(218, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -274,7 +275,8 @@
             this.UserName.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.UserName.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UserLoginInfor,
-            this.LogOutButton});
+            this.LogOutButton,
+            this.ListUserToolStripMenuItem});
             this.UserName.Image = global::QLBANXE.Properties.Resources.icon_user_kiranshastry_gradient_70;
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(90, 20);
@@ -284,7 +286,7 @@
             // 
             this.UserLoginInfor.Name = "UserLoginInfor";
             this.UserLoginInfor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserLoginInfor.Size = new System.Drawing.Size(128, 22);
+            this.UserLoginInfor.Size = new System.Drawing.Size(180, 22);
             this.UserLoginInfor.Text = "Tài khoản";
             this.UserLoginInfor.Click += new System.EventHandler(this.UserLoginInfor_Click);
             // 
@@ -292,9 +294,17 @@
             // 
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LogOutButton.Size = new System.Drawing.Size(128, 22);
+            this.LogOutButton.Size = new System.Drawing.Size(180, 22);
             this.LogOutButton.Text = "Đăng xuất";
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // ListUserToolStripMenuItem
+            // 
+            this.ListUserToolStripMenuItem.Name = "ListUserToolStripMenuItem";
+            this.ListUserToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ListUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ListUserToolStripMenuItem.Text = "Quản lý đăng nhập";
+            this.ListUserToolStripMenuItem.Click += new System.EventHandler(this.ListUserToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -359,5 +369,6 @@
         private System.Windows.Forms.ToolStripMenuItem sổChiTiếtTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinVềPhầmMềmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem liênHệToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListUserToolStripMenuItem;
     }
 }

@@ -14,9 +14,9 @@ namespace Dapper.IBLL
     {
         #region CRUD
 
-        bool Insert(HoaDonGTGT model,CTHDGTGT modelChiTiet);
+        bool Insert(HoaDonGTGT model, List<CTHDGTGT> modelChiTiet);
 
-        bool Update(HoaDonGTGT model);
+        bool Update(HoaDonGTGT model, List<CTHDGTGT> modelChiTiet);
 
         bool Delete(HoaDonGTGT model);
 
@@ -24,7 +24,8 @@ namespace Dapper.IBLL
 
         IList<HoaDonGTGTModel> GetList(CoreModel obj);
 
-        HoaDonGTGTModel GetEntity(string code);
+        HoaDonGTGTDetail GetEntity(string code);
+        HoaDonGTGTDetail GetEntity(int id);
 
         #endregion
     }

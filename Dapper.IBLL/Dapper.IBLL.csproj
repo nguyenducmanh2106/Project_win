@@ -46,6 +46,7 @@
     <Compile Include="IHangHoaBLL.cs" />
     <Compile Include="IKhachHangBLL.cs" />
     <Compile Include="INhaCungCapBLL.cs" />
+    <Compile Include="IDanhMucTaiKhoanBLL.cs" />
     <Compile Include="IUserBLL.cs" />
     <Compile Include="IBookBLL.cs" />
     <Compile Include="IBookReviewBLL.cs" />

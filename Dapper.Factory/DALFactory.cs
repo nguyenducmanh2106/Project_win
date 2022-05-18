@@ -60,6 +60,19 @@ namespace Dapper.Factory
                 throw ex;
             }
         }
+
+        public static IDanhMucTaiKhoanDAL CreateDanhMucTaiKhoanDAL()
+        {
+            try
+            {
+                string className = path + ".DanhMucTaiKhoanDAL";
+                return (IDanhMucTaiKhoanDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static INhaCungCapDAL CreateNhaCungCapDAL()
         {
             try

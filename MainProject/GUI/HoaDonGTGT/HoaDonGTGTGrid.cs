@@ -52,15 +52,8 @@ namespace QLBANXE
                 return;
             }
 
-            HangHoaUpdate frame = new HangHoaUpdate();
-            //frame.MAKH.Text = recordEdit.MAKH;
-            //frame.TENKH.Text = recordEdit.TENKH;
-            //frame.DIACHI.Text = recordEdit.DIACHI;
-            //frame.SDT.Text = recordEdit.SDT;
-            //frame.EMAIL.Text = recordEdit.EMAIL;
-            //frame.MST.Text = recordEdit.MST;
-            //frame.NGAYDANGKY.Value = recordEdit.NGAYDANGKY;
-            //frame.MAHH.Text = recordEdit.MAHH.ToString();
+            HoaDonGTGTUpdate frame = new HoaDonGTGTUpdate();
+            frame.SOHD.Text = recordEdit.SOHD;
             frame.Show();
         }
 

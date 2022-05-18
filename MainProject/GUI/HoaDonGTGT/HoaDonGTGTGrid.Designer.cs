@@ -185,7 +185,7 @@
             // 
             // TIENDOANHTHU
             // 
-            this.TIENDOANHTHU.DataPropertyName = "TIENDOANHTHU";
+            this.TIENDOANHTHU.DataPropertyName = "TIENTHANHTOAN";
             dataGridViewCellStyle1.Format = "N2";
             dataGridViewCellStyle1.NullValue = null;
             this.TIENDOANHTHU.DefaultCellStyle = dataGridViewCellStyle1;
