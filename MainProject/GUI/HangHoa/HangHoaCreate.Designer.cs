@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.CodeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DVT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SOLUONG = new System.Windows.Forms.NumericUpDown();
-            this.MANCC = new System.Windows.Forms.ComboBox();
             this.MAHH = new System.Windows.Forms.TextBox();
             this.GIAXUAT = new System.Windows.Forms.MaskedTextBox();
             this.GIANHAP = new System.Windows.Forms.MaskedTextBox();
@@ -57,15 +55,6 @@
             this.CodeLabel.Size = new System.Drawing.Size(80, 13);
             this.CodeLabel.TabIndex = 0;
             this.CodeLabel.Text = "Mã hàng hóa(*)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mã NCC";
             // 
             // label2
             // 
@@ -131,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(143, 243);
+            this.label3.Location = new System.Drawing.Point(143, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 16;
@@ -140,7 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(143, 277);
+            this.label6.Location = new System.Drawing.Point(143, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 18;
@@ -153,14 +142,6 @@
             this.SOLUONG.Size = new System.Drawing.Size(200, 20);
             this.SOLUONG.TabIndex = 20;
             // 
-            // MANCC
-            // 
-            this.MANCC.FormattingEnabled = true;
-            this.MANCC.Location = new System.Drawing.Point(233, 195);
-            this.MANCC.Name = "MANCC";
-            this.MANCC.Size = new System.Drawing.Size(200, 21);
-            this.MANCC.TabIndex = 21;
-            // 
             // MAHH
             // 
             this.MAHH.Location = new System.Drawing.Point(233, 41);
@@ -170,7 +151,7 @@
             // 
             // GIAXUAT
             // 
-            this.GIAXUAT.Location = new System.Drawing.Point(233, 235);
+            this.GIAXUAT.Location = new System.Drawing.Point(233, 199);
             this.GIAXUAT.Name = "GIAXUAT";
             this.GIAXUAT.Size = new System.Drawing.Size(200, 20);
             this.GIAXUAT.TabIndex = 22;
@@ -179,7 +160,7 @@
             // 
             // GIANHAP
             // 
-            this.GIANHAP.Location = new System.Drawing.Point(233, 274);
+            this.GIANHAP.Location = new System.Drawing.Point(233, 238);
             this.GIANHAP.Name = "GIANHAP";
             this.GIANHAP.Size = new System.Drawing.Size(200, 20);
             this.GIANHAP.TabIndex = 23;
@@ -206,7 +187,6 @@
             this.Controls.Add(this.HINHANH);
             this.Controls.Add(this.GIANHAP);
             this.Controls.Add(this.GIAXUAT);
-            this.Controls.Add(this.MANCC);
             this.Controls.Add(this.SOLUONG);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -217,7 +197,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DVT);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.MAHH);
             this.Controls.Add(this.CodeLabel);
             this.MaximizeBox = false;
@@ -235,7 +214,6 @@
         #endregion
 
         public System.Windows.Forms.Label CodeLabel;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox DVT;
         public System.Windows.Forms.Label label4;
@@ -246,7 +224,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown SOLUONG;
-        private System.Windows.Forms.ComboBox MANCC;
         public System.Windows.Forms.TextBox MAHH;
         private System.Windows.Forms.MaskedTextBox GIAXUAT;
         private System.Windows.Forms.MaskedTextBox GIANHAP;

@@ -23,7 +23,7 @@ namespace QLBANXE
         public HangHoaCreate()
         {
             InitializeComponent();
-            this.MAHH.Text = "MAKH";
+            this.MAHH.Text = "MAHH";
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace QLBANXE
                         MAHH = this.MAHH.Text,
                         TENHH = this.TENHH.Text,
                         DVT = this.DVT.Text,
-                        NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
+                        //NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
                         SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
                         GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
                         GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
@@ -149,10 +149,10 @@ namespace QLBANXE
 
         private void HangHoaCreate_Load(object sender, EventArgs e)
         {
-            MANCC.DataSource = nhaCungCapBLL.GetListActive();
-            MANCC.DisplayMember = "MANCC";
-            MANCC.ValueMember = "ID";
-            MANCC.SelectedIndex = -1;
+            //MANCC.DataSource = nhaCungCapBLL.GetListActive();
+            //MANCC.DisplayMember = "MANCC";
+            //MANCC.ValueMember = "ID";
+            //MANCC.SelectedIndex = -1;
         }
 
         private void HINHANH_Click(object sender, EventArgs e)

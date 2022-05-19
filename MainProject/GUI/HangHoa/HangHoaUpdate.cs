@@ -49,7 +49,7 @@ namespace QLBANXE
                         MAHH = this.MAHH.Text,
                         TENHH = this.TENHH.Text,
                         DVT = this.DVT.Text,
-                        NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
+                        //NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
                         SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
                         GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
                         GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
@@ -161,15 +161,15 @@ namespace QLBANXE
 
         private void HangHoaUpdate_Load(object sender, EventArgs e)
         {
-            MANCC.DataSource = nhaCungCapBLL.GetListActive();
-            MANCC.DisplayMember = "MANCC";
-            MANCC.ValueMember = "ID";
+            //MANCC.DataSource = nhaCungCapBLL.GetListActive();
+            //MANCC.DisplayMember = "MANCC";
+            //MANCC.ValueMember = "ID";
 
             recordEdit = bll.GetEntity(this.MAHH.Text);
             this.TENHH.Text = recordEdit.TENHH;
             this.DVT.Text = recordEdit.DVT;
             this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
-            this.MANCC.SelectedValue = recordEdit?.NhaCungCapID ?? -1;
+            //this.MANCC.SelectedValue = recordEdit?.NhaCungCapID ?? -1;
             this.GIANHAP.Text = String.Format("{0:n}", recordEdit.GIANHAP)?.ToString();
             this.GIAXUAT.Text = String.Format("{0:n}", recordEdit.GIAXUAT)?.ToString();
             this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);

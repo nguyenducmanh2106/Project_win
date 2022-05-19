@@ -93,6 +93,16 @@ namespace QLBANXE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_filtering_flaticons_lineal_color_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon-filtering-flaticons-lineal-color-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_image_color_70 {
             get {
                 object obj = ResourceManager.GetObject("icon-image-color-70", resourceCulture);
@@ -186,6 +196,16 @@ namespace QLBANXE.Properties {
         internal static System.Drawing.Bitmap icon_user_kiranshastry_gradient_70 {
             get {
                 object obj = ResourceManager.GetObject("icon-user-kiranshastry-gradient-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons_filter_kiranshastry_gradient_70 {
+            get {
+                object obj = ResourceManager.GetObject("icons-filter-kiranshastry-gradient-70", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

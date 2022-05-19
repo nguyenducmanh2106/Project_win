@@ -56,9 +56,6 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\K4os.Co
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainProject.csproj.AssemblyReference.cache
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainProject.csproj.SuggestedBindingRedirects.cache
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDon.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonBan.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonNhap.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.txtUsername.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.MainScreen.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.Properties.Resources.resources
@@ -177,3 +174,8 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE
 E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoKhachHang.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoHangHoa.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoGiamTruDoanhThu.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoTongHopDoanhThu.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.SoCaiTaiKhoan.resources

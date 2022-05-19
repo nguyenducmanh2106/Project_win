@@ -20,13 +20,7 @@ namespace QLBANXE
 
             this.UserName.Text = fullName;
         }
-        private void btn_HOA_DON_Click(object sender, EventArgs e)
-        {
-            HoaDon hoaDon = new HoaDon();
-            hoaDon.Show();
-            this.Hide();
-        }
-
+        
         private void Close(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -96,5 +90,34 @@ namespace QLBANXE
             this.Dispose(true);
         }
 
+        private void BaoCaoDoanhThuTheoKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThuTheoKhachHang frame = new BaoCaoDoanhThuTheoKhachHang();
+            frame.Show();
+        }
+
+        private void BaoCaoDoanhThuTheoHangHoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThuTheoHangHoa frame = new BaoCaoDoanhThuTheoHangHoa();
+            frame.Show();
+        }
+
+        private void BaoCaoGiamTruDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoGiamTruDoanhThu frame = new BaoCaoGiamTruDoanhThu();
+            frame.Show();
+        }
+
+        private void BaoCaoTongHopDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoTongHopDoanhThu frame = new BaoCaoTongHopDoanhThu();
+            frame.Show();
+        }
+
+        private void SoCaiTaiKhoanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoCaiTaiKhoan frame = new SoCaiTaiKhoan();
+            frame.Show();
+        }
     }
 }

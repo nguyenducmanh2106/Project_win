@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -60,6 +64,30 @@
     <Compile Include="BLL\BLL_SANPHAM.cs" />
     <Compile Include="BLL\BLL_THONGKE.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\BaoCao\BaoCaoTongHopDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoTongHopDoanhThu.Designer.cs">
+      <DependentUpon>BaoCaoTongHopDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoGiamTruDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoGiamTruDoanhThu.Designer.cs">
+      <DependentUpon>BaoCaoGiamTruDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoDoanhThuTheoHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoDoanhThuTheoHangHoa.Designer.cs">
+      <DependentUpon>BaoCaoDoanhThuTheoHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoDoanhThuTheoKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaoCao\BaoCaoDoanhThuTheoKhachHang.Designer.cs">
+      <DependentUpon>BaoCaoDoanhThuTheoKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,24 +196,6 @@
     <Compile Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.Designer.cs">
       <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HoaDonBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HoaDonBan.Designer.cs">
-      <DependentUpon>HoaDonBan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HoaDonNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HoaDonNhap.Designer.cs">
-      <DependentUpon>HoaDonNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +208,12 @@
     <Compile Include="GUI\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SO_SACH\SOCAITAIKHOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SO_SACH\SOCAITAIKHOAN.Designer.cs">
+      <DependentUpon>SOCAITAIKHOAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserLoginInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +222,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BaoCao\BaoCaoTongHopDoanhThu.resx">
+      <DependentUpon>BaoCaoTongHopDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCao\BaoCaoGiamTruDoanhThu.resx">
+      <DependentUpon>BaoCaoGiamTruDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCao\BaoCaoDoanhThuTheoHangHoa.resx">
+      <DependentUpon>BaoCaoDoanhThuTheoHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BaoCao\BaoCaoDoanhThuTheoKhachHang.resx">
+      <DependentUpon>BaoCaoDoanhThuTheoKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToan.resx">
       <DependentUpon>DanhMucTaiKhoanKeToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,20 +288,14 @@
     <EmbeddedResource Include="GUI\DanhMucTaiKhoan\DanhMucTaiKhoanBox.resx">
       <DependentUpon>DanhMucTaiKhoanBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDonBan.resx">
-      <DependentUpon>HoaDonBan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDonNhap.resx">
-      <DependentUpon>HoaDonNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SO_SACH\SOCAITAIKHOAN.resx">
+      <DependentUpon>SOCAITAIKHOAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserLoginInfor.resx">
       <DependentUpon>UserLoginInfor.cs</DependentUpon>
@@ -316,6 +338,8 @@
     <Content Include="assets\icons\icon-previous-material-outlined-70.png" />
     <Content Include="assets\icons\icon-no-image-color-70.png" />
     <Content Include="assets\icons\icon-image-color-70.png" />
+    <Content Include="assets\icons\icons-filter-kiranshastry-gradient-70.png" />
+    <Content Include="assets\icons\icon-filtering-flaticons-lineal-color-70.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />

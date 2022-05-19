@@ -172,6 +172,7 @@ namespace QLBANXE
             obj.CustomData.Add("TextSearch", this.inputSearch.Text);
             var data = bll.GetList(obj);
 
+            gridView.AutoGenerateColumns = false;
             //set height cho hàng
             gridView.RowTemplate.Height = 70;
             ((DataGridViewImageColumn)this.gridView.Columns["HINHANH"]).DefaultCellStyle.NullValue = null;
