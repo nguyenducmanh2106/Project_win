@@ -33,20 +33,20 @@ namespace QLBANXE
             try
             {
                 int? nullInt = null;
-                if (string.IsNullOrEmpty(this.MATK.Text) || string.IsNullOrEmpty(this.TENTK.Text) )
+                if (string.IsNullOrEmpty(this.MATK.Text) || string.IsNullOrEmpty(this.TENTK.Text))
                 {
                     new ShowMessageBox().Warning("Không được để trống trường bắt buộc!");
                 }
                 else
                 {
-                    DanhMucTaiKhoanKeToanModel dangNhap = new DanhMucTaiKhoanKeToanModel()
+                    DanhMucTaiKhoanKeToanModel model = new DanhMucTaiKhoanKeToanModel()
                     {
                         MATK = this.MATK.Text,
                         TENTK = this.TENTK.Text,
-                        TKCT = !string.IsNullOrEmpty(this.TKCT.Text) ? Convert.ToInt32(this.TKCT.Text) : nullInt,
-                        CAPTK = !string.IsNullOrEmpty(this.CAPTK.Text) ? Convert.ToInt32(this.CAPTK.Text) : nullInt,
+                        TKCT = !string.IsNullOrEmpty(this.TKCT.SelectedValue?.ToString()) ? Convert.ToInt32(this.TKCT.SelectedValue) : nullInt,
+                        CAPTK = !string.IsNullOrEmpty(this.CAPTK.SelectedItem?.ToString()) ? Convert.ToInt32(this.CAPTK.SelectedItem) : nullInt,
                     };
-                    bool result = bll.Insert(dangNhap);
+                    bool result = bll.Insert(model);
                     if (result)
                     {
                         new ShowMessageBox().Success(String.Format(MessageConstants.InsertSuccessMessage, "tài khoản kế toán"));
@@ -69,6 +69,15 @@ namespace QLBANXE
                     new ShowMessageBox().Error(ex.Message);
                 }
             }
+        }
+
+        private void DanhMucTaiKhoanKeToanCreate_Load(object sender, EventArgs e)
+        {
+            var listTaiKhoan = bll.GetListActive(0);
+            this.TKCT.DataSource = listTaiKhoan;
+            this.TKCT.DisplayMember = "TENTK";
+            this.TKCT.ValueMember = "ID";
+            this.CAPTK.SelectedIndex = -1;
         }
     }
 }

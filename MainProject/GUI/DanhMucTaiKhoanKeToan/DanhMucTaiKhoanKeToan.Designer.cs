@@ -41,6 +41,7 @@
             this.TENTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CAPTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TKCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -119,7 +120,8 @@
             this.MATK,
             this.TENTK,
             this.CAPTK,
-            this.TKCT});
+            this.TKCT,
+            this.ID});
             this.gridView.Location = new System.Drawing.Point(0, 109);
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(800, 341);
@@ -166,6 +168,13 @@
             this.TKCT.HeaderText = "Tài khoản cấp trên";
             this.TKCT.Name = "TKCT";
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
             // DanhMucTaiKhoanKeToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,5 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TENTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn CAPTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TKCT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

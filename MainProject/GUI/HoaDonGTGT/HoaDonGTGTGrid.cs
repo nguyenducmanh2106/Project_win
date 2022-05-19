@@ -53,7 +53,7 @@ namespace QLBANXE
             }
 
             HoaDonGTGTUpdate frame = new HoaDonGTGTUpdate();
-            frame.SOHD.Text = recordEdit.SOHD;
+            frame.ID.Text = recordEdit.ID.ToString();
             frame.Show();
         }
 

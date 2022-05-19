@@ -24,7 +24,7 @@ namespace Dapper.IDAL
 
         IList<DanhMucTaiKhoanKeToanModel> GetList(CoreModel obj);
 
-        IList<DanhMucTaiKhoanKeToanModel> GetListActive();
+        IList<DanhMucTaiKhoanKeToanModel> GetListActive(int? id);
 
         /// <summary>
         /// DANGNHAP

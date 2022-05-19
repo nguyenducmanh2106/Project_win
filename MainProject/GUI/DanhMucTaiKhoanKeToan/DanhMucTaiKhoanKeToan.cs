@@ -64,12 +64,7 @@ namespace QLBANXE
             }
 
             DanhMucTaiKhoanKeToanUpdate danhMucTaiKhoanBox = new DanhMucTaiKhoanKeToanUpdate();
-            //danhMucTaiKhoanBox.Text = "Cập nhật tài khoản";
-            //danhMucTaiKhoanBox.TENDANGNHAP.ReadOnly = true;
-            //danhMucTaiKhoanBox.TENDANGNHAP.Text = recordEdit.TENDANGNHAP;
-            //danhMucTaiKhoanBox.TENTK.Text = recordEdit.TENTK;
-            //danhMucTaiKhoanBox.CAPTK.Text = recordEdit.CAPTK?.ToString() ?? null;
-            //danhMucTaiKhoanBox.TRANGTHAI.Checked = Convert.ToBoolean(recordEdit.TRANGTHAI);
+            danhMucTaiKhoanBox.ID.Text = recordEdit.ID.ToString();
             danhMucTaiKhoanBox.Show();
         }
 
@@ -85,11 +80,8 @@ namespace QLBANXE
         {
             int index = gridView.CurrentCell.RowIndex;
             recordEdit = new DanhMucTaiKhoanKeToanModel();
-            //recordEdit.TENDANGNHAP = gridView.Rows[index].Cells["TENDANGNHAP"].Value.ToString();
-            //recordEdit.TENTK = gridView.Rows[index].Cells["TENTK"].Value.ToString();
-            //recordEdit.CAPTK = Convert.ToInt32(gridView.Rows[index].Cells["CAPTK"].Value);
-            //recordEdit.TRANGTHAI = Convert.ToInt32(gridView.Rows[index].Cells["TRANGTHAI"].Value);
-            //recordEdit.ID = Convert.ToInt32(gridView.Rows[index].Cells["ID"].Value);
+            recordEdit.MATK = gridView.Rows[index].Cells["MATK"].Value.ToString();
+            recordEdit.ID = Convert.ToInt32(gridView.Rows[index].Cells["ID"].Value);
         }
 
         private DialogResult Show(string title, string userName)
@@ -150,18 +142,18 @@ namespace QLBANXE
                 new ShowMessageBox().Warning("Chưa chọn bản ghi");
                 return;
             }
-            string userName = recordEdit.TENTK;
-            if (Show("Xóa tài khoản", userName) == DialogResult.OK)
+            string userName = recordEdit.MATK;
+            if (Show("Xóa tài khoản kế toán", userName) == DialogResult.OK)
             {
                 var result = bll.Delete(recordEdit.ID);
                 if (result)
                 {
-                    new ShowMessageBox().Success(String.Format(MessageConstants.DeletetSuccessMessage, "tài khoản"));
+                    new ShowMessageBox().Success(String.Format(MessageConstants.DeletetSuccessMessage, "tài khoản kế toán"));
                     DanhMucTaiKhoan_Load(sender, e);
                 }
                 else
                 {
-                    new ShowMessageBox().Error(String.Format(MessageConstants.DeleteErrorMessage, "tài khoản"));
+                    new ShowMessageBox().Error(String.Format(MessageConstants.DeleteErrorMessage, "tài khoản kế toán"));
                 }
             }
         }

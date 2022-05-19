@@ -22,7 +22,7 @@ namespace QLBANXE
         private readonly HoaDonGTGTBLL bll = new HoaDonGTGTBLL();
         private readonly HangHoaBLL hangHoaBll = new HangHoaBLL();
         private readonly KhachHangBLL khachHangBLL = new KhachHangBLL();
-        private readonly UserBLL userBLL = new UserBLL();
+        private readonly DanhMucTaiKhoanBLL taiKhoanBLL = new DanhMucTaiKhoanBLL();
 
         private HoaDonGTGT modelEdit = new HoaDonGTGT();
         public HoaDonGTGTUpdate()
@@ -166,25 +166,25 @@ namespace QLBANXE
             //this.MAKH.SelectedIndex = -1;
 
             //lấy thông tin các tài khoản
-            IList<DangNhap> TKNOTHANHTOAN = userBLL.GetListActive();
+            IList<DanhMucTaiKhoanKeToanModel> TKNOTHANHTOAN = taiKhoanBLL.GetListActive(0);
             this.TKNOTHANHTOAN.DataSource = TKNOTHANHTOAN;
             this.TKNOTHANHTOAN.DisplayMember = "TENTK";
             this.TKNOTHANHTOAN.ValueMember = "ID";
             this.TKNOTHANHTOAN.SelectedIndex = -1;
 
-            List<DangNhap> TKCODOANHTHU = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCODOANHTHU = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCODOANHTHU.DataSource = TKCODOANHTHU;
             this.TKCODOANHTHU.DisplayMember = "TENTK";
             this.TKCODOANHTHU.ValueMember = "ID";
             this.TKCODOANHTHU.SelectedIndex = -1;
 
-            List<DangNhap> TKCOTHUE = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCOTHUE = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCOTHUE.DataSource = TKCOTHUE;
             this.TKCOTHUE.DisplayMember = "TENTK";
             this.TKCOTHUE.ValueMember = "ID";
             this.TKCOTHUE.SelectedIndex = -1;
 
-            List<DangNhap> TKCK = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCK = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCK.DataSource = TKCK;
             this.TKCK.DisplayMember = "TENTK";
             this.TKCK.ValueMember = "ID";
@@ -192,13 +192,16 @@ namespace QLBANXE
 
             this.BindDataSourceForColumnCombobox(-1);
 
-            HoaDonGTGTDetail hoaDonGTGTDetail = bll.GetEntity(this.SOHD.Text);
+            int id = 0;
+            Int32.TryParse(this.ID.Text, out id);
+            HoaDonGTGTDetail hoaDonGTGTDetail = bll.GetEntity(id);
             if (hoaDonGTGTDetail != null && !string.IsNullOrEmpty(hoaDonGTGTDetail.ChiTiet))
             {
                 modelEdit.ID = hoaDonGTGTDetail.ID;
                 //BindingList<CTHDGTGTModel> ChiTietHoaDonGTGT = JsonConvert.DeserializeObject<BindingList<CTHDGTGTModel>>(hoaDonGTGTDetail.ChiTiet);
                 var ChiTietHoaDonGTGT = JsonConvert.DeserializeObject<DataTable>(hoaDonGTGTDetail.ChiTiet);
 
+                this.SOHD.Text = hoaDonGTGTDetail.SOHD;
                 this.MAKH.SelectedValue = hoaDonGTGTDetail.KhachHangID;
                 this.DIENGIAI.Text = hoaDonGTGTDetail.DIENGIAI;
                 this.LOAITIEN.SelectedText = hoaDonGTGTDetail.LOAITIEN;

@@ -95,5 +95,6 @@ namespace QLBANXE
             danhMucTaiKhoan.Show();
             this.Dispose(true);
         }
+
     }
 }

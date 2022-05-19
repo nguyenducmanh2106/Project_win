@@ -23,7 +23,7 @@ namespace Dapper.IBLL
         bool Delete(int id);
 
         IList<DanhMucTaiKhoanKeToanModel> GetList(CoreModel obj);
-        IList<DanhMucTaiKhoanKeToanModel> GetListActive();
+        IList<DanhMucTaiKhoanKeToanModel> GetListActive(int? id);
 
         DanhMucTaiKhoanKeToanModel GetEntity(int id);
         #endregion

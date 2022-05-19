@@ -72,7 +72,8 @@
             "1",
             "2",
             "3",
-            "4"});
+            "4",
+            "5"});
             this.CAPTK.Location = new System.Drawing.Point(224, 166);
             this.CAPTK.Name = "CAPTK";
             this.CAPTK.Size = new System.Drawing.Size(121, 21);
@@ -155,6 +156,7 @@
             this.Name = "DanhMucTaiKhoanKeToanCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm mới tài khoản";
+            this.Load += new System.EventHandler(this.DanhMucTaiKhoanKeToanCreate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

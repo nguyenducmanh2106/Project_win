@@ -48,11 +48,11 @@ namespace Dapper.BLL
         }
 
 
-        public IList<DanhMucTaiKhoanKeToanModel> GetListActive()
+        public IList<DanhMucTaiKhoanKeToanModel> GetListActive(int? id)
         {
             try
             {
-                return dal.GetListActive();
+                return dal.GetListActive(id);
             }
             catch (Exception ex)
             {

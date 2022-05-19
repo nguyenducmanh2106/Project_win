@@ -117,9 +117,10 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-
+                HoaDonGTGTDetail result = new HoaDonGTGTDetail();
                 string sqlQuery = "select *,(select ct.*,ct.HangHoaID as MAHH,hh.TENHH,hh.DVT,hh.SOLUONG as KHO,(ct.SOLUONG* ct.DONGIA-TIENCK + TIENTHUE) as THANHTIEN from HOADONGTGT hd left join CTHDGTGT ct on hd.ID = ct.HoaDonGTGT_ID left join HANGHOA hh on ct.HangHoaID = hh.ID where hd.SOHD = @SOHD FOR JSON PATH) as ChiTiet from HOADONGTGT hd where hd.SOHD = @SOHD";
-                return Conn.QueryFirst<HoaDonGTGTDetail>(sqlQuery, new { SOHD = code });
+                result = Conn.QueryFirst<HoaDonGTGTDetail>(sqlQuery, new { SOHD = code });
+                return result;
             }
         }
 
@@ -157,8 +158,10 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "select *,(select ct.* from HOADONGTGT hd left join CTHDGTGT ct on hd.ID = ct.HoaDonGTGT_ID where hd.ID = @ID FOR JSON AUTO) as ChiTietHoaDonGTGT from HOADONGTGT hd where hd.ID = @ID";
-                return Conn.QueryFirst<HoaDonGTGTDetail>(sqlQuery, new { ID = id });
+                HoaDonGTGTDetail result = new HoaDonGTGTDetail();
+                string sqlQuery = "select *,(select ct.*,ct.HangHoaID as MAHH,hh.TENHH,hh.DVT,hh.SOLUONG as KHO,(ct.SOLUONG* ct.DONGIA-TIENCK + TIENTHUE) as THANHTIEN from HOADONGTGT hd left join CTHDGTGT ct on hd.ID = ct.HoaDonGTGT_ID left join HANGHOA hh on ct.HangHoaID = hh.ID where hd.ID = @ID FOR JSON PATH) as ChiTiet from HOADONGTGT hd where hd.ID = @ID";
+                result = Conn.QueryFirst<HoaDonGTGTDetail>(sqlQuery, new { ID = id });
+                return result;
             }
         }
         #endregion

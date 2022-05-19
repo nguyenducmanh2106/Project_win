@@ -59,6 +59,12 @@
             this.UserLoginInfor = new System.Windows.Forms.ToolStripMenuItem();
             this.LogOutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ListUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -250,6 +256,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Location = new System.Drawing.Point(575, 0);
             this.panel1.Name = "panel1";
@@ -263,10 +270,10 @@
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UserName});
-            this.menuStrip2.Location = new System.Drawing.Point(101, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(221, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip2.Size = new System.Drawing.Size(218, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(98, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -286,7 +293,7 @@
             // 
             this.UserLoginInfor.Name = "UserLoginInfor";
             this.UserLoginInfor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserLoginInfor.Size = new System.Drawing.Size(180, 22);
+            this.UserLoginInfor.Size = new System.Drawing.Size(175, 22);
             this.UserLoginInfor.Text = "Tài khoản";
             this.UserLoginInfor.Click += new System.EventHandler(this.UserLoginInfor_Click);
             // 
@@ -294,7 +301,7 @@
             // 
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LogOutButton.Size = new System.Drawing.Size(180, 22);
+            this.LogOutButton.Size = new System.Drawing.Size(175, 22);
             this.LogOutButton.Text = "Đăng xuất";
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
@@ -302,9 +309,90 @@
             // 
             this.ListUserToolStripMenuItem.Name = "ListUserToolStripMenuItem";
             this.ListUserToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ListUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ListUserToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.ListUserToolStripMenuItem.Text = "Quản lý đăng nhập";
             this.ListUserToolStripMenuItem.Click += new System.EventHandler(this.ListUserToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RosyBrown;
+            this.label1.Location = new System.Drawing.Point(178, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(560, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Phần mềm kế toán doanh thu bán hàng tại";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RosyBrown;
+            this.label2.Location = new System.Drawing.Point(164, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(594, 31);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Công ty Cổ phần Công nghệ cao Thành Phát";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(265, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(285, 22);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "GVHD: ThS. Phan Phước Long";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(265, 351);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 22);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "SV: Bùi Thị Hoa";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(265, 383);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(372, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Chuyên ngành: Tin học tài chính kế toán";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(265, 422);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(256, 22);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Lớp niên chế: CQ56. 41.01 ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainScreen
             // 
@@ -315,10 +403,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 625);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -370,5 +464,11 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinVềPhầmMềmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem liênHệToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListUserToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

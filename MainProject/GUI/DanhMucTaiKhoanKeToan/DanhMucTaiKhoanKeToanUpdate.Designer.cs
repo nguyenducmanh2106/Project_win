@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.MATKLabel = new System.Windows.Forms.Label();
-            this.TENDANGNHAP = new System.Windows.Forms.TextBox();
+            this.MATK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CAPTK = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TENTK = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.TRANGTHAI = new System.Windows.Forms.CheckBox();
+            this.TKCT = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MATKLabel
@@ -44,23 +46,22 @@
             this.MATKLabel.AutoSize = true;
             this.MATKLabel.Location = new System.Drawing.Point(112, 44);
             this.MATKLabel.Name = "MATKLabel";
-            this.MATKLabel.Size = new System.Drawing.Size(91, 13);
+            this.MATKLabel.Size = new System.Drawing.Size(79, 13);
             this.MATKLabel.TabIndex = 0;
-            this.MATKLabel.Text = "Tên đăng nhập(*)";
+            this.MATKLabel.Text = "Mã tài khoản(*)";
             // 
-            // TENDANGNHAP
+            // MATK
             // 
-            this.TENDANGNHAP.Enabled = false;
-            this.TENDANGNHAP.Location = new System.Drawing.Point(224, 41);
-            this.TENDANGNHAP.Name = "TENDANGNHAP";
-            this.TENDANGNHAP.ReadOnly = true;
-            this.TENDANGNHAP.Size = new System.Drawing.Size(121, 20);
-            this.TENDANGNHAP.TabIndex = 1;
+            this.MATK.Location = new System.Drawing.Point(224, 41);
+            this.MATK.Name = "MATK";
+            this.MATK.ReadOnly = true;
+            this.MATK.Size = new System.Drawing.Size(121, 20);
+            this.MATK.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 142);
+            this.label1.Location = new System.Drawing.Point(112, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 2;
@@ -74,7 +75,7 @@
             "2",
             "3",
             "4"});
-            this.CAPTK.Location = new System.Drawing.Point(224, 134);
+            this.CAPTK.Location = new System.Drawing.Point(224, 157);
             this.CAPTK.Name = "CAPTK";
             this.CAPTK.Size = new System.Drawing.Size(121, 21);
             this.CAPTK.TabIndex = 6;
@@ -84,9 +85,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(112, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Họ tên(*)";
+            this.label4.Text = "Tên tài khoản(*)";
             // 
             // TENTK
             // 
@@ -115,34 +116,53 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // TRANGTHAI
+            // TKCT
             // 
-            this.TRANGTHAI.AutoSize = true;
-            this.TRANGTHAI.Location = new System.Drawing.Point(224, 178);
-            this.TRANGTHAI.Name = "TRANGTHAI";
-            this.TRANGTHAI.Size = new System.Drawing.Size(73, 17);
-            this.TRANGTHAI.TabIndex = 14;
-            this.TRANGTHAI.Text = "Kích hoạt";
-            this.TRANGTHAI.UseVisualStyleBackColor = true;
+            this.TKCT.FormattingEnabled = true;
+            this.TKCT.Location = new System.Drawing.Point(224, 121);
+            this.TKCT.Name = "TKCT";
+            this.TKCT.Size = new System.Drawing.Size(121, 21);
+            this.TKCT.TabIndex = 17;
             // 
-            // DanhMucTaiKhoanBoxUpdate
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(112, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Tài khoản cấp trên";
+            // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Location = new System.Drawing.Point(375, 44);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(0, 13);
+            this.ID.TabIndex = 18;
+            this.ID.Visible = false;
+            // 
+            // DanhMucTaiKhoanKeToanUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
-            this.Controls.Add(this.TRANGTHAI);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.TKCT);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.TENTK);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CAPTK);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TENDANGNHAP);
+            this.Controls.Add(this.MATK);
             this.Controls.Add(this.MATKLabel);
             this.MaximizeBox = false;
-            this.Name = "DanhMucTaiKhoanBoxUpdate";
+            this.Name = "DanhMucTaiKhoanKeToanUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật tài khoản";
+            this.Load += new System.EventHandler(this.DanhMucTaiKhoanKeToanUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,13 +171,15 @@
         #endregion
 
         public System.Windows.Forms.Label MATKLabel;
-        public System.Windows.Forms.TextBox TENDANGNHAP;
+        public System.Windows.Forms.TextBox MATK;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox CAPTK;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox TENTK;
         public System.Windows.Forms.Button BackButton;
         public System.Windows.Forms.Button SaveButton;
-        public System.Windows.Forms.CheckBox TRANGTHAI;
+        public System.Windows.Forms.ComboBox TKCT;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label ID;
     }
 }

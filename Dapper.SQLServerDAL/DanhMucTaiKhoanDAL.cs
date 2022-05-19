@@ -38,7 +38,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "INSERT INTO DANHMUCTAIKHOAN(MATK,TENTK,CAPTK,TKCT) VALUES (@MATK,@TENTK,@CAPTK,@TKCT)";
-                return Conn.Execute(sqlQuery, new { MATK = model.MATK, TENTK = model.TENTK, CAPTK = model.CAPTK });
+                return Conn.Execute(sqlQuery, new { MATK = model.MATK, TENTK = model.TENTK, CAPTK = model.CAPTK, TKCT = model.TKCT });
             }
         }
 
@@ -47,7 +47,7 @@ namespace Dapper.SQLServerDAL
             using (Conn)
             {
                 string sqlQuery = "UPDATE DANHMUCTAIKHOAN SET MATK = @MATK,TENTK=@TENTK,CAPTK=@CAPTK,TKCT = @TKCT where ID = @ID";
-                return Conn.Execute(sqlQuery, new { MATK = model.MATK, TENTK = model.TENTK, CAPTK = model.CAPTK, ID = model.ID });
+                return Conn.Execute(sqlQuery, new { MATK = model.MATK, TENTK = model.TENTK, CAPTK = model.CAPTK, TKCT = model.TKCT, ID = model.ID });
             }
         }
 
@@ -65,7 +65,7 @@ namespace Dapper.SQLServerDAL
         {
             using (Conn)
             {
-                string sqlQuery = "DELETE FROM DANGNHAP WHERE ID = @ID";
+                string sqlQuery = "DELETE FROM DANHMUCTAIKHOAN WHERE ID = @ID";
                 return Conn.Execute(sqlQuery, new { ID = id });
             }
         }
@@ -88,20 +88,20 @@ namespace Dapper.SQLServerDAL
         public DanhMucTaiKhoanKeToanModel GetEntity(int id)
         {
             DanhMucTaiKhoanKeToanModel model;
-            string sqlQuery = "";
+            string sqlQuery = "SELECT * FROM DANHMUCTAIKHOAN WHERE ID = @ID";
             using (Conn)
             {
-                model = Conn.Query<DanhMucTaiKhoanKeToanModel>(sqlQuery, new { id = id })?.SingleOrDefault();
+                model = Conn.Query<DanhMucTaiKhoanKeToanModel>(sqlQuery, new { ID = id })?.SingleOrDefault();
                 return model;
             }
         }
 
-        public IList<DanhMucTaiKhoanKeToanModel> GetListActive()
+        public IList<DanhMucTaiKhoanKeToanModel> GetListActive(int? id)
         {
             using (Conn)
             {
-                string sqlQuery = "Select ID,CONCAT(TENTK,' (',MATK,')') as TENTK from DANHMUCTAIKHOAN";
-                return Conn.Query<DanhMucTaiKhoanKeToanModel>(sqlQuery)?.ToList();
+                string sqlQuery = "Select ID,CONCAT(TENTK,' (',MATK,')') as TENTK from DANHMUCTAIKHOAN WHERE (@ID is null or @ID = 0 or ID != @ID)";
+                return Conn.Query<DanhMucTaiKhoanKeToanModel>(sqlQuery, new { ID = id })?.ToList();
             }
         }
 

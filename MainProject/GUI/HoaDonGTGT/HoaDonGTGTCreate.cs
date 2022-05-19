@@ -21,7 +21,7 @@ namespace QLBANXE
         private readonly HoaDonGTGTBLL bll = new HoaDonGTGTBLL();
         private readonly HangHoaBLL hangHoaBll = new HangHoaBLL();
         private readonly KhachHangBLL khachHangBLL = new KhachHangBLL();
-        private readonly UserBLL userBLL = new UserBLL();
+        private readonly DanhMucTaiKhoanBLL taiKhoanKeToanBLL = new DanhMucTaiKhoanBLL();
         public HoaDonGTGTCreate()
         {
             InitializeComponent();
@@ -164,25 +164,25 @@ namespace QLBANXE
             //this.MAKH.SelectedIndex = -1;
 
             //lấy thông tin các tài khoản
-            IList<DangNhap> TKNOTHANHTOAN = userBLL.GetListActive();
+            IList<DanhMucTaiKhoanKeToanModel> TKNOTHANHTOAN = taiKhoanKeToanBLL.GetListActive(0);
             this.TKNOTHANHTOAN.DataSource = TKNOTHANHTOAN;
             this.TKNOTHANHTOAN.DisplayMember = "TENTK";
             this.TKNOTHANHTOAN.ValueMember = "ID";
             this.TKNOTHANHTOAN.SelectedIndex = -1;
 
-            List<DangNhap> TKCODOANHTHU = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCODOANHTHU = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCODOANHTHU.DataSource = TKCODOANHTHU;
             this.TKCODOANHTHU.DisplayMember = "TENTK";
             this.TKCODOANHTHU.ValueMember = "ID";
             this.TKCODOANHTHU.SelectedIndex = -1;
 
-            List<DangNhap> TKCOTHUE = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCOTHUE = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCOTHUE.DataSource = TKCOTHUE;
             this.TKCOTHUE.DisplayMember = "TENTK";
             this.TKCOTHUE.ValueMember = "ID";
             this.TKCOTHUE.SelectedIndex = -1;
 
-            List<DangNhap> TKCK = new List<DangNhap>(TKNOTHANHTOAN);
+            List<DanhMucTaiKhoanKeToanModel> TKCK = new List<DanhMucTaiKhoanKeToanModel>(TKNOTHANHTOAN);
             this.TKCK.DataSource = TKCK;
             this.TKCK.DisplayMember = "TENTK";
             this.TKCK.ValueMember = "ID";

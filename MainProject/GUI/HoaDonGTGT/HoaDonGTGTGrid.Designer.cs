@@ -37,8 +37,6 @@
             this.RefreshButton = new System.Windows.Forms.ToolStripMenuItem();
             this.inputSearch = new System.Windows.Forms.TextBox();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.SearchButton = new System.Windows.Forms.Button();
             this.SOHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYLAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,8 @@
             this.DIENGIAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhachHangID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -137,31 +137,6 @@
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "HINHANH";
-            this.dataGridViewImageColumn1.HeaderText = "Hình ảnh";
-            this.dataGridViewImageColumn1.Image = global::QLBANXE.Properties.Resources.icon_no_image_color_70;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 100;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
-            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(516, 81);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(28, 24);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.UseVisualStyleBackColor = false;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
             // SOHD
             // 
             this.SOHD.DataPropertyName = "SOHD";
@@ -216,6 +191,31 @@
             this.KhachHangID.ReadOnly = true;
             this.KhachHangID.Visible = false;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "HINHANH";
+            this.dataGridViewImageColumn1.HeaderText = "Hình ảnh";
+            this.dataGridViewImageColumn1.Image = global::QLBANXE.Properties.Resources.icon_no_image_color_70;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 100;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SearchButton.FlatAppearance.BorderSize = 0;
+            this.SearchButton.Location = new System.Drawing.Point(516, 81);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(28, 24);
+            this.SearchButton.TabIndex = 3;
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // HoaDonGTGTList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,7 +227,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "HoaDonGTGTList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hàng hóa";
+            this.Text = "Danh mục hóa đơn GTGT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.Frame_Load);
