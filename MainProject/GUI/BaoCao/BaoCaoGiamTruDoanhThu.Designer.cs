@@ -216,6 +216,7 @@
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(65, 20);
             this.RefreshButton.Text = "Tải lại";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // gridViewBaoCao
             // 
@@ -292,7 +293,7 @@
             this.Text = "Báo cáo giảm trừ doanh thu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
-            this.Load += new System.EventHandler(this.BaoCaoDoanhThuTheoHangHoa_Load);
+            this.Load += new System.EventHandler(this.BaoCaoDoanhThuTheoDoanhThu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBaoCao)).EndInit();

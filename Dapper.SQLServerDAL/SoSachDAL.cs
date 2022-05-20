@@ -31,7 +31,29 @@ namespace Dapper.SQLServerDAL
             }
         }
 
-        public List<SoCaiChiTietModel> GetDataTableSoCaiTaiKhoan(CoreModel obj)
+        public List<SoCaiChiTietTaiKhoanModel> GetDataTableSoChiTietTaiKhoan(CoreModel obj)
+        {
+            using (Conn)
+            {
+                try
+                {
+                    var param = obj.CustomData;
+                    DynamicParameters dynamicParameters = new DynamicParameters();
+                    foreach (var item in param)
+                    {
+                        dynamicParameters.Add(item.Key, item.Value);
+                    }
+                    string sqlQuery = "sp_SoCaiChiTietTaiKhoan_Grid";
+                    return Conn.Query<SoCaiChiTietTaiKhoanModel>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure)?.ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public List<SoCaiTaiKhoanModel> GetDataTableSoCaiTaiKhoan(CoreModel obj)
         {
             using (Conn)
             {
@@ -44,7 +66,7 @@ namespace Dapper.SQLServerDAL
                         dynamicParameters.Add(item.Key, item.Value);
                     }
                     string sqlQuery = "sp_SoCaiTaiKhoan";
-                    return Conn.Query<SoCaiChiTietModel>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure)?.ToList();
+                    return Conn.Query<SoCaiTaiKhoanModel>(sqlQuery, dynamicParameters, null, true, null, CommandType.StoredProcedure)?.ToList();
                 }
                 catch (Exception ex)
                 {

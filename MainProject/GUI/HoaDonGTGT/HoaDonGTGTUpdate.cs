@@ -28,7 +28,7 @@ namespace QLBANXE
         public HoaDonGTGTUpdate()
         {
             InitializeComponent();
-            this.SOHD.Text = "SoHD";
+            //this.SOHD.Text = "SoHD";
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -248,11 +248,10 @@ namespace QLBANXE
             columns.DisplayMember = "TENHH";
             columns.ValueMember = "ID";
 
-
         }
         private void AddRow()
         {
-            DataTable dataTable = (DataTable)gridViewHangHoa.DataSource;
+            DataTable dataTable = (DataTable)gridViewHangHoa.DataSource ?? new DataTable();
             DataRow drToAdd = dataTable.NewRow();
             dataTable.Rows.Add(drToAdd);
             //gridViewHangHoa.Rows.Add();

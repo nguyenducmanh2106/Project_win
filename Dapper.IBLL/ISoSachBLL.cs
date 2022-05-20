@@ -14,7 +14,8 @@ namespace Dapper.IBLL
     public interface ISoSachBLL
     {
         #region CRUD
-        List<SoCaiChiTietModel> GetDataTableSoCaiTaiKhoan(CoreModel obj);
+        List<SoCaiTaiKhoanModel> GetDataTableSoCaiTaiKhoan(CoreModel obj);
+        List<SoCaiChiTietTaiKhoanModel> GetDataTableSoChiTietTaiKhoan(CoreModel obj);
 
         #endregion
     }

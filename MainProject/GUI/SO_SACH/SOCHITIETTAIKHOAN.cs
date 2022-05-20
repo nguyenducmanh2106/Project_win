@@ -19,14 +19,14 @@ namespace QLBANXE
     {
         private readonly DangNhap userLoginInfor = VariablesGlobal.Instance.UserLoginCurrent;
         private DanhMucTaiKhoanBLL taiKhoanBLL = new DanhMucTaiKhoanBLL();
+        private SoSachBLL bll = new SoSachBLL();
         public SoChiTietTaiKhoan()
         {
             InitializeComponent();
-            DrawingTableLayout();
         }
 
 
-        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate, out int taiKhoan)
+        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate, out int taiKhoan, out string tenTaiKhoan)
         {
             Form form = new Form();
             Label StartDateLabel = new Label();
@@ -47,9 +47,12 @@ namespace QLBANXE
             StartDateLabel.Text = "Từ ngày:";
             EndDateLabel.Text = "Đến ngày:";
             taiKhoanLabel.Text = "Tài khoản:";
+
+
             taiKhoanCombobox.DataSource = taiKhoanBLL.GetListActive(0);
             taiKhoanCombobox.DisplayMember = "TENTK";
             taiKhoanCombobox.ValueMember = "ID";
+            taiKhoanCombobox.SelectedIndex = -1;
 
             StartDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             EndDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,14 +107,17 @@ namespace QLBANXE
             form.CancelButton = buttonCancel;
 
             DialogResult dialogResult = form.ShowDialog();
-            StartDate = Convert.ToDateTime(StartDateTextBox.Value);
-            EndDate = Convert.ToDateTime(EndDateTextBox.Value);
+            StartDate = StartDateTextBox.Value;
+            EndDate = EndDateTextBox.Value;
             taiKhoan = Convert.ToInt32(taiKhoanCombobox.SelectedValue);
+            tenTaiKhoan = taiKhoanCombobox.Text;
             return dialogResult;
         }
 
         private void Close(object sender, FormClosingEventArgs e)
         {
+            MainScreen mainMenu = new MainScreen();
+            mainMenu.Show();
             this.Dispose(true);
         }
 
@@ -127,32 +133,45 @@ namespace QLBANXE
             DateTime startDate;
             DateTime endDate;
             int taiKhoan;
-            if (Show("Tham số báo cáo", out startDate, out endDate, out taiKhoan) == DialogResult.OK)
+            string tenTaiKhoan;
+
+            if (Show("Tham số báo cáo", out startDate, out endDate, out taiKhoan, out tenTaiKhoan) == DialogResult.OK)
             {
+                this.TimeReport.Text = $"Từ ngày {startDate.ToString("dd/MM/yyyy")} đến {endDate.ToString("dd/MM/yyyy")}";
+                this.TaiKhoanLabel.Text = $"Tài khoản: {tenTaiKhoan}";
+                CoreModel obj = new CoreModel();
+                obj.CustomData = new Dictionary<string, object>();
+                obj.CustomData["StartDate"] = startDate;
+                obj.CustomData["EndDate"] = endDate;
+                obj.CustomData["TaiKhoan"] = taiKhoan;
+                DrawingTableLayout(obj);
             }
         }
 
 
         private void BaoCaoDoanhThuTheoHangHoa_Load(object sender, EventArgs e)
         {
-            //List<BaoCaoDoanhThuTheoHangHoaModel> data = new List<BaoCaoDoanhThuTheoHangHoaModel>();
-            //for (var index = 0; index < 5; index++)
-            //{
-            //    BaoCaoDoanhThuTheoHangHoaModel model = new BaoCaoDoanhThuTheoHangHoaModel()
-            //    {
-            //        MAHH = $"MAHH00{index}",
-            //        TENHH = index == 1 ? "Chăn lông cừu" : index == 2 ? "Nệm ép" : index == 3 ? "Gối chống chào Hi Mom" : index == 4 ? "Nệm sông Hồng" : "Chăn sông Hồng",
-            //        DOANHTHU = (decimal)(index + 2 * 100000)
-            //    };
-            //    data.Add(model);
-            //};
-            //this.gridViewBaoCao.DataSource = data;
+            DateTime date = DateTime.Now;
+            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+            this.TimeReport.Text = $"Từ ngày {firstDayOfMonth.ToString("dd/MM/yyyy")} đến {lastDayOfMonth.ToString("dd/MM/yyyy")}";
+            this.TaiKhoanLabel.Text = $"Tài khoản: ";
+            CoreModel obj = new CoreModel();
+            obj.CustomData = new Dictionary<string, object>();
+            obj.CustomData["StartDate"] = firstDayOfMonth;
+            obj.CustomData["EndDate"] = lastDayOfMonth;
+            obj.CustomData["TaiKhoan"] = null;
+            DrawingTableLayout(obj);
 
 
         }
 
-        private void DrawingTableLayout()
+        private void DrawingTableLayout(CoreModel obj)
         {
+            this.tableLayoutPanel1.Visible = false;
+
+            tableLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.RowStyles.Clear();
             Dictionary<string, object> headers = new Dictionary<string, object>();
             headers["col1"] = "Ngày tháng ghi sổ";
             headers["col2"] = "Chứng từ";
@@ -181,9 +200,15 @@ namespace QLBANXE
             headers3["col7"] = "H";
             headers3["col8"] = "1";
             headers3["col9"] = "2";
-            headers3["col10"] = "3";
 
-            dt.Rows.Add("13/04/2022", "HD002", "13/04/2022", "Quảng cáo sản phẩm trên một số Website", "", "", "511", "10.000.000", "0", "10.000.000");
+
+            var result = bll.GetDataTableSoChiTietTaiKhoan(obj);
+            foreach (var item in result)
+            {
+                string NgayThangGhiSo = item.NgayThangGhiSo != null ? Convert.ToDateTime(item.NgayThangGhiSo).ToString("dd/MM/yyyy") : "";
+                string NgayThangChungTu = item.NgayThangChungTu != null ? Convert.ToDateTime(item.NgayThangChungTu).ToString("dd/MM/yyyy") : "";
+                dt.Rows.Add(NgayThangGhiSo, item.SoHieu, NgayThangChungTu, item.DIENGIAI, item.TRANGSO, item.STT_DONG, item.TKDOIUNG, item.SONO?.ToString("n2"), item.CO?.ToString("n2"), item.TON?.ToString("n2"));
+            }
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = dt.Columns.Count;
             tableLayoutPanel1.AutoSize = true;
@@ -204,7 +229,7 @@ namespace QLBANXE
                 }
                 if (dic.Key == "col6")
                 {
-                    tableLayoutPanel1.SetColumnSpan(l, 3);
+                    tableLayoutPanel1.SetColumnSpan(l, 2);
 
                 }
                 if (dic.Key == "col1" || dic.Key == "col3" || dic.Key == "col5")
@@ -259,6 +284,7 @@ namespace QLBANXE
             }
 
             setStyleForTablelayout(tableLayoutPanel1);
+
         }
 
         /// <summary>
@@ -309,6 +335,14 @@ namespace QLBANXE
                     style.Height = 24;
                 }
             }
+
+
+            this.tableLayoutPanel1.Visible = true;
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThuTheoHangHoa_Load(sender, e);
         }
     }
 

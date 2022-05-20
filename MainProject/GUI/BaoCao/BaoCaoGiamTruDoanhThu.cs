@@ -96,6 +96,8 @@ namespace QLBANXE
 
         private void Close(object sender, FormClosingEventArgs e)
         {
+            MainScreen mainMenu = new MainScreen();
+            mainMenu.Show();
             this.Dispose(true);
         }
 
@@ -115,7 +117,7 @@ namespace QLBANXE
         }
 
 
-        private void BaoCaoDoanhThuTheoHangHoa_Load(object sender, EventArgs e)
+        private void BaoCaoDoanhThuTheoDoanhThu_Load(object sender, EventArgs e)
         {
             List<BaoCaoGiamTruDoanhThuModel> data = new List<BaoCaoGiamTruDoanhThuModel>();
             for (var index = 0; index < 5; index++)
@@ -131,6 +133,11 @@ namespace QLBANXE
                 data.Add(model);
             };
             this.gridViewBaoCao.DataSource = data;
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThuTheoDoanhThu_Load(sender, e);
         }
     }
 

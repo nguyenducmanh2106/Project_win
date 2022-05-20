@@ -26,7 +26,7 @@ namespace QLBANXE
         }
 
 
-        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate, out int taiKhoan)
+        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate, out int taiKhoan, out string tenTaiKhoan)
         {
             Form form = new Form();
             Label StartDateLabel = new Label();
@@ -50,6 +50,7 @@ namespace QLBANXE
             taiKhoanCombobox.DataSource = taiKhoanBLL.GetListActive(0);
             taiKhoanCombobox.DisplayMember = "TENTK";
             taiKhoanCombobox.ValueMember = "ID";
+            taiKhoanCombobox.SelectedIndex = -1;
 
             StartDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             EndDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,14 +105,17 @@ namespace QLBANXE
             form.CancelButton = buttonCancel;
 
             DialogResult dialogResult = form.ShowDialog();
-            StartDate = Convert.ToDateTime(StartDateTextBox.Value);
-            EndDate = Convert.ToDateTime(EndDateTextBox.Value);
+            StartDate = StartDateTextBox.Value;
+            EndDate = EndDateTextBox.Value;
             taiKhoan = Convert.ToInt32(taiKhoanCombobox.SelectedValue);
+            tenTaiKhoan = taiKhoanCombobox.Text;
             return dialogResult;
         }
 
         private void Close(object sender, FormClosingEventArgs e)
         {
+            MainScreen mainMenu = new MainScreen();
+            mainMenu.Show();
             this.Dispose(true);
         }
 
@@ -127,9 +131,12 @@ namespace QLBANXE
             DateTime startDate;
             DateTime endDate;
             int taiKhoan;
+            string tenTaiKhoan;
 
-            if (Show("Tham số báo cáo", out startDate, out endDate, out taiKhoan) == DialogResult.OK)
+            if (Show("Tham số báo cáo", out startDate, out endDate, out taiKhoan, out tenTaiKhoan) == DialogResult.OK)
             {
+                this.TimeReport.Text = $"Từ ngày {startDate.ToString("dd/MM/yyyy")} đến {endDate.ToString("dd/MM/yyyy")}";
+                this.TaiKhoanLabel.Text = $"Tài khoản: {tenTaiKhoan}";
                 CoreModel obj = new CoreModel();
                 obj.CustomData = new Dictionary<string, object>();
                 obj.CustomData["StartDate"] = startDate;
@@ -142,10 +149,15 @@ namespace QLBANXE
 
         private void BaoCaoDoanhThuTheoHangHoa_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now;
+            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+            this.TimeReport.Text = $"Từ ngày {firstDayOfMonth.ToString("dd/MM/yyyy")} đến {lastDayOfMonth.ToString("dd/MM/yyyy")}";
+            this.TaiKhoanLabel.Text = $"Tài khoản: ";
             CoreModel obj = new CoreModel();
             obj.CustomData = new Dictionary<string, object>();
-            obj.CustomData["StartDate"] = DateTime.Now;
-            obj.CustomData["EndDate"] = DateTime.Now;
+            obj.CustomData["StartDate"] = firstDayOfMonth;
+            obj.CustomData["EndDate"] = lastDayOfMonth;
             obj.CustomData["TaiKhoan"] = null;
             DrawingTableLayout(obj);
 

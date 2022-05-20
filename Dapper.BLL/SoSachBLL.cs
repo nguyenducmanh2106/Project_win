@@ -18,7 +18,12 @@ namespace Dapper.BLL
     {
         private static readonly ISoSachDAL dal = DALFactory.CreateSoSachDAL();
 
-        public List<SoCaiChiTietModel> GetDataTableSoCaiTaiKhoan(CoreModel obj)
+        public List<SoCaiChiTietTaiKhoanModel> GetDataTableSoChiTietTaiKhoan(CoreModel obj)
+        {
+            return dal.GetDataTableSoChiTietTaiKhoan(obj);
+        }
+
+        public List<SoCaiTaiKhoanModel> GetDataTableSoCaiTaiKhoan(CoreModel obj)
         {
             return dal.GetDataTableSoCaiTaiKhoan(obj);
         }

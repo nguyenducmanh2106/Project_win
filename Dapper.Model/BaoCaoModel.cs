@@ -32,4 +32,13 @@ namespace Dapper.Model
         public decimal GIAMTRUDOANHTHU { get; set; }
         public decimal DOANHTHUTHUAN { get; set; }
     }
+
+    public class BaoCaoTongHopDoanhThuModel
+    {
+        public string MAKH { get; set; }
+        public string TENKH { get; set; }
+        public decimal DOANHTHU { get; set; }
+        public decimal GIAMTRUDOANHTHU { get; set; }
+        public decimal DOANHTHUTHUAN { get; set; }
+    }
 }

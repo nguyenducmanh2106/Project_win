@@ -125,12 +125,38 @@ namespace Dapper.Factory
             }
         }
 
+        public static IPhieuGiamGiaDAL CreatePhieuGiamGiaDAL()
+        {
+            try
+            {
+                string className = path + ".PhieuGiamGiaDAL";
+                return (IPhieuGiamGiaDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static ISoSachDAL CreateSoSachDAL()
         {
             try
             {
                 string className = path + ".SoSachDAL";
                 return (ISoSachDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static IBaoCaoDAL CreateBaoCaoDAL()
+        {
+            try
+            {
+                string className = path + ".BaoCaoDAL";
+                return (IBaoCaoDAL)Assembly.Load(path).CreateInstance(className);
             }
             catch (Exception ex)
             {

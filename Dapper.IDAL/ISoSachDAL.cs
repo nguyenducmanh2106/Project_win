@@ -15,7 +15,8 @@ namespace Dapper.IDAL
     {
         #region CRUD
         IDbConnection GetDbConnection();
-        List<SoCaiChiTietModel> GetDataTableSoCaiTaiKhoan(CoreModel obj);
+        List<SoCaiTaiKhoanModel> GetDataTableSoCaiTaiKhoan(CoreModel obj);
+        List<SoCaiChiTietTaiKhoanModel> GetDataTableSoChiTietTaiKhoan(CoreModel obj);
 
         #endregion
     }

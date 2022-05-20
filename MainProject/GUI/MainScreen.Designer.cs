@@ -36,7 +36,7 @@
             this.listUserMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giaoDịchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HoaDonGTGTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phiếuGiảmGiáDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhieuGiamGiaDichVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HangHoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đốiTácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,7 +119,7 @@
             // 
             this.giaoDịchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HoaDonGTGTToolStripMenuItem,
-            this.phiếuGiảmGiáDịchVụToolStripMenuItem});
+            this.PhieuGiamGiaDichVuToolStripMenuItem});
             this.giaoDịchToolStripMenuItem.Name = "giaoDịchToolStripMenuItem";
             this.giaoDịchToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.giaoDịchToolStripMenuItem.Text = "Giao dịch";
@@ -131,11 +131,12 @@
             this.HoaDonGTGTToolStripMenuItem.Text = "Hóa đơn GTGT";
             this.HoaDonGTGTToolStripMenuItem.Click += new System.EventHandler(this.HoaDonGTGTToolStripMenuItem_Click);
             // 
-            // phiếuGiảmGiáDịchVụToolStripMenuItem
+            // PhieuGiamGiaDichVuToolStripMenuItem
             // 
-            this.phiếuGiảmGiáDịchVụToolStripMenuItem.Name = "phiếuGiảmGiáDịchVụToolStripMenuItem";
-            this.phiếuGiảmGiáDịchVụToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.phiếuGiảmGiáDịchVụToolStripMenuItem.Text = "Phiếu giảm giá dịch vụ";
+            this.PhieuGiamGiaDichVuToolStripMenuItem.Name = "PhieuGiamGiaDichVuToolStripMenuItem";
+            this.PhieuGiamGiaDichVuToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.PhieuGiamGiaDichVuToolStripMenuItem.Text = "Phiếu giảm giá dịch vụ";
+            this.PhieuGiamGiaDichVuToolStripMenuItem.Click += new System.EventHandler(this.PhieuGiamGiaDichVuToolStripMenuItem_Click);
             // 
             // sảnPhẩmToolStripMenuItem
             // 
@@ -218,14 +219,14 @@
             // SoCaiTaiKhoanToolStripMenuItem
             // 
             this.SoCaiTaiKhoanToolStripMenuItem.Name = "SoCaiTaiKhoanToolStripMenuItem";
-            this.SoCaiTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SoCaiTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.SoCaiTaiKhoanToolStripMenuItem.Text = "Sổ cái tài khoản";
             this.SoCaiTaiKhoanToolStripMenuItem.Click += new System.EventHandler(this.SoCaiTaiKhoanToolStripMenuItem_Click);
             // 
             // SoChiTietTaiKhoanToolStripMenuItem
             // 
             this.SoChiTietTaiKhoanToolStripMenuItem.Name = "SoChiTietTaiKhoanToolStripMenuItem";
-            this.SoChiTietTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SoChiTietTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.SoChiTietTaiKhoanToolStripMenuItem.Text = "Sổ chi tiết tài khoản";
             this.SoChiTietTaiKhoanToolStripMenuItem.Click += new System.EventHandler(this.SoChiTietTaiKhoanToolStripMenuItem_Click);
             // 
@@ -448,7 +449,7 @@
         private System.Windows.Forms.ToolStripMenuItem UserLoginInfor;
         private System.Windows.Forms.ToolStripMenuItem LogOutButton;
         private System.Windows.Forms.ToolStripMenuItem HoaDonGTGTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuGiảmGiáDịchVụToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhieuGiamGiaDichVuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HangHoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem KhachHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BaoCaoDoanhThuTheoKhachHangToolStripMenuItem;

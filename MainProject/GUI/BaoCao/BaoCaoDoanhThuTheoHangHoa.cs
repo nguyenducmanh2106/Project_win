@@ -19,13 +19,14 @@ namespace QLBANXE
     {
         private readonly DangNhap userLoginInfor = VariablesGlobal.Instance.UserLoginCurrent;
         private UserBLL _dangNhapBLL = new UserBLL();
+        private BaoCaoBLL bll = new BaoCaoBLL();
         public BaoCaoDoanhThuTheoHangHoa()
         {
             InitializeComponent();
         }
 
 
-        private DialogResult Show(string title, out string passWordOld)
+        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate)
         {
             Form form = new Form();
             Label StartDateLabel = new Label();
@@ -90,12 +91,15 @@ namespace QLBANXE
             form.CancelButton = buttonCancel;
 
             DialogResult dialogResult = form.ShowDialog();
-            passWordOld = StartDateTextBox.Text;
+            StartDate = StartDateTextBox.Value;
+            EndDate = EndDateTextBox.Value;
             return dialogResult;
         }
 
         private void Close(object sender, FormClosingEventArgs e)
         {
+            MainScreen mainMenu = new MainScreen();
+            mainMenu.Show();
             this.Dispose(true);
         }
 
@@ -108,26 +112,32 @@ namespace QLBANXE
 
         private void FilterButton_Click(object sender, EventArgs e)
         {
-            string filter = "";
-            if (Show("Tham số báo cáo", out filter) == DialogResult.OK)
+            DateTime startDate;
+            DateTime endDate;
+            if (Show("Tham số báo cáo", out startDate, out endDate) == DialogResult.OK)
             {
+                this.TimeReport.Text = $"Từ ngày {startDate.ToString("dd/MM/yyyy")} đến {endDate.ToString("dd/MM/yyyy")}";
+                CoreModel obj = new CoreModel();
+                obj.CustomData = new Dictionary<string, object>();
+                obj.CustomData["StartDate"] = startDate;
+                obj.CustomData["EndDate"] = endDate;
+                var data = bll.GetBaoCaoDoanhThuTheoHangHoa(obj);
+                this.gridViewBaoCao.DataSource = data;
             }
         }
 
 
         private void BaoCaoDoanhThuTheoHangHoa_Load(object sender, EventArgs e)
         {
-            List<BaoCaoDoanhThuTheoHangHoaModel> data = new List<BaoCaoDoanhThuTheoHangHoaModel>();
-            for (var index = 0; index < 5; index++)
-            {
-                BaoCaoDoanhThuTheoHangHoaModel model = new BaoCaoDoanhThuTheoHangHoaModel()
-                {
-                    MAHH = $"MAHH00{index}",
-                    TENHH = index == 1 ? "Chăn lông cừu" : index == 2 ? "Nệm ép" : index == 3 ? "Gối chống chào Hi Mom" : index == 4 ? "Nệm sông Hồng" : "Chăn sông Hồng",
-                    DOANHTHU = (decimal)(index + 2 * 100000)
-                };
-                data.Add(model);
-            };
+            DateTime date = DateTime.Now;
+            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+            this.TimeReport.Text = $"Từ ngày {firstDayOfMonth.ToString("dd/MM/yyyy")} đến {lastDayOfMonth.ToString("dd/MM/yyyy")}";
+            CoreModel obj = new CoreModel();
+            obj.CustomData = new Dictionary<string, object>();
+            obj.CustomData["StartDate"] = firstDayOfMonth;
+            obj.CustomData["EndDate"] = lastDayOfMonth;
+            var data = bll.GetBaoCaoDoanhThuTheoHangHoa(obj);
             this.gridViewBaoCao.DataSource = data;
         }
 
@@ -196,6 +206,11 @@ namespace QLBANXE
                 //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
                 ToExcel(gridViewBaoCao, saveFileDialog1.FileName);
             }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThuTheoHangHoa_Load(sender, e);
         }
     }
 

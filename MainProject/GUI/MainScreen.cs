@@ -94,36 +94,49 @@ namespace QLBANXE
         {
             BaoCaoDoanhThuTheoKhachHang frame = new BaoCaoDoanhThuTheoKhachHang();
             frame.Show();
+            this.Dispose(true);
         }
 
         private void BaoCaoDoanhThuTheoHangHoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BaoCaoDoanhThuTheoHangHoa frame = new BaoCaoDoanhThuTheoHangHoa();
             frame.Show();
+            this.Dispose(true);
         }
 
         private void BaoCaoGiamTruDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BaoCaoGiamTruDoanhThu frame = new BaoCaoGiamTruDoanhThu();
             frame.Show();
+            this.Dispose(true);
         }
 
         private void BaoCaoTongHopDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BaoCaoTongHopDoanhThu frame = new BaoCaoTongHopDoanhThu();
             frame.Show();
+            this.Dispose(true);
         }
 
         private void SoCaiTaiKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SoCaiTaiKhoan frame = new SoCaiTaiKhoan();
             frame.Show();
+            this.Dispose(true);
         }
 
         private void SoChiTietTaiKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SoChiTietTaiKhoan frame = new SoChiTietTaiKhoan();
             frame.Show();
+            this.Dispose(true);
+        }
+
+        private void PhieuGiamGiaDichVuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhieuGiamGiaList frame = new PhieuGiamGiaList();
+            frame.Show();
+            this.Dispose(true);
         }
     }
 }

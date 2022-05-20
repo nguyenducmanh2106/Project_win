@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.TimeReport = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.TaiKhoanLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -94,16 +94,16 @@
             this.label5.Text = "SỔ CÁI TÀI KHOẢN";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // TimeReport
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(388, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Từ ngày 01/04/2022 đến 30/04/2022";
+            this.TimeReport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TimeReport.AutoSize = true;
+            this.TimeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeReport.Location = new System.Drawing.Point(388, 178);
+            this.TimeReport.Name = "TimeReport";
+            this.TimeReport.Size = new System.Drawing.Size(240, 17);
+            this.TimeReport.TabIndex = 5;
+            this.TimeReport.Text = "Từ ngày 01/04/2022 đến 30/04/2022";
             // 
             // label7
             // 
@@ -238,16 +238,16 @@
             this.label16.TabIndex = 15;
             this.label16.Text = "Mẫu số: S03b - DN";
             // 
-            // label4
+            // TaiKhoanLabel
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(397, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(213, 17);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Tài khoản: 1221 - Tiền Việt Nam";
+            this.TaiKhoanLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TaiKhoanLabel.AutoSize = true;
+            this.TaiKhoanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaiKhoanLabel.Location = new System.Drawing.Point(397, 198);
+            this.TaiKhoanLabel.Name = "TaiKhoanLabel";
+            this.TaiKhoanLabel.Size = new System.Drawing.Size(213, 17);
+            this.TaiKhoanLabel.TabIndex = 19;
+            this.TaiKhoanLabel.Text = "Tài khoản: 1221 - Tiền Việt Nam";
             // 
             // tableLayoutPanel1
             // 
@@ -256,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 923F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 924F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 257);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -283,7 +283,7 @@
             this.ClientSize = new System.Drawing.Size(998, 671);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TaiKhoanLabel);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
@@ -294,7 +294,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TimeReport);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -318,7 +318,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TimeReport;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label TaiKhoanLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label14;
     }

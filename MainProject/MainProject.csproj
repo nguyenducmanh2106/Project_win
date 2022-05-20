@@ -106,6 +106,24 @@
     <Compile Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanUpdate.Designer.cs">
       <DependentUpon>DanhMucTaiKhoanKeToanUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaCreate.Designer.cs">
+      <DependentUpon>PhieuGiamGiaCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaGrid.Designer.cs">
+      <DependentUpon>PhieuGiamGiaGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuGiamGia\PhieuGiamGiaUpdate.Designer.cs">
+      <DependentUpon>PhieuGiamGiaUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +266,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DanhMucTaiKhoanKeToan\DanhMucTaiKhoanKeToanUpdate.resx">
       <DependentUpon>DanhMucTaiKhoanKeToanUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuGiamGia\PhieuGiamGiaCreate.resx">
+      <DependentUpon>PhieuGiamGiaCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuGiamGia\PhieuGiamGiaGrid.resx">
+      <DependentUpon>PhieuGiamGiaGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuGiamGia\PhieuGiamGiaUpdate.resx">
+      <DependentUpon>PhieuGiamGiaUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonGTGT\HoaDonGTGTUpdate.resx">
       <DependentUpon>HoaDonGTGTUpdate.cs</DependentUpon>
