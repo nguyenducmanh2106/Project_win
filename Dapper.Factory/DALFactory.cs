@@ -124,5 +124,18 @@ namespace Dapper.Factory
                 throw ex;
             }
         }
+
+        public static ISoSachDAL CreateSoSachDAL()
+        {
+            try
+            {
+                string className = path + ".SoSachDAL";
+                return (ISoSachDAL)Assembly.Load(path).CreateInstance(className);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

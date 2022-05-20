@@ -20,7 +20,7 @@ namespace QLBANXE
 
             this.UserName.Text = fullName;
         }
-        
+
         private void Close(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -117,6 +117,12 @@ namespace QLBANXE
         private void SoCaiTaiKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SoCaiTaiKhoan frame = new SoCaiTaiKhoan();
+            frame.Show();
+        }
+
+        private void SoChiTietTaiKhoanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoChiTietTaiKhoan frame = new SoChiTietTaiKhoan();
             frame.Show();
         }
     }

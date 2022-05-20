@@ -48,7 +48,7 @@
             this.BaoCaoTongHopDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sổSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SoCaiTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SoChiTietTaiKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinVềPhầmMềmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liênHệToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -210,7 +210,7 @@
             // 
             this.sổSáchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SoCaiTaiKhoanToolStripMenuItem,
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem});
+            this.SoChiTietTaiKhoanToolStripMenuItem});
             this.sổSáchToolStripMenuItem.Name = "sổSáchToolStripMenuItem";
             this.sổSáchToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.sổSáchToolStripMenuItem.Text = "Sổ sách";
@@ -222,11 +222,12 @@
             this.SoCaiTaiKhoanToolStripMenuItem.Text = "Sổ cái tài khoản";
             this.SoCaiTaiKhoanToolStripMenuItem.Click += new System.EventHandler(this.SoCaiTaiKhoanToolStripMenuItem_Click);
             // 
-            // sổChiTiếtTàiKhoảnToolStripMenuItem
+            // SoChiTietTaiKhoanToolStripMenuItem
             // 
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Name = "sổChiTiếtTàiKhoảnToolStripMenuItem";
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sổChiTiếtTàiKhoảnToolStripMenuItem.Text = "Sổ chi tiết tài khoản";
+            this.SoChiTietTaiKhoanToolStripMenuItem.Name = "SoChiTietTaiKhoanToolStripMenuItem";
+            this.SoChiTietTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SoChiTietTaiKhoanToolStripMenuItem.Text = "Sổ chi tiết tài khoản";
+            this.SoChiTietTaiKhoanToolStripMenuItem.Click += new System.EventHandler(this.SoChiTietTaiKhoanToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -455,7 +456,7 @@
         private System.Windows.Forms.ToolStripMenuItem BaoCaoGiamTruDoanhThuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BaoCaoTongHopDoanhThuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SoCaiTaiKhoanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sổChiTiếtTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SoChiTietTaiKhoanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinVềPhầmMềmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem liênHệToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListUserToolStripMenuItem;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,17 +43,13 @@
             this.FilterButton = new System.Windows.Forms.ToolStripMenuItem();
             this.BackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridViewBaoCao = new System.Windows.Forms.DataGridView();
-            this.MAHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOANHTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewBaoCao)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,18 +107,20 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 467);
+            this.label7.Location = new System.Drawing.Point(46, 520);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 17);
+            this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Người ghi sổ";
+            this.label7.Text = "Thủ quỹ";
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 490);
+            this.label8.Location = new System.Drawing.Point(46, 543);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 13);
             this.label8.TabIndex = 8;
@@ -131,9 +128,9 @@
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(317, 490);
+            this.label9.Location = new System.Drawing.Point(317, 543);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 10;
@@ -141,32 +138,32 @@
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(317, 467);
+            this.label10.Location = new System.Drawing.Point(317, 520);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(57, 17);
+            this.label10.Size = new System.Drawing.Size(102, 17);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Kế toán";
+            this.label10.Text = "Kế toán trưởng";
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(846, 490);
+            this.label11.Location = new System.Drawing.Point(825, 543);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.Size = new System.Drawing.Size(116, 13);
             this.label11.TabIndex = 12;
-            this.label11.Text = "(Ký, họ tên )";
+            this.label11.Text = "(Ký, họ tên, đóng dấu )";
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(846, 467);
+            this.label12.Location = new System.Drawing.Point(825, 520);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 11;
@@ -206,42 +203,7 @@
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(65, 20);
             this.RefreshButton.Text = "Tải lại";
-            // 
-            // gridViewBaoCao
-            // 
-            this.gridViewBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridViewBaoCao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridViewBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewBaoCao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MAHH,
-            this.TENHH,
-            this.DOANHTHU});
-            this.gridViewBaoCao.Location = new System.Drawing.Point(49, 244);
-            this.gridViewBaoCao.Name = "gridViewBaoCao";
-            this.gridViewBaoCao.Size = new System.Drawing.Size(896, 194);
-            this.gridViewBaoCao.TabIndex = 14;
-            // 
-            // MAHH
-            // 
-            this.MAHH.DataPropertyName = "MAHH";
-            this.MAHH.HeaderText = "Mã hàng hóa";
-            this.MAHH.Name = "MAHH";
-            // 
-            // TENHH
-            // 
-            this.TENHH.DataPropertyName = "TENHH";
-            this.TENHH.HeaderText = "Tên hàng hóa";
-            this.TENHH.Name = "TENHH";
-            // 
-            // DOANHTHU
-            // 
-            this.DOANHTHU.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle13.Format = "N2";
-            dataGridViewCellStyle13.NullValue = null;
-            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle13;
-            this.DOANHTHU.HeaderText = "Doanh thu";
-            this.DOANHTHU.Name = "DOANHTHU";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // label13
             // 
@@ -289,27 +251,42 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(177, 52);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 923F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 257);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 351);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(922, 204);
             this.tableLayoutPanel1.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(802, 489);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 13);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Ngày ... tháng ... năm ...";
             // 
             // SoCaiTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 522);
+            this.ClientSize = new System.Drawing.Size(998, 671);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.gridViewBaoCao);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -324,13 +301,12 @@
             this.Controls.Add(this.label1);
             this.Name = "SoCaiTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Báo cáo doanh thu theo hàng hóa";
+            this.Text = "Sổ cái tài khoản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.BaoCaoDoanhThuTheoHangHoa_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewBaoCao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,14 +329,11 @@
         private System.Windows.Forms.ToolStripMenuItem FilterButton;
         private System.Windows.Forms.ToolStripMenuItem BackButton;
         private System.Windows.Forms.ToolStripMenuItem RefreshButton;
-        private System.Windows.Forms.DataGridView gridViewBaoCao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label14;
     }
 }

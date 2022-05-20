@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoCaoModel.cs" />
+    <Compile Include="SoSachModel.cs" />
     <Compile Include="CoreModel.cs" />
     <Compile Include="DanhMucTaiKhoanKeToanModel.cs" />
     <Compile Include="DangNhap.cs" />
