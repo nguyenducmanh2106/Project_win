@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QLBANXE.Properties
+namespace KETOANDOANHTHU.Properties
 {
 
 

@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class MainScreen
     {
@@ -294,7 +294,7 @@
             this.LogOutButton,
             this.ListUserToolStripMenuItem});
             this.UserName.ForeColor = System.Drawing.Color.Black;
-            this.UserName.Image = global::QLBANXE.Properties.Resources.icon_user_kiranshastry_gradient_70;
+            this.UserName.Image = global::KETOANDOANHTHU.Properties.Resources.icon_user_kiranshastry_gradient_70;
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(90, 20);
             this.UserName.Text = "UserName";

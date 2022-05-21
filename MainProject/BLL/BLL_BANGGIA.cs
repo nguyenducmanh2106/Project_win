@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QLBANXE.BLL
+namespace KETOANDOANHTHU.BLL
 {
     class BLL_BANGGIA
     {

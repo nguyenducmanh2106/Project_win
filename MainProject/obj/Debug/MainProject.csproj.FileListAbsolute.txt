@@ -64,9 +64,39 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainPro
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\MainProject.csproj.CopyComplete
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.exe
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.pdb
-E:\Project_win\MainProject\bin\Debug\QLBANXE.exe.config
-E:\Project_win\MainProject\bin\Debug\QLBANXE.exe
-E:\Project_win\MainProject\bin\Debug\QLBANXE.pdb
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapList.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoan.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBoxUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBox.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.UserLoginInfor.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangList.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaList.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTList.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoKhachHang.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoHangHoa.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoGiamTruDoanhThu.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoTongHopDoanhThu.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.SoCaiTaiKhoan.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.SoChiTietTaiKhoan.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaCreate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaList.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaUpdate.resources
+C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.Maintenance.resources
+E:\Project_win\MainProject\bin\Debug\KETOANDOANHTHU.exe.config
+E:\Project_win\MainProject\bin\Debug\KETOANDOANHTHU.exe
+E:\Project_win\MainProject\bin\Debug\KETOANDOANHTHU.pdb
 E:\Project_win\MainProject\bin\Debug\Core.dll
 E:\Project_win\MainProject\bin\Debug\Dapper.BLL.dll
 E:\Project_win\MainProject\bin\Debug\Dapper.Factory.dll
@@ -74,6 +104,7 @@ E:\Project_win\MainProject\bin\Debug\Dapper.IBLL.dll
 E:\Project_win\MainProject\bin\Debug\Dapper.IDAL.dll
 E:\Project_win\MainProject\bin\Debug\Dapper.Model.dll
 E:\Project_win\MainProject\bin\Debug\Dapper.SQLServerDAL.dll
+E:\Project_win\MainProject\bin\Debug\Newtonsoft.Json.dll
 E:\Project_win\MainProject\bin\Debug\System.Text.Json.dll
 E:\Project_win\MainProject\bin\Debug\MySql.Data.dll
 E:\Project_win\MainProject\bin\Debug\DapperExtensions.dll
@@ -122,72 +153,40 @@ E:\Project_win\MainProject\bin\Debug\K4os.Compression.LZ4.xml
 E:\Project_win\MainProject\bin\Debug\K4os.Hash.xxHash.xml
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.AssemblyReference.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.SuggestedBindingRedirects.cache
-E:\Project_win\MainProject\obj\Debug\QLBANXE.txtUsername.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.MainScreen.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.Properties.Resources.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.BaoCaoTongHopDoanhThu.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.BaoCaoGiamTruDoanhThu.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.BaoCaoDoanhThuTheoHangHoa.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.BaoCaoDoanhThuTheoKhachHang.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoanKeToan.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoanKeToanCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoanKeToanUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.PhieuGiamGiaCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.PhieuGiamGiaList.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.PhieuGiamGiaUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HoaDonGTGTUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HoaDonGTGTCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HoaDonGTGTList.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HangHoaUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HangHoaCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.HangHoaList.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.KhachHangCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.KhachHangList.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.KhachHangUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.NhaCungCapList.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.NhaCungCapCreate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.NhaCungCapUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoan.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoanBoxUpdate.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.DanhMucTaiKhoanBox.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.txtUsername.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.MainScreen.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.SoChiTietTaiKhoan.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.SoCaiTaiKhoan.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.Maintenance.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.UserLoginInfor.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.Properties.Resources.resources
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.GenerateResource.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.CoreCompileInputs.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.CopyComplete
-E:\Project_win\MainProject\obj\Debug\QLBANXE.exe
-E:\Project_win\MainProject\obj\Debug\QLBANXE.pdb
-E:\Project_win\MainProject\obj\Debug\QLBANXE.UserLoginInfor.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoan.resources
-E:\Project_win\MainProject\bin\Debug\Newtonsoft.Json.dll
-E:\Project_win\MainProject\bin\Debug\Newtonsoft.Json.xml
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBox.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBoxUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.NhaCungCapList.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.NhaCungCapCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.NhaCungCapUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\bin\Debug\Newtonsoft.Json.dll
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapList.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.NhaCungCapUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoan.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBoxUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanBox.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.UserLoginInfor.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangList.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.KhachHangUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaList.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HangHoaUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaList.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HangHoaUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangList.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.KhachHangUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTList.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTList.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonGTGTUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToan.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.DanhMucTaiKhoanKeToanUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoKhachHang.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoHangHoa.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoGiamTruDoanhThu.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.BaoCaoTongHopDoanhThu.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.SoCaiTaiKhoan.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.SoChiTietTaiKhoan.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaCreate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaList.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaUpdate.resources
-C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.Maintenance.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoTongHopDoanhThu.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoGiamTruDoanhThu.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoHangHoa.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoKhachHang.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaCreate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaList.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaUpdate.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.SoChiTietTaiKhoan.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.SoCaiTaiKhoan.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.Maintenance.resources
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.exe
+E:\Project_win\MainProject\obj\Debug\KETOANDOANHTHU.pdb

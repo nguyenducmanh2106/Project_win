@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-namespace QLBANXE
+namespace KETOANDOANHTHU
 {
     class DAL
     {
         SqlConnection connection;
-        string ketnoi = @"Data Source=SV-CAS-107;Initial Catalog=qlbanxe;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string ketnoi = @"Data Source=SV-CAS-107;Initial Catalog=KETOANDOANHTHU;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlCommand command;
         SqlDataAdapter adapter;
         DataTable dt;

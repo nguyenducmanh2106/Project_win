@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class PhieuGiamGiaList
     {
@@ -66,7 +66,7 @@
             // 
             // CreateButton
             // 
-            this.CreateButton.Image = global::QLBANXE.Properties.Resources.icon_plus_70;
+            this.CreateButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_plus_70;
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(65, 20);
             this.CreateButton.Text = "Thêm";
@@ -74,7 +74,7 @@
             // 
             // EditButton
             // 
-            this.EditButton.Image = global::QLBANXE.Properties.Resources.icon_edit_soft_fill_70;
+            this.EditButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_edit_soft_fill_70;
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(54, 20);
             this.EditButton.Text = "Sửa";
@@ -82,7 +82,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Image = global::QLBANXE.Properties.Resources.icon_remove_color_70;
+            this.DeleteButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_remove_color_70;
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(55, 20);
             this.DeleteButton.Text = "Xóa";
@@ -90,7 +90,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Image = global::QLBANXE.Properties.Resources.icon_close_ios_filled_70;
+            this.BackButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_close_ios_filled_70;
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(64, 20);
             this.BackButton.Text = "Đóng";
@@ -98,7 +98,7 @@
             // 
             // RefreshButton
             // 
-            this.RefreshButton.Image = global::QLBANXE.Properties.Resources.icon_refresh_soft_fill_70;
+            this.RefreshButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_refresh_soft_fill_70;
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(65, 20);
             this.RefreshButton.Text = "Tải lại";
@@ -194,7 +194,7 @@
             // 
             this.dataGridViewImageColumn1.DataPropertyName = "HINHANH";
             this.dataGridViewImageColumn1.HeaderText = "Hình ảnh";
-            this.dataGridViewImageColumn1.Image = global::QLBANXE.Properties.Resources.icon_no_image_color_70;
+            this.dataGridViewImageColumn1.Image = global::KETOANDOANHTHU.Properties.Resources.icon_no_image_color_70;
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn1.MinimumWidth = 100;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
@@ -203,7 +203,7 @@
             // 
             this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchButton.BackgroundImage = global::QLBANXE.Properties.Resources.icon_search_ios_filled_70;
+            this.SearchButton.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.icon_search_ios_filled_70;
             this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4E6EEBE8-5909-4079-8115-163F5780DD70}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>QLBANXE</RootNamespace>
-    <AssemblyName>QLBANXE</AssemblyName>
+    <RootNamespace>KETOANDOANHTHU</RootNamespace>
+    <AssemblyName>KETOANDOANHTHU</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

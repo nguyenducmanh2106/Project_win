@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class NhaCungCapCreate
     {

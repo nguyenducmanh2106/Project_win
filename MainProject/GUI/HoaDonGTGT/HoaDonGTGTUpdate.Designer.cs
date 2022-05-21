@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class HoaDonGTGTUpdate
     {
@@ -551,7 +551,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Image = global::QLBANXE.Properties.Resources.icon_save_color_70;
+            this.SaveButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_save_color_70;
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(55, 20);
             this.SaveButton.Text = "Lưu";
@@ -559,7 +559,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Image = global::QLBANXE.Properties.Resources.icon_close_ios_filled_70;
+            this.BackButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_close_ios_filled_70;
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(64, 20);
             this.BackButton.Text = "Đóng";

@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class Maintenance
     {
@@ -40,7 +40,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackgroundImage = global::QLBANXE.Properties.Resources.icon_maintenance_70;
+            this.panel1.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.icon_maintenance_70;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Location = new System.Drawing.Point(178, 21);
             this.panel1.Name = "panel1";

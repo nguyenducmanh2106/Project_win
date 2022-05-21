@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLBANXE
+namespace KETOANDOANHTHU
 {
     public partial class SoCaiTaiKhoan : Form
     {

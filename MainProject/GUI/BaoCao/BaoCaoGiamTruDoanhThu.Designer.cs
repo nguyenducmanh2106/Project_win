@@ -1,4 +1,4 @@
-﻿namespace QLBANXE
+﻿namespace KETOANDOANHTHU
 {
     partial class BaoCaoGiamTruDoanhThu
     {
@@ -196,7 +196,7 @@
             // 
             // FilterButton
             // 
-            this.FilterButton.Image = global::QLBANXE.Properties.Resources.icon_filtering_flaticons_lineal_color_70;
+            this.FilterButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_filtering_flaticons_lineal_color_70;
             this.FilterButton.Name = "FilterButton";
             this.FilterButton.Size = new System.Drawing.Size(54, 20);
             this.FilterButton.Text = "Lọc";
@@ -204,7 +204,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Image = global::QLBANXE.Properties.Resources.icon_close_ios_filled_70;
+            this.BackButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_close_ios_filled_70;
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(64, 20);
             this.BackButton.Text = "Đóng";
@@ -212,7 +212,7 @@
             // 
             // RefreshButton
             // 
-            this.RefreshButton.Image = global::QLBANXE.Properties.Resources.icon_refresh_soft_fill_70;
+            this.RefreshButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_refresh_soft_fill_70;
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(65, 20);
             this.RefreshButton.Text = "Tải lại";
