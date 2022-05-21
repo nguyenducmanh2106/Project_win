@@ -277,6 +277,10 @@ namespace KETOANDOANHTHU
 
             setStyleForTablelayout(tableLayoutPanel1);
 
+            //tạo scroll 
+            tableLayoutPanel1.AutoScroll = true;
+            tableLayoutPanel1.AutoSize = false;
+
         }
 
         /// <summary>
