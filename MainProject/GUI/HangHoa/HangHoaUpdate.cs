@@ -53,7 +53,7 @@ namespace QLBANXE
                         //SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
                         //GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
                         //GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
-                        HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
+                        //HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
                     };
                     bool result = bll.Update(model);
                     if (result)
@@ -154,8 +154,8 @@ namespace QLBANXE
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
-                HINHANH.Image = new Bitmap(opnfd.FileName);
-                HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
+                //HINHANH.Image = new Bitmap(opnfd.FileName);
+                //HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
@@ -172,8 +172,8 @@ namespace QLBANXE
             //this.MANCC.SelectedValue = recordEdit?.NhaCungCapID ?? -1;
             //this.GIANHAP.Text = String.Format("{0:n}", recordEdit.GIANHAP)?.ToString();
             //this.GIAXUAT.Text = String.Format("{0:n}", recordEdit.GIAXUAT)?.ToString();
-            this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
-            this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
+            //this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

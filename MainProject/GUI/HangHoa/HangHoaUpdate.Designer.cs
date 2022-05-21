@@ -36,14 +36,12 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.MAHH = new System.Windows.Forms.TextBox();
-            this.HINHANH = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.HINHANH)).BeginInit();
             this.SuspendLayout();
             // 
             // CodeLabel
             // 
             this.CodeLabel.AutoSize = true;
-            this.CodeLabel.Location = new System.Drawing.Point(101, 171);
+            this.CodeLabel.Location = new System.Drawing.Point(101, 83);
             this.CodeLabel.Name = "CodeLabel";
             this.CodeLabel.Size = new System.Drawing.Size(80, 13);
             this.CodeLabel.TabIndex = 0;
@@ -52,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 251);
+            this.label2.Location = new System.Drawing.Point(101, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 3;
@@ -60,7 +58,7 @@
             // 
             // DVT
             // 
-            this.DVT.Location = new System.Drawing.Point(191, 244);
+            this.DVT.Location = new System.Drawing.Point(191, 156);
             this.DVT.Name = "DVT";
             this.DVT.Size = new System.Drawing.Size(229, 20);
             this.DVT.TabIndex = 5;
@@ -68,7 +66,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(101, 213);
+            this.label4.Location = new System.Drawing.Point(101, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 8;
@@ -76,7 +74,7 @@
             // 
             // TENHH
             // 
-            this.TENHH.Location = new System.Drawing.Point(191, 206);
+            this.TENHH.Location = new System.Drawing.Point(191, 118);
             this.TENHH.Name = "TENHH";
             this.TENHH.Size = new System.Drawing.Size(229, 20);
             this.TENHH.TabIndex = 9;
@@ -103,29 +101,16 @@
             // 
             // MAHH
             // 
-            this.MAHH.Location = new System.Drawing.Point(191, 168);
+            this.MAHH.Location = new System.Drawing.Point(191, 80);
             this.MAHH.Name = "MAHH";
             this.MAHH.Size = new System.Drawing.Size(229, 20);
             this.MAHH.TabIndex = 1;
-            // 
-            // HINHANH
-            // 
-            this.HINHANH.BackgroundImage = global::QLBANXE.Properties.Resources.icon_image_color_70;
-            this.HINHANH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.HINHANH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HINHANH.Location = new System.Drawing.Point(191, 36);
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.Size = new System.Drawing.Size(117, 118);
-            this.HINHANH.TabIndex = 24;
-            this.HINHANH.TabStop = false;
-            this.HINHANH.Click += new System.EventHandler(this.HINHANH_Click);
             // 
             // HangHoaUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 387);
-            this.Controls.Add(this.HINHANH);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.TENHH);
@@ -139,7 +124,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật hàng hóa";
             this.Load += new System.EventHandler(this.HangHoaUpdate_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.HINHANH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +139,5 @@
         public System.Windows.Forms.Button BackButton;
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.TextBox MAHH;
-        private System.Windows.Forms.PictureBox HINHANH;
     }
 }

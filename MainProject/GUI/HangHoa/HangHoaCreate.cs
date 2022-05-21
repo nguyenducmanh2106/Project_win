@@ -52,7 +52,7 @@ namespace QLBANXE
                         //SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
                         //GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
                         //GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
-                        HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
+                        //HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
                     };
                     bool result = bll.Insert(model);
                     if (result)
@@ -159,11 +159,11 @@ namespace QLBANXE
         {
             OpenFileDialog opnfd = new OpenFileDialog();
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
-            if (opnfd.ShowDialog() == DialogResult.OK)
-            {
-                HINHANH.Image = new Bitmap(opnfd.FileName);
-                HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
+            //if (opnfd.ShowDialog() == DialogResult.OK)
+            //{
+            //    HINHANH.Image = new Bitmap(opnfd.FileName);
+            //    HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
+            //}
         }
     }
 }

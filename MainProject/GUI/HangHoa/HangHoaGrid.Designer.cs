@@ -42,7 +42,6 @@
             this.TENHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MANCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HINHANH = new System.Windows.Forms.DataGridViewImageColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhaCungCapID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
@@ -125,7 +124,6 @@
             this.TENHH,
             this.DVT,
             this.MANCC,
-            this.HINHANH,
             this.ID,
             this.NhaCungCapID});
             this.gridView.Location = new System.Drawing.Point(0, 117);
@@ -189,15 +187,6 @@
             this.MANCC.ReadOnly = true;
             this.MANCC.Visible = false;
             // 
-            // HINHANH
-            // 
-            this.HINHANH.DataPropertyName = "HINHANH";
-            this.HINHANH.HeaderText = "Hình ảnh";
-            this.HINHANH.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.HINHANH.MinimumWidth = 100;
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.ReadOnly = true;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -253,7 +242,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TENHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MANCC;
-        private System.Windows.Forms.DataGridViewImageColumn HINHANH;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhaCungCapID;
     }

@@ -122,9 +122,6 @@ E:\Project_win\MainProject\bin\Debug\K4os.Compression.LZ4.xml
 E:\Project_win\MainProject\bin\Debug\K4os.Hash.xxHash.xml
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.AssemblyReference.cache
 E:\Project_win\MainProject\obj\Debug\MainProject.csproj.SuggestedBindingRedirects.cache
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDon.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonBan.resources
-E:\Project_win\MainProject\obj\Debug\QLBANXE.HoaDonNhap.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.txtUsername.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.MainScreen.resources
 E:\Project_win\MainProject\obj\Debug\QLBANXE.Properties.Resources.resources
@@ -184,3 +181,13 @@ C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaList.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaUpdate.resources
 C:\Users\manhnd1\Downloads\BTL WIN\BTL WIN\QLBANXE\MainProject\obj\Debug\QLBANXE.Maintenance.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoTongHopDoanhThu.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoGiamTruDoanhThu.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoHangHoa.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.BaoCaoDoanhThuTheoKhachHang.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaCreate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaList.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.PhieuGiamGiaUpdate.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.SoChiTietTaiKhoan.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.SoCaiTaiKhoan.resources
+E:\Project_win\MainProject\obj\Debug\QLBANXE.Maintenance.resources

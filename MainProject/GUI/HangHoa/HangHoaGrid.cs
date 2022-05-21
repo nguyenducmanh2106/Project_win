@@ -167,20 +167,20 @@ namespace QLBANXE
 
         private void Frame_Load(object sender, EventArgs e)
         {
+
             CoreModel obj = new CoreModel();
             obj.CustomData = new Dictionary<string, object>();
             obj.CustomData.Add("TextSearch", this.inputSearch.Text);
             var data = bll.GetList(obj);
 
-            gridView.AutoGenerateColumns = false;
             //set height cho hàng
             gridView.RowTemplate.Height = 70;
-            ((DataGridViewImageColumn)this.gridView.Columns["HINHANH"]).DefaultCellStyle.NullValue = null;
+            gridView.AutoGenerateColumns = false;
+            //((DataGridViewImageColumn)this.gridView.Columns["HINHANH"]).DefaultCellStyle.NullValue = null;
             //binding data
             gridView.DataSource = data;
-            //cbbMaSP.DataSource = bll.getMaSP();
-            //cbbMaSP.DisplayMember = "MaSP";
-            //cbbMaSP.ValueMember = "MaSP";
+
+            gridView.AutoGenerateColumns = false;
         }
     }
 }
