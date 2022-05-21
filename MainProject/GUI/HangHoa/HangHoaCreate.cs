@@ -49,9 +49,9 @@ namespace QLBANXE
                         TENHH = this.TENHH.Text,
                         DVT = this.DVT.Text,
                         //NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
-                        SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
-                        GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
-                        GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
+                        //SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
+                        //GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
+                        //GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
                         HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
                     };
                     bool result = bll.Insert(model);
@@ -94,18 +94,18 @@ namespace QLBANXE
             }
             else
             {
-                if (!string.IsNullOrEmpty(GIAXUAT.Text))
-                {
-                    string[] strArr = GIAXUAT.Text.Split(',');
-                    if (strArr != null && strArr.Length > 0)
-                    {
-                        GIAXUAT.Text = strArr[0];
-                    }
-                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
-                    var valueBefore = decimal.Parse(GIAXUAT.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
-                    GIAXUAT.Text = String.Format(culture, "{0:N0}", valueBefore);
-                    GIAXUAT.Select(GIAXUAT.Text.Length, 0);
-                }
+                //if (!string.IsNullOrEmpty(GIAXUAT.Text))
+                //{
+                //    string[] strArr = GIAXUAT.Text.Split(',');
+                //    if (strArr != null && strArr.Length > 0)
+                //    {
+                //        GIAXUAT.Text = strArr[0];
+                //    }
+                //    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                //    var valueBefore = decimal.Parse(GIAXUAT.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                //    GIAXUAT.Text = String.Format(culture, "{0:N0}", valueBefore);
+                //    GIAXUAT.Select(GIAXUAT.Text.Length, 0);
+                //}
 
             }
         }
@@ -131,18 +131,18 @@ namespace QLBANXE
             }
             else
             {
-                if (!string.IsNullOrEmpty(GIANHAP.Text))
-                {
-                    string[] strArr = GIANHAP.Text.Split(',');
-                    if (strArr != null && strArr.Length > 0)
-                    {
-                        GIANHAP.Text = strArr[0];
-                    }
-                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
-                    var valueBefore = decimal.Parse(GIANHAP.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
-                    GIANHAP.Text = String.Format(culture, "{0:N0}", valueBefore);
-                    GIANHAP.Select(GIANHAP.Text.Length, 0);
-                }
+                //if (!string.IsNullOrEmpty(GIANHAP.Text))
+                //{
+                //    string[] strArr = GIANHAP.Text.Split(',');
+                //    if (strArr != null && strArr.Length > 0)
+                //    {
+                //        GIANHAP.Text = strArr[0];
+                //    }
+                //    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                //    var valueBefore = decimal.Parse(GIANHAP.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                //    GIANHAP.Text = String.Format(culture, "{0:N0}", valueBefore);
+                //    GIANHAP.Select(GIANHAP.Text.Length, 0);
+                //}
 
             }
         }

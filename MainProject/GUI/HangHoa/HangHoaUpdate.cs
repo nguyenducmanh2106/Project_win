@@ -50,9 +50,9 @@ namespace QLBANXE
                         TENHH = this.TENHH.Text,
                         DVT = this.DVT.Text,
                         //NhaCungCapID = this.MANCC.SelectedValue != null ? Convert.ToInt32(this.MANCC.SelectedValue) : nullInt,
-                        SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
-                        GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
-                        GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
+                        //SOLUONG = Convert.ToInt32(this.SOLUONG.Value),
+                        //GIAXUAT = !string.IsNullOrEmpty(this.GIAXUAT.Text) ? Convert.ToDecimal(this.GIAXUAT.Text) : nullDec,
+                        //GIANHAP = !string.IsNullOrEmpty(this.GIANHAP.Text) ? Convert.ToDecimal(this.GIANHAP.Text) : nullDec,
                         HINHANH = CustomConvert.ImageToByteArray(this.HINHANH.Image)
                     };
                     bool result = bll.Update(model);
@@ -95,18 +95,18 @@ namespace QLBANXE
             }
             else
             {
-                if (!string.IsNullOrEmpty(GIAXUAT.Text))
-                {
-                    string[] strArr = GIAXUAT.Text.Split(',');
-                    if (strArr != null && strArr.Length > 0)
-                    {
-                        GIAXUAT.Text = strArr[0];
-                    }
-                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
-                    var valueBefore = decimal.Parse(GIAXUAT.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
-                    GIAXUAT.Text = String.Format(culture, "{0:N0}", valueBefore);
-                    GIAXUAT.Select(GIAXUAT.Text.Length, 0);
-                }
+                //if (!string.IsNullOrEmpty(GIAXUAT.Text))
+                //{
+                //    string[] strArr = GIAXUAT.Text.Split(',');
+                //    if (strArr != null && strArr.Length > 0)
+                //    {
+                //        GIAXUAT.Text = strArr[0];
+                //    }
+                //    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                //    var valueBefore = decimal.Parse(GIAXUAT.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                //    GIAXUAT.Text = String.Format(culture, "{0:N0}", valueBefore);
+                //    GIAXUAT.Select(GIAXUAT.Text.Length, 0);
+                //}
 
             }
         }
@@ -132,18 +132,18 @@ namespace QLBANXE
             }
             else
             {
-                if (!string.IsNullOrEmpty(GIANHAP.Text))
-                {
-                    string[] strArr = GIANHAP.Text.Split(',');
-                    if (strArr != null && strArr.Length > 0)
-                    {
-                        GIANHAP.Text = strArr[0];
-                    }
-                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
-                    var valueBefore = decimal.Parse(GIANHAP.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
-                    GIANHAP.Text = String.Format(culture, "{0:N0}", valueBefore);
-                    GIANHAP.Select(GIANHAP.Text.Length, 0);
-                }
+                //if (!string.IsNullOrEmpty(GIANHAP.Text))
+                //{
+                //    string[] strArr = GIANHAP.Text.Split(',');
+                //    if (strArr != null && strArr.Length > 0)
+                //    {
+                //        GIANHAP.Text = strArr[0];
+                //    }
+                //    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("vi-VN");
+                //    var valueBefore = decimal.Parse(GIANHAP.Text.Replace(".", ""), System.Globalization.NumberStyles.AllowThousands);
+                //    GIANHAP.Text = String.Format(culture, "{0:N0}", valueBefore);
+                //    GIANHAP.Select(GIANHAP.Text.Length, 0);
+                //}
 
             }
         }
@@ -168,10 +168,10 @@ namespace QLBANXE
             recordEdit = bll.GetEntity(this.MAHH.Text);
             this.TENHH.Text = recordEdit.TENHH;
             this.DVT.Text = recordEdit.DVT;
-            this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
+            //this.SOLUONG.Text = recordEdit.SOLUONG?.ToString();
             //this.MANCC.SelectedValue = recordEdit?.NhaCungCapID ?? -1;
-            this.GIANHAP.Text = String.Format("{0:n}", recordEdit.GIANHAP)?.ToString();
-            this.GIAXUAT.Text = String.Format("{0:n}", recordEdit.GIAXUAT)?.ToString();
+            //this.GIANHAP.Text = String.Format("{0:n}", recordEdit.GIANHAP)?.ToString();
+            //this.GIAXUAT.Text = String.Format("{0:n}", recordEdit.GIAXUAT)?.ToString();
             this.HINHANH.Image = CustomConvert.ByteArrayToImage(recordEdit.HINHANH);
             this.HINHANH.SizeMode = PictureBoxSizeMode.StretchImage;
         }

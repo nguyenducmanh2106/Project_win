@@ -321,7 +321,7 @@ namespace QLBANXE
                 HangHoa hangHoa = hangHoaBll.GetEntity(HangHoaID);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TENHH1"].Value = hangHoa?.TENHH;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["DVT1"].Value = hangHoa?.DVT;
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value = hangHoa?.SOLUONG;
+                //gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value = hangHoa?.SOLUONG;
             }
         }
 
@@ -343,17 +343,16 @@ namespace QLBANXE
                     {
                         double d = 0;
                         double.TryParse(e.Value?.ToString(), out d);
-                        if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("SOLUONG1"))
-                        {
-                            double kho = 0;
-                            double.TryParse(gridViewHangHoa.Rows[e.RowIndex].Cells["KHO"].Value?.ToString(), out kho);
-                            if (d > kho)
-                            {
-                                d = kho;
-                            }
-                        }
+                        //if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("SOLUONG1"))
+                        //{
+                        //    double kho = 0;
+                        //    double.TryParse(gridViewHangHoa.Rows[e.RowIndex].Cells["KHO"].Value?.ToString(), out kho);
+                        //    if (d > kho)
+                        //    {
+                        //        d = kho;
+                        //    }
+                        //}
                         e.Value = d.ToString("n0");
-                        //e.Value = d.ToString("n");
                     }
                 }
                 if (gridViewHangHoa.Columns[e.ColumnIndex].Name.Contains("DONGIA")
@@ -376,10 +375,10 @@ namespace QLBANXE
             int EditingControlColumnIndex = e.ColumnIndex;
             if (EditingControlRowIndex < 0) return;
             Dictionary<string, object> dics = new Dictionary<string, object>();
-            if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString() == "NaN")
-            {
-                gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
-            }
+            //if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString() == "NaN")
+            //{
+            //    gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
+            //}
             if (gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value?.ToString() == "NaN")
             {
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = 0;
@@ -396,8 +395,8 @@ namespace QLBANXE
             {
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value = 0;
             }
-            double soLuongKho = 0;
-            double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString(), out soLuongKho);
+            //double soLuongKho = 0;
+            //double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["KHO"].Value?.ToString(), out soLuongKho);
 
             #region tự tính thuế suất và tiền thuế cho mỗi hàng hóa
             if (gridViewHangHoa.Columns[EditingControlColumnIndex].Name.Contains("THUESUAT")
@@ -418,10 +417,10 @@ namespace QLBANXE
                 double tienCK = 0;
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
 
-                if (soLuong > soLuongKho)
-                {
-                    soLuong = soLuongKho;
-                }
+                //if (soLuong > soLuongKho)
+                //{
+                //    soLuong = soLuongKho;
+                //}
                 double tienThue = (soLuong * donGia - tienCK) * (thueSuat / 100);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENTHUE"].Value = tienThue;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = soLuong * donGia - tienCK + tienThue;
@@ -450,10 +449,10 @@ namespace QLBANXE
 
                 double tienCK = 0;
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value?.ToString(), out tienCK);
-                if (soLuong > soLuongKho)
-                {
-                    soLuong = soLuongKho;
-                }
+                //if (soLuong > soLuongKho)
+                //{
+                //    soLuong = soLuongKho;
+                //}
 
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value = soLuong * donGia - tienCK > 0 ? (tienThue * 100) / (soLuong * donGia - tienCK) : 0;
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THANHTIEN"].Value = (soLuong * donGia - tienCK) + tienThue;
@@ -484,10 +483,10 @@ namespace QLBANXE
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
 
 
-                if (soLuong > soLuongKho)
-                {
-                    soLuong = soLuongKho;
-                }
+                //if (soLuong > soLuongKho)
+                //{
+                //    soLuong = soLuongKho;
+                //}
                 double tienCK = soLuong * donGia * (tyLeCK / 100);
                 double tienThue = (soLuong * donGia - tienCK) * (thueSuat / 100);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TIENCK"].Value = tienCK;
@@ -516,10 +515,10 @@ namespace QLBANXE
                 double.TryParse(gridViewHangHoa.Rows[EditingControlRowIndex].Cells["THUESUAT"].Value?.ToString(), out thueSuat);
 
                 double tienThue = (soLuong * donGia - tienCK) * (thueSuat / 100);
-                if (soLuong > soLuongKho)
-                {
-                    soLuong = soLuongKho;
-                }
+                //if (soLuong > soLuongKho)
+                //{
+                //    soLuong = soLuongKho;
+                //}
 
                 double tyLeCk = (tienCK * 100) / (soLuong * donGia);
                 gridViewHangHoa.Rows[EditingControlRowIndex].Cells["TYLECK"].Value = tyLeCk;

@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.TimeReport = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -108,16 +108,16 @@
             this.label5.Text = "BÁO CÁO TỔNG HỢP DOANH THU";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // TimeReport
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(373, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Từ ngày 01/04/2022 đến 30/04/2022";
+            this.TimeReport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TimeReport.AutoSize = true;
+            this.TimeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeReport.Location = new System.Drawing.Point(373, 202);
+            this.TimeReport.Name = "TimeReport";
+            this.TimeReport.Size = new System.Drawing.Size(240, 17);
+            this.TimeReport.TabIndex = 5;
+            this.TimeReport.Text = "Từ ngày 01/04/2022 đến 30/04/2022";
             // 
             // label7
             // 
@@ -240,7 +240,7 @@
             // MAKH
             // 
             this.MAKH.DataPropertyName = "MAKH";
-            this.MAKH.HeaderText = "Mã hàng hóa";
+            this.MAKH.HeaderText = "Mã khách hàng";
             this.MAKH.Name = "MAKH";
             // 
             // TENKH
@@ -295,7 +295,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TimeReport);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -303,7 +303,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BaoCaoTongHopDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Báo cáo giảm trừ doanh thu";
+            this.Text = "Báo cáo tổng hợp doanh thu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Close);
             this.Load += new System.EventHandler(this.BaoCaoTongHopDoanhThuTheo_Load);
@@ -322,7 +322,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TimeReport;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -334,11 +334,11 @@
         private System.Windows.Forms.ToolStripMenuItem BackButton;
         private System.Windows.Forms.ToolStripMenuItem RefreshButton;
         private System.Windows.Forms.DataGridView gridViewBaoCao;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIAMTRUDOANHTHU;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHUTHUAN;
-        private System.Windows.Forms.Label label13;
     }
 }

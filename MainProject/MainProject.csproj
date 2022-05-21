@@ -238,6 +238,12 @@
     <Compile Include="GUI\SO_SACH\SOCAITAIKHOAN.Designer.cs">
       <DependentUpon>SOCAITAIKHOAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Maintenance.Designer.cs">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserLoginInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     <EmbeddedResource Include="GUI\SO_SACH\SOCAITAIKHOAN.resx">
       <DependentUpon>SOCAITAIKHOAN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Maintenance.resx">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserLoginInfor.resx">
       <DependentUpon>UserLoginInfor.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +385,7 @@
     <Content Include="assets\icons\icon-image-color-70.png" />
     <Content Include="assets\icons\icons-filter-kiranshastry-gradient-70.png" />
     <Content Include="assets\icons\icon-filtering-flaticons-lineal-color-70.png" />
+    <Content Include="assets\icons\icon-maintenance-70.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />

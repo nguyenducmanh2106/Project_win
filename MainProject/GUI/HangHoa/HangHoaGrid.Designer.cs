@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EditButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +42,6 @@
             this.TENHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MANCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIAXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIANHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HINHANH = new System.Windows.Forms.DataGridViewImageColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhaCungCapID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,9 +125,6 @@
             this.TENHH,
             this.DVT,
             this.MANCC,
-            this.SOLUONG,
-            this.GIAXUAT,
-            this.GIANHAP,
             this.HINHANH,
             this.ID,
             this.NhaCungCapID});
@@ -196,33 +188,6 @@
             this.MANCC.Name = "MANCC";
             this.MANCC.ReadOnly = true;
             this.MANCC.Visible = false;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.DataPropertyName = "SOLUONG";
-            this.SOLUONG.HeaderText = "Số lượng";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.ReadOnly = true;
-            // 
-            // GIAXUAT
-            // 
-            this.GIAXUAT.DataPropertyName = "GIAXUAT";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.GIAXUAT.DefaultCellStyle = dataGridViewCellStyle1;
-            this.GIAXUAT.HeaderText = "Giá xuất";
-            this.GIAXUAT.Name = "GIAXUAT";
-            this.GIAXUAT.ReadOnly = true;
-            // 
-            // GIANHAP
-            // 
-            this.GIANHAP.DataPropertyName = "GIANHAP";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.GIANHAP.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GIANHAP.HeaderText = "Giá nhập";
-            this.GIANHAP.Name = "GIANHAP";
-            this.GIANHAP.ReadOnly = true;
             // 
             // HINHANH
             // 
@@ -288,9 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TENHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MANCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIAXUAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIANHAP;
         private System.Windows.Forms.DataGridViewImageColumn HINHANH;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhaCungCapID;

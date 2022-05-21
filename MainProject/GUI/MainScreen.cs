@@ -138,5 +138,33 @@ namespace QLBANXE
             frame.Show();
             this.Dispose(true);
         }
+
+        private void BackUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Maintenance frame = new Maintenance();
+            frame.Show();
+            this.Dispose(true);
+        }
+
+        private void RestoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Maintenance frame = new Maintenance();
+            frame.Show();
+            this.Dispose(true);
+        }
+
+        private void SoftwareInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Maintenance frame = new Maintenance();
+            frame.Show();
+            this.Dispose(true);
+        }
+
+        private void ContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Maintenance frame = new Maintenance();
+            frame.Show();
+            this.Dispose(true);
+        }
     }
 }

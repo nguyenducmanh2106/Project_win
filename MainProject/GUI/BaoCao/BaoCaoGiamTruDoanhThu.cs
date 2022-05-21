@@ -19,13 +19,14 @@ namespace QLBANXE
     {
         private readonly DangNhap userLoginInfor = VariablesGlobal.Instance.UserLoginCurrent;
         private UserBLL _dangNhapBLL = new UserBLL();
+        private BaoCaoBLL bll = new BaoCaoBLL();
         public BaoCaoGiamTruDoanhThu()
         {
             InitializeComponent();
         }
 
 
-        private DialogResult Show(string title, out string passWordOld)
+        private DialogResult Show(string title, out DateTime StartDate, out DateTime EndDate)
         {
             Form form = new Form();
             Label StartDateLabel = new Label();
@@ -90,7 +91,8 @@ namespace QLBANXE
             form.CancelButton = buttonCancel;
 
             DialogResult dialogResult = form.ShowDialog();
-            passWordOld = StartDateTextBox.Text;
+            StartDate = StartDateTextBox.Value;
+            EndDate = EndDateTextBox.Value;
             return dialogResult;
         }
 
@@ -110,34 +112,38 @@ namespace QLBANXE
 
         private void FilterButton_Click(object sender, EventArgs e)
         {
-            string filter = "";
-            if (Show("Tham số báo cáo", out filter) == DialogResult.OK)
+            DateTime startDate;
+            DateTime endDate;
+            if (Show("Tham số báo cáo", out startDate, out endDate) == DialogResult.OK)
             {
+                this.TimeReport.Text = $"Từ ngày {startDate.ToString("dd/MM/yyyy")} đến {endDate.ToString("dd/MM/yyyy")}";
+                CoreModel obj = new CoreModel();
+                obj.CustomData = new Dictionary<string, object>();
+                obj.CustomData["StartDate"] = startDate;
+                obj.CustomData["EndDate"] = endDate;
+                var data = bll.GetBaoCaoGiamTruDoanhThu(obj);
+                this.gridViewBaoCao.DataSource = data;
             }
         }
 
 
-        private void BaoCaoDoanhThuTheoDoanhThu_Load(object sender, EventArgs e)
+        private void BaoCaoGiamTruDoanhThu_Load(object sender, EventArgs e)
         {
-            List<BaoCaoGiamTruDoanhThuModel> data = new List<BaoCaoGiamTruDoanhThuModel>();
-            for (var index = 0; index < 5; index++)
-            {
-                BaoCaoGiamTruDoanhThuModel model = new BaoCaoGiamTruDoanhThuModel()
-                {
-                    MAKH = $"MAKH00{index}",
-                    TENKH = index == 1 ? "Nguyễn Văn Linh" : index == 2 ? "Bùi Thị Hoa" : index == 3 ? "Phan Thành Trung" : index == 4 ? "Phạm Thành Long" : "Phạm Minh Hiếu",
-                    DOANHTHU = (decimal)(index + 2 * 100000),
-                    GIAMTRUDOANHTHU = 0,
-                    DOANHTHUTHUAN = (decimal)(index + 2 * 100000),
-                };
-                data.Add(model);
-            };
+            DateTime date = DateTime.Now;
+            var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+            this.TimeReport.Text = $"Từ ngày {firstDayOfMonth.ToString("dd/MM/yyyy")} đến {lastDayOfMonth.ToString("dd/MM/yyyy")}";
+            CoreModel obj = new CoreModel();
+            obj.CustomData = new Dictionary<string, object>();
+            obj.CustomData["StartDate"] = firstDayOfMonth;
+            obj.CustomData["EndDate"] = lastDayOfMonth;
+            var data = bll.GetBaoCaoGiamTruDoanhThu(obj);
             this.gridViewBaoCao.DataSource = data;
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            BaoCaoDoanhThuTheoDoanhThu_Load(sender, e);
+            BaoCaoGiamTruDoanhThu_Load(sender, e);
         }
     }
 

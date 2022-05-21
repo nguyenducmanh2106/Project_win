@@ -176,7 +176,6 @@ namespace QLBANXE
             headers["col1"] = "Ngày tháng ghi sổ";
             headers["col2"] = "Chứng từ";
             headers["col3"] = "Diễn giải";
-            headers["col4"] = "Nhật ký chung";
             headers["col5"] = "Số hiệu TK đối ứng";
             headers["col6"] = "Số tiền";
             var dt = new DataTable();
@@ -184,8 +183,6 @@ namespace QLBANXE
             dt.Columns.Add("Số hiệu");
             dt.Columns.Add("Ngày, tháng");
             dt.Columns.Add("Diễn giải");
-            dt.Columns.Add("Trang số");
-            dt.Columns.Add("STT dòng");
             dt.Columns.Add("Số hiệu TK đối ứng");
             dt.Columns.Add("Nợ");
             dt.Columns.Add("Có");
@@ -196,10 +193,9 @@ namespace QLBANXE
             headers3["col3"] = "C";
             headers3["col4"] = "D";
             headers3["col5"] = "E";
-            headers3["col6"] = "G";
-            headers3["col7"] = "H";
-            headers3["col8"] = "1";
-            headers3["col9"] = "2";
+            headers3["col6"] = "1";
+            headers3["col7"] = "2";
+            headers3["col8"] = "3";
 
 
             var result = bll.GetDataTableSoChiTietTaiKhoan(obj);
@@ -207,7 +203,7 @@ namespace QLBANXE
             {
                 string NgayThangGhiSo = item.NgayThangGhiSo != null ? Convert.ToDateTime(item.NgayThangGhiSo).ToString("dd/MM/yyyy") : "";
                 string NgayThangChungTu = item.NgayThangChungTu != null ? Convert.ToDateTime(item.NgayThangChungTu).ToString("dd/MM/yyyy") : "";
-                dt.Rows.Add(NgayThangGhiSo, item.SoHieu, NgayThangChungTu, item.DIENGIAI, item.TRANGSO, item.STT_DONG, item.TKDOIUNG, item.SONO?.ToString("n2"), item.CO?.ToString("n2"), item.TON?.ToString("n2"));
+                dt.Rows.Add(NgayThangGhiSo, item.SoHieu, NgayThangChungTu, item.DIENGIAI, item.TKDOIUNG, item.SONO?.ToString("n2"), item.CO?.ToString("n2"), item.TON?.ToString("n2"));
             }
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = dt.Columns.Count;
@@ -222,7 +218,7 @@ namespace QLBANXE
                 l.TextAlign = (ContentAlignment)HorizontalAlignment.Center;
                 l.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-                if (dic.Key == "col2" || dic.Key == "col4")
+                if (dic.Key == "col2")
                 {
                     tableLayoutPanel1.SetColumnSpan(l, 2);
 
