@@ -387,8 +387,8 @@
     <Content Include="assets\icons\icon-filtering-flaticons-lineal-color-70.png" />
     <Content Include="assets\icons\icon-maintenance-70.png" />
     <Content Include="assets\images\background_login.jpg" />
-    <Content Include="assets\images\background_mainscreen.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />
+    <Content Include="assets\images\bg8.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

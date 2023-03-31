@@ -35,6 +35,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btn_LOGIN = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +48,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(40, 137);
+            this.label2.Location = new System.Drawing.Point(40, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(40, 178);
+            this.label3.Location = new System.Drawing.Point(40, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 2;
@@ -71,7 +72,7 @@
             this.txtUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUser.Location = new System.Drawing.Point(43, 148);
+            this.txtUser.Location = new System.Drawing.Point(43, 169);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(218, 20);
             this.txtUser.TabIndex = 4;
@@ -81,7 +82,7 @@
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(43, 190);
+            this.txtPassword.Location = new System.Drawing.Point(43, 211);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(218, 20);
@@ -96,7 +97,7 @@
             this.btn_LOGIN.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_LOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LOGIN.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_LOGIN.Location = new System.Drawing.Point(43, 234);
+            this.btn_LOGIN.Location = new System.Drawing.Point(43, 255);
             this.btn_LOGIN.Name = "btn_LOGIN";
             this.btn_LOGIN.Size = new System.Drawing.Size(218, 37);
             this.btn_LOGIN.TabIndex = 6;
@@ -110,6 +111,7 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_LOGIN);
@@ -121,6 +123,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 328);
             this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(92, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 26);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Đăng nhập";
             // 
             // pictureBox1
             // 
@@ -166,6 +181,7 @@
         private System.Windows.Forms.Button btn_LOGIN;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
