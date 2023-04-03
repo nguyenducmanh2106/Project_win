@@ -127,23 +127,26 @@
   <data name="icon-no-image-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icon-no-image-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning-future-office-room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning-future-office-room.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_mainscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\background_mainscreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-remove-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icon-remove-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-search-ios-filled-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-search-ios-filled-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-image-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-image-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-plus-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-plus-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-close-ios-filled-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-close-ios-filled-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-save-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icon-save-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-filtering-flaticons-lineal-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-filtering-flaticons-lineal-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-plus-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-plus-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-refresh-soft-fill-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-refresh-soft-fill-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons-filter-kiranshastry-gradient-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icons-filter-kiranshastry-gradient-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +157,22 @@
   <data name="icon-user-kiranshastry-gradient-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icon-user-kiranshastry-gradient-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-close-ios-filled-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-close-ios-filled-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-refresh-soft-fill-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\icon-refresh-soft-fill-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background_mainscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\background_mainscreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-image-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-image-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-maintenance-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\icon-maintenance-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-filtering-flaticons-lineal-color-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-filtering-flaticons-lineal-color-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-search-ios-filled-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\icon-search-ios-filled-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="businesspeople-meeting-plan-analysis-graph-company-finance-strat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\businesspeople-meeting-plan-analysis-graph-company-finance-strat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="friend-request" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\friend-request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

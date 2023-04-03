@@ -1,0 +1,11 @@
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\Dapper.IDAL.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\Dapper.IDAL.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\Dapper.Model.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\DapperExtensions.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\Dapper.Model.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\bin\Debug\DapperExtensions.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\obj\Debug\Dapper.IDAL.csproj.CopyComplete
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\obj\Debug\Dapper.IDAL.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IDAL\obj\Debug\Dapper.IDAL.pdb

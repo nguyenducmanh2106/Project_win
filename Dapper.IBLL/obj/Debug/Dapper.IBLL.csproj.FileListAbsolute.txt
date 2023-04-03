@@ -1,0 +1,11 @@
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\Dapper.IBLL.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\Dapper.IBLL.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\Dapper.Model.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\DapperExtensions.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\Dapper.Model.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\bin\Debug\DapperExtensions.pdb
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.csproj.CopyComplete
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.dll
+\\Mac\Home\Desktop\PW\Project_win\Dapper.IBLL\obj\Debug\Dapper.IBLL.pdb
