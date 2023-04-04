@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CreateButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EditButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -163,9 +163,9 @@
             // TIENDOANHTHU
             // 
             this.TIENDOANHTHU.DataPropertyName = "TIENTHANHTOAN";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.TIENDOANHTHU.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.TIENDOANHTHU.DefaultCellStyle = dataGridViewCellStyle2;
             this.TIENDOANHTHU.HeaderText = "Giá trị đơn hàng";
             this.TIENDOANHTHU.Name = "TIENDOANHTHU";
             this.TIENDOANHTHU.ReadOnly = true;
@@ -211,10 +211,10 @@
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(774, 125);
+            this.SearchButton.Location = new System.Drawing.Point(774, 127);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(42, 37);
+            this.SearchButton.Size = new System.Drawing.Size(42, 32);
             this.SearchButton.TabIndex = 3;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);

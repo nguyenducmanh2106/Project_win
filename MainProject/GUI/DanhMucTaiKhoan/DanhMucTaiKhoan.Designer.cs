@@ -189,10 +189,10 @@
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(774, 111);
+            this.SearchButton.Location = new System.Drawing.Point(774, 113);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(42, 37);
+            this.SearchButton.Size = new System.Drawing.Size(42, 32);
             this.SearchButton.TabIndex = 3;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
