@@ -50,9 +50,10 @@
             this.panel1.Controls.Add(this.TENDANGNHAP);
             this.panel1.Controls.Add(this.TENTKTitle);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(192, 39);
+            this.panel1.Location = new System.Drawing.Point(288, 60);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 232);
+            this.panel1.Size = new System.Drawing.Size(975, 357);
             this.panel1.TabIndex = 0;
             // 
             // BackButton
@@ -60,9 +61,10 @@
             this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BackButton.Location = new System.Drawing.Point(359, 158);
+            this.BackButton.Location = new System.Drawing.Point(538, 243);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(98, 36);
+            this.BackButton.Size = new System.Drawing.Size(147, 55);
             this.BackButton.TabIndex = 7;
             this.BackButton.Text = "Thoát";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             this.ChangePassWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ChangePassWord.Location = new System.Drawing.Point(242, 158);
+            this.ChangePassWord.Location = new System.Drawing.Point(363, 243);
+            this.ChangePassWord.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChangePassWord.Name = "ChangePassWord";
-            this.ChangePassWord.Size = new System.Drawing.Size(98, 36);
+            this.ChangePassWord.Size = new System.Drawing.Size(147, 55);
             this.ChangePassWord.TabIndex = 6;
             this.ChangePassWord.Text = "Đổi mật khẩu";
             this.ChangePassWord.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@
             this.UpdateUserLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateUserLogin.Location = new System.Drawing.Point(127, 158);
+            this.UpdateUserLogin.Location = new System.Drawing.Point(190, 243);
+            this.UpdateUserLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UpdateUserLogin.Name = "UpdateUserLogin";
-            this.UpdateUserLogin.Size = new System.Drawing.Size(98, 36);
+            this.UpdateUserLogin.Size = new System.Drawing.Size(147, 55);
             this.UpdateUserLogin.TabIndex = 5;
             this.UpdateUserLogin.Text = "Cập nhật";
             this.UpdateUserLogin.UseVisualStyleBackColor = true;
@@ -99,9 +103,10 @@
             this.TENTK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TENTK.Location = new System.Drawing.Point(280, 54);
+            this.TENTK.Location = new System.Drawing.Point(420, 83);
+            this.TENTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TENTK.Name = "TENTK";
-            this.TENTK.Size = new System.Drawing.Size(223, 20);
+            this.TENTK.Size = new System.Drawing.Size(332, 26);
             this.TENTK.TabIndex = 4;
             // 
             // TENDANGNHAP
@@ -111,10 +116,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TENDANGNHAP.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TENDANGNHAP.Enabled = false;
-            this.TENDANGNHAP.Location = new System.Drawing.Point(280, 15);
+            this.TENDANGNHAP.Location = new System.Drawing.Point(420, 23);
+            this.TENDANGNHAP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TENDANGNHAP.Name = "TENDANGNHAP";
             this.TENDANGNHAP.ReadOnly = true;
-            this.TENDANGNHAP.Size = new System.Drawing.Size(223, 20);
+            this.TENDANGNHAP.Size = new System.Drawing.Size(332, 26);
             this.TENDANGNHAP.TabIndex = 3;
             // 
             // TENTKTitle
@@ -124,7 +130,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TENTKTitle.AutoSize = true;
             this.TENTKTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TENTKTitle.Location = new System.Drawing.Point(123, 52);
+            this.TENTKTitle.Location = new System.Drawing.Point(184, 80);
+            this.TENTKTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TENTKTitle.Name = "TENTKTitle";
             this.TENTKTitle.Size = new System.Drawing.Size(102, 22);
             this.TENTKTitle.TabIndex = 2;
@@ -137,7 +144,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 13);
+            this.label1.Location = new System.Drawing.Point(184, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 0;
@@ -145,10 +153,12 @@
             // 
             // UserLoginInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 522);
+            this.ClientSize = new System.Drawing.Size(1497, 803);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserLoginInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đăng nhập";

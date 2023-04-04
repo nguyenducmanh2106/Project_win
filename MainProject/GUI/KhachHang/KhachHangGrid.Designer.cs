@@ -37,7 +37,6 @@
             this.RefreshButton = new System.Windows.Forms.ToolStripMenuItem();
             this.inputSearch = new System.Windows.Forms.TextBox();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.SearchButton = new System.Windows.Forms.Button();
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +45,7 @@
             this.MST = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYDANGKY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,8 @@
             this.RefreshButton});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,10 +108,11 @@
             // inputSearch
             // 
             this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputSearch.Location = new System.Drawing.Point(543, 69);
+            this.inputSearch.Location = new System.Drawing.Point(814, 106);
+            this.inputSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
-            this.inputSearch.Size = new System.Drawing.Size(245, 21);
+            this.inputSearch.Size = new System.Drawing.Size(366, 30);
             this.inputSearch.TabIndex = 2;
             // 
             // gridView
@@ -130,28 +132,13 @@
             this.MST,
             this.NGAYDANGKY,
             this.ID});
-            this.gridView.Location = new System.Drawing.Point(0, 104);
+            this.gridView.Location = new System.Drawing.Point(0, 160);
+            this.gridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridView.Name = "gridView";
             this.gridView.ReadOnly = true;
-            this.gridView.Size = new System.Drawing.Size(800, 346);
+            this.gridView.Size = new System.Drawing.Size(1200, 532);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchButton.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.icon_search_ios_filled_70;
-            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(516, 68);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(28, 24);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.UseVisualStyleBackColor = false;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // MAKH
             // 
@@ -215,15 +202,35 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
+            // SearchButton
+            // 
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchButton.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.icon_search_ios_filled_70;
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SearchButton.FlatAppearance.BorderSize = 0;
+            this.SearchButton.Location = new System.Drawing.Point(774, 105);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(42, 37);
+            this.SearchButton.TabIndex = 3;
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // KhachHangList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.businesspeople_working_finance_accounting_analyze_financi;
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "KhachHangList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách hàng";

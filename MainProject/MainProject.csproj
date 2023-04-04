@@ -371,6 +371,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\images\glasses-calculator-tablet-white-neat-desk.jpg" />
+    <None Include="assets\icons\application.png" />
+    <None Include="assets\icons\folder.png" />
+    <None Include="assets\icons\demand.png" />
+    <None Include="assets\icons\decrease.png" />
+    <None Include="assets\icons\dashboard.png" />
+    <None Include="assets\icons\book.png" />
+    <None Include="assets\icons\accountant.png" />
     <Content Include="assets\icons\icon-plus-70.png" />
     <Content Include="assets\icons\icon-save-color-70.png" />
     <Content Include="assets\icons\icon-edit-soft-fill-70.png" />
@@ -386,10 +394,20 @@
     <Content Include="assets\icons\icons-filter-kiranshastry-gradient-70.png" />
     <Content Include="assets\icons\icon-filtering-flaticons-lineal-color-70.png" />
     <Content Include="assets\icons\icon-maintenance-70.png" />
+    <None Include="assets\icons\user.png" />
+    <None Include="assets\icons\lending.png" />
+    <None Include="assets\icons\shopping-cart.png" />
+    <None Include="assets\icons\value.png" />
+    <None Include="assets\icons\report.png" />
+    <None Include="assets\icons\sales.png" />
+    <None Include="assets\icons\notepad.png" />
+    <None Include="assets\icons\receipt.png" />
+    <None Include="assets\icons\voucher.png" />
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />
     <Content Include="assets\images\bg8.jpg" />
     <Content Include="assets\images\businesspeople-meeting-plan-analysis-graph-company-finance-strat.jpg" />
+    <None Include="assets\images\businesspeople-working-finance-accounting-analyze-financi.jpg" />
     <Content Include="assets\images\businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning-future-office-room.jpg" />
     <Content Include="assets\images\friend-request.png" />
   </ItemGroup>

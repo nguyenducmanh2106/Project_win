@@ -49,6 +49,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CreateButton,
             this.EditButton,
@@ -57,7 +58,8 @@
             this.RefreshButton});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +67,7 @@
             // 
             this.CreateButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_plus_70;
             this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(65, 20);
+            this.CreateButton.Size = new System.Drawing.Size(77, 25);
             this.CreateButton.Text = "Thêm";
             this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
@@ -73,7 +75,7 @@
             // 
             this.EditButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_edit_soft_fill_70;
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(54, 20);
+            this.EditButton.Size = new System.Drawing.Size(64, 25);
             this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
@@ -81,7 +83,7 @@
             // 
             this.DeleteButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_remove_color_70;
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(55, 20);
+            this.DeleteButton.Size = new System.Drawing.Size(64, 25);
             this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
@@ -89,7 +91,7 @@
             // 
             this.BackButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_close_ios_filled_70;
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(64, 20);
+            this.BackButton.Size = new System.Drawing.Size(76, 25);
             this.BackButton.Text = "Đóng";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
@@ -97,17 +99,18 @@
             // 
             this.RefreshButton.Image = global::KETOANDOANHTHU.Properties.Resources.icon_refresh_soft_fill_70;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(65, 20);
+            this.RefreshButton.Size = new System.Drawing.Size(78, 25);
             this.RefreshButton.Text = "Tải lại";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // inputSearch
             // 
             this.inputSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputSearch.Location = new System.Drawing.Point(543, 74);
+            this.inputSearch.Location = new System.Drawing.Point(814, 114);
+            this.inputSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.inputSearch.Multiline = true;
             this.inputSearch.Name = "inputSearch";
-            this.inputSearch.Size = new System.Drawing.Size(238, 21);
+            this.inputSearch.Size = new System.Drawing.Size(355, 30);
             this.inputSearch.TabIndex = 2;
             // 
             // gridView
@@ -125,10 +128,11 @@
             this.TRANGTHAI_TEXT,
             this.TRANGTHAI,
             this.ID});
-            this.gridView.Location = new System.Drawing.Point(0, 109);
+            this.gridView.Location = new System.Drawing.Point(0, 168);
+            this.gridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridView.Name = "gridView";
             this.gridView.ReadOnly = true;
-            this.gridView.Size = new System.Drawing.Size(800, 341);
+            this.gridView.Size = new System.Drawing.Size(1200, 525);
             this.gridView.TabIndex = 4;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick);
             // 
@@ -185,22 +189,26 @@
             this.SearchButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.Location = new System.Drawing.Point(516, 72);
+            this.SearchButton.Location = new System.Drawing.Point(774, 111);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(28, 24);
+            this.SearchButton.Size = new System.Drawing.Size(42, 37);
             this.SearchButton.TabIndex = 3;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // DanhMucTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.businesspeople_working_finance_accounting_analyze_financi;
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.inputSearch);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DanhMucTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh mục tài khoản";

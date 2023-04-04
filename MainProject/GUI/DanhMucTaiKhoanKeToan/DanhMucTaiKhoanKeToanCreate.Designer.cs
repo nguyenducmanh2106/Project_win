@@ -43,25 +43,28 @@
             // MATKLabel
             // 
             this.MATKLabel.AutoSize = true;
-            this.MATKLabel.Location = new System.Drawing.Point(112, 44);
+            this.MATKLabel.Location = new System.Drawing.Point(168, 68);
+            this.MATKLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MATKLabel.Name = "MATKLabel";
-            this.MATKLabel.Size = new System.Drawing.Size(79, 13);
+            this.MATKLabel.Size = new System.Drawing.Size(116, 20);
             this.MATKLabel.TabIndex = 0;
             this.MATKLabel.Text = "Mã tài khoản(*)";
             // 
             // MATK
             // 
-            this.MATK.Location = new System.Drawing.Point(224, 41);
+            this.MATK.Location = new System.Drawing.Point(336, 63);
+            this.MATK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MATK.Name = "MATK";
-            this.MATK.Size = new System.Drawing.Size(121, 20);
+            this.MATK.Size = new System.Drawing.Size(180, 26);
             this.MATK.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 174);
+            this.label1.Location = new System.Drawing.Point(168, 268);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cấp tài khoản";
             // 
@@ -74,41 +77,46 @@
             "3",
             "4",
             "5"});
-            this.CAPTK.Location = new System.Drawing.Point(224, 166);
+            this.CAPTK.Location = new System.Drawing.Point(336, 255);
+            this.CAPTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CAPTK.Name = "CAPTK";
-            this.CAPTK.Size = new System.Drawing.Size(121, 21);
+            this.CAPTK.Size = new System.Drawing.Size(180, 28);
             this.CAPTK.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 91);
+            this.label4.Location = new System.Drawing.Point(168, 140);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tên tài khoản(*)";
             // 
             // TENTK
             // 
-            this.TENTK.Location = new System.Drawing.Point(224, 84);
+            this.TENTK.Location = new System.Drawing.Point(336, 129);
+            this.TENTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TENTK.Name = "TENTK";
-            this.TENTK.Size = new System.Drawing.Size(121, 20);
+            this.TENTK.Size = new System.Drawing.Size(180, 26);
             this.TENTK.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(112, 128);
+            this.label5.Location = new System.Drawing.Point(168, 197);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 13);
+            this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Tài khoản cấp trên";
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(181, 319);
+            this.BackButton.Location = new System.Drawing.Point(272, 491);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(90, 35);
+            this.BackButton.Size = new System.Drawing.Size(135, 54);
             this.BackButton.TabIndex = 12;
             this.BackButton.Text = "Hủy";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -116,9 +124,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(288, 319);
+            this.SaveButton.Location = new System.Drawing.Point(432, 491);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(90, 35);
+            this.SaveButton.Size = new System.Drawing.Size(135, 54);
             this.SaveButton.TabIndex = 13;
             this.SaveButton.Text = "Lưu";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -132,16 +141,17 @@
             "2",
             "3",
             "4"});
-            this.TKCT.Location = new System.Drawing.Point(224, 125);
+            this.TKCT.Location = new System.Drawing.Point(336, 192);
+            this.TKCT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TKCT.Name = "TKCT";
-            this.TKCT.Size = new System.Drawing.Size(121, 21);
+            this.TKCT.Size = new System.Drawing.Size(180, 28);
             this.TKCT.TabIndex = 15;
             // 
             // DanhMucTaiKhoanKeToanCreate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 387);
+            this.ClientSize = new System.Drawing.Size(762, 595);
             this.Controls.Add(this.TKCT);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
@@ -152,6 +162,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MATK);
             this.Controls.Add(this.MATKLabel);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "DanhMucTaiKhoanKeToanCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

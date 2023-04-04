@@ -34,6 +34,11 @@ namespace KETOANDOANHTHU
             this.Dispose(true);
         }
 
+        /// <summary>
+        /// Tài khoản
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UserLoginInfor_Click(object sender, EventArgs e)
         {
             UserLoginInfor userInfor = new UserLoginInfor();
@@ -41,6 +46,11 @@ namespace KETOANDOANHTHU
             this.Dispose(true);
         }
 
+        /// <summary>
+        /// Đăng xuất
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             txtUsername login = new txtUsername();
@@ -83,6 +93,11 @@ namespace KETOANDOANHTHU
             this.Dispose(true);
         }
 
+        /// <summary>
+        /// Quản lý đăng nhập
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhMucTaiKhoan danhMucTaiKhoan = new DanhMucTaiKhoan();

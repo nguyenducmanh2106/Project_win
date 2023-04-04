@@ -42,9 +42,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.icon_maintenance_70;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(178, 21);
+            this.panel1.Location = new System.Drawing.Point(267, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 115);
+            this.panel1.Size = new System.Drawing.Size(369, 177);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -52,7 +53,8 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(127, 168);
+            this.label1.Location = new System.Drawing.Point(190, 258);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(358, 24);
             this.label1.TabIndex = 1;
@@ -66,17 +68,19 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(224, 107);
+            this.panel2.Location = new System.Drawing.Point(336, 165);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(589, 324);
+            this.panel2.Size = new System.Drawing.Size(882, 497);
             this.panel2.TabIndex = 2;
             // 
             // BackButton
             // 
             this.BackButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BackButton.Location = new System.Drawing.Point(260, 233);
+            this.BackButton.Location = new System.Drawing.Point(390, 358);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.Size = new System.Drawing.Size(112, 35);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Quay lại";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -86,7 +90,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 199);
+            this.label2.Location = new System.Drawing.Point(316, 306);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 22);
             this.label2.TabIndex = 2;
@@ -94,10 +99,12 @@
             // 
             // Maintenance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 522);
+            this.ClientSize = new System.Drawing.Size(1497, 803);
             this.Controls.Add(this.panel2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Maintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chức năng đang phát triển";

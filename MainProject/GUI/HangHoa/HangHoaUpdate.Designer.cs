@@ -41,49 +41,55 @@
             // CodeLabel
             // 
             this.CodeLabel.AutoSize = true;
-            this.CodeLabel.Location = new System.Drawing.Point(101, 83);
+            this.CodeLabel.Location = new System.Drawing.Point(152, 128);
+            this.CodeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodeLabel.Name = "CodeLabel";
-            this.CodeLabel.Size = new System.Drawing.Size(80, 13);
+            this.CodeLabel.Size = new System.Drawing.Size(118, 20);
             this.CodeLabel.TabIndex = 0;
             this.CodeLabel.Text = "Mã hàng hóa(*)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 163);
+            this.label2.Location = new System.Drawing.Point(152, 251);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Đơn vị tính";
             // 
             // DVT
             // 
-            this.DVT.Location = new System.Drawing.Point(191, 156);
+            this.DVT.Location = new System.Drawing.Point(286, 240);
+            this.DVT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DVT.Name = "DVT";
-            this.DVT.Size = new System.Drawing.Size(229, 20);
+            this.DVT.Size = new System.Drawing.Size(342, 26);
             this.DVT.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(101, 125);
+            this.label4.Location = new System.Drawing.Point(152, 192);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.Size = new System.Drawing.Size(123, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tên hàng hóa(*)";
             // 
             // TENHH
             // 
-            this.TENHH.Location = new System.Drawing.Point(191, 118);
+            this.TENHH.Location = new System.Drawing.Point(286, 182);
+            this.TENHH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TENHH.Name = "TENHH";
-            this.TENHH.Size = new System.Drawing.Size(229, 20);
+            this.TENHH.Size = new System.Drawing.Size(342, 26);
             this.TENHH.TabIndex = 9;
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(190, 319);
+            this.BackButton.Location = new System.Drawing.Point(285, 491);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(90, 35);
+            this.BackButton.Size = new System.Drawing.Size(135, 54);
             this.BackButton.TabIndex = 12;
             this.BackButton.Text = "Hủy";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -91,9 +97,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(297, 319);
+            this.SaveButton.Location = new System.Drawing.Point(446, 491);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(90, 35);
+            this.SaveButton.Size = new System.Drawing.Size(135, 54);
             this.SaveButton.TabIndex = 13;
             this.SaveButton.Text = "Lưu";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -101,16 +108,17 @@
             // 
             // MAHH
             // 
-            this.MAHH.Location = new System.Drawing.Point(191, 80);
+            this.MAHH.Location = new System.Drawing.Point(286, 123);
+            this.MAHH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MAHH.Name = "MAHH";
-            this.MAHH.Size = new System.Drawing.Size(229, 20);
+            this.MAHH.Size = new System.Drawing.Size(342, 26);
             this.MAHH.TabIndex = 1;
             // 
             // HangHoaUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 387);
+            this.ClientSize = new System.Drawing.Size(762, 595);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.TENHH);
@@ -119,6 +127,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MAHH);
             this.Controls.Add(this.CodeLabel);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "HangHoaUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
