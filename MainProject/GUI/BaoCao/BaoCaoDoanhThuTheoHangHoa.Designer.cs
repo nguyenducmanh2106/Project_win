@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -268,9 +268,9 @@
             // DOANHTHU
             // 
             this.DOANHTHU.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle1;
             this.DOANHTHU.HeaderText = "Doanh thu";
             this.DOANHTHU.Name = "DOANHTHU";
             this.DOANHTHU.ReadOnly = true;
@@ -279,7 +279,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::KETOANDOANHTHU.Properties.Resources.businesspeople_working_finance_accounting_analyze_financi;
             this.ClientSize = new System.Drawing.Size(1497, 1009);
             this.Controls.Add(this.gridViewBaoCao);
             this.Controls.Add(this.menuStrip1);
