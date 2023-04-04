@@ -389,6 +389,9 @@
     <Content Include="assets\images\background_login.jpg" />
     <Content Include="assets\images\background_mainscreen1.jpg" />
     <Content Include="assets\images\bg8.jpg" />
+    <Content Include="assets\images\businesspeople-meeting-plan-analysis-graph-company-finance-strat.jpg" />
+    <Content Include="assets\images\businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning-future-office-room.jpg" />
+    <Content Include="assets\images\friend-request.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

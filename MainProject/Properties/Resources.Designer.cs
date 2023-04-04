@@ -73,6 +73,37 @@ namespace KETOANDOANHTHU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap businesspeople_meeting_plan_analysis_graph_company_finance_strat {
+            get {
+                object obj = ResourceManager.GetObject("businesspeople-meeting-plan-analysis-graph-company-finance-strat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap businesspeople_working_finance_accounting_analyze_financial_graph_budget_planning_future_office_room {
+            get {
+                object obj = ResourceManager.GetObject("businesspeople-working-finance-accounting-analyze-financial-graph-budget-planning" +
+                        "-future-office-room", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap friend_request {
+            get {
+                object obj = ResourceManager.GetObject("friend-request", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_close_ios_filled_70 {
             get {
                 object obj = ResourceManager.GetObject("icon-close-ios-filled-70", resourceCulture);

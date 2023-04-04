@@ -23,12 +23,13 @@ namespace Dapper.SQLServerDAL
 {
     public class HoaDonGTGTDAL : IHoaDonGTGTDAL
     {
-        private IDbConnection _conn;
+        //private IDbConnection _conn;
         public IDbConnection Conn
         {
             get
             {
-                return _conn = ConnectionFactory.CreateConnection();
+                //return _conn = ConnectionFactory.CreateConnection();
+                return ConnectionFactory.CreateConnection();
             }
         }
 
