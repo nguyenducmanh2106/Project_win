@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOANHTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBaoCao)).BeginInit();
             this.SuspendLayout();
@@ -198,7 +200,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilterButton,
             this.BackButton,
-            this.RefreshButton});
+            this.RefreshButton,
+            this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -262,11 +265,19 @@
             // DOANHTHU
             // 
             this.DOANHTHU.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle2;
             this.DOANHTHU.HeaderText = "Doanh thu";
             this.DOANHTHU.Name = "DOANHTHU";
+            // 
+            // xuấtBáoCáoToolStripMenuItem
+            // 
+            this.xuấtBáoCáoToolStripMenuItem.Image = global::KETOANDOANHTHU.Properties.Resources.outbox;
+            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
+            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
+            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // BaoCaoDoanhThuTheoKhachHang
             // 
@@ -325,5 +336,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
+        private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

@@ -45,6 +45,7 @@
             this.FilterButton = new System.Windows.Forms.ToolStripMenuItem();
             this.BackButton = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridViewBaoCao = new System.Windows.Forms.DataGridView();
             this.MAHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,7 +200,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilterButton,
             this.BackButton,
-            this.RefreshButton});
+            this.RefreshButton,
+            this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -230,6 +232,14 @@
             this.RefreshButton.Size = new System.Drawing.Size(78, 25);
             this.RefreshButton.Text = "Tải lại";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // xuấtBáoCáoToolStripMenuItem
+            // 
+            this.xuấtBáoCáoToolStripMenuItem.Image = global::KETOANDOANHTHU.Properties.Resources.outbox;
+            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
+            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
+            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // gridViewBaoCao
             // 
@@ -333,5 +343,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TENHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;
     }
 }

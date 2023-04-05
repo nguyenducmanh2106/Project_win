@@ -1,8 +1,10 @@
 ﻿using Core.Box;
 using Core.Constants;
 using Core.Global;
+using Core.Utils;
 using Dapper.BLL;
 using Dapper.Model;
+using IIG.Core.Framework.ICom.Infrastructure.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -163,7 +165,7 @@ namespace KETOANDOANHTHU
 
 
         }
-
+        DataTable details = new DataTable();
         private void DrawingTableLayout(CoreModel obj)
         {
             this.tableLayoutPanel1.Visible = false;
@@ -200,6 +202,7 @@ namespace KETOANDOANHTHU
 
 
             var result = bll.GetDataTableSoCaiTaiKhoan(obj);
+            details = CustomConvert.ToDataTable<SoCaiTaiKhoanModel>(result);
             foreach (var item in result)
             {
                 string NgayThangGhiSo = item.NgayThangGhiSo != null ? Convert.ToDateTime(item.NgayThangGhiSo).ToString("dd/MM/yyyy") : "";
@@ -339,6 +342,51 @@ namespace KETOANDOANHTHU
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             BaoCaoDoanhThuTheoHangHoa_Load(sender, e);
+        }
+
+        private void ToExcel(DataTable details, string fileOutputName)
+        {
+
+            try
+            {
+                //lấy dữ liệu
+                DateTime date = DateTime.Now;
+                var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+                var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+                this.TimeReport.Text = $"Từ ngày {firstDayOfMonth.ToString("dd/MM/yyyy")} đến {lastDayOfMonth.ToString("dd/MM/yyyy")}";
+                CoreModel obj = new CoreModel();
+                obj.CustomData = new Dictionary<string, object>();
+                obj.CustomData["StartDate"] = firstDayOfMonth;
+                obj.CustomData["EndDate"] = lastDayOfMonth;
+                DataTable detail = details.Copy();
+                detail.TableName = "details";
+                DataSet ds = new DataSet();
+                ds.Tables.Add(detail);
+                string fileTemplateName = "SoCaiTaiKhoan.xlsx";
+                ExcelFillData.FillReportGrid(fileOutputName, fileTemplateName, ds, new string[] { "{", "}" }, 1);
+                MessageBox.Show("Xuất dữ liệu ra Excel thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = "SoCaiTaiKhoan.xlsx";
+            saveFileDialog1.Filter = "Excel Spreadsheet (*.XLSX;*.XLSM)|*.XLSX;*.XLSM";
+            saveFileDialog1.FilterIndex = 0;
+            //ToExcel(gridViewBaoCao, "ReportRevenueProduct.xlsx");
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
+                ToExcel(details, saveFileDialog1.FileName);
+            }
         }
     }
 

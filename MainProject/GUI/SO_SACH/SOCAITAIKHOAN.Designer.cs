@@ -49,6 +49,8 @@
             this.TaiKhoanLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
+            this.xuấtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,7 +187,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilterButton,
             this.BackButton,
-            this.RefreshButton});
+            this.RefreshButton,
+            this.xuấtFileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -272,7 +275,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1392F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1393F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(58, 395);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -293,6 +296,14 @@
             this.label14.Size = new System.Drawing.Size(121, 13);
             this.label14.TabIndex = 21;
             this.label14.Text = "Ngày ... tháng ... năm ...";
+            // 
+            // xuấtFileToolStripMenuItem
+            // 
+            this.xuấtFileToolStripMenuItem.Image = global::KETOANDOANHTHU.Properties.Resources.outbox;
+            this.xuấtFileToolStripMenuItem.Name = "xuấtFileToolStripMenuItem";
+            this.xuấtFileToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.xuấtFileToolStripMenuItem.Text = "Xuất file";
+            this.xuấtFileToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // SoCaiTaiKhoan
             // 
@@ -355,5 +366,7 @@
         private System.Windows.Forms.Label TaiKhoanLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripMenuItem xuấtFileToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

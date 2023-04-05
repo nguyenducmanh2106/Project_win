@@ -52,6 +52,8 @@
             this.GIAMTRUDOANHTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOANHTHUTHUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
+            this.xuấtBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBaoCao)).BeginInit();
             this.SuspendLayout();
@@ -201,7 +203,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilterButton,
             this.BackButton,
-            this.RefreshButton});
+            this.RefreshButton,
+            this.xuấtBáoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -297,6 +300,14 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Ngày ... Tháng ... Năm";
             // 
+            // xuấtBáoCáoToolStripMenuItem
+            // 
+            this.xuấtBáoCáoToolStripMenuItem.Image = global::KETOANDOANHTHU.Properties.Resources.outbox;
+            this.xuấtBáoCáoToolStripMenuItem.Name = "xuấtBáoCáoToolStripMenuItem";
+            this.xuấtBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
+            this.xuấtBáoCáoToolStripMenuItem.Text = "Xuất báo cáo";
+            this.xuấtBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // BaoCaoTongHopDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -358,5 +369,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIAMTRUDOANHTHU;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHUTHUAN;
+        private System.Windows.Forms.ToolStripMenuItem xuấtBáoCáoToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
